@@ -1,0 +1,33 @@
+{% if page.header.title is not null %}
+     <h3 class="section-title">{{ page.header.title }}</h3>
+ {% endif %}
+
+
+<div class="quick-links text-center">
+	<ul class="list-inline">
+		{% for link in page.header.links %}
+			{% set url = false %}	
+			{% if link.external is defined %}
+				{% set url = link.external %}
+			{% else %}
+				{% if link.pages starts with '/' %}
+					{% set url = page.find(link.pages).url %}	
+
+				{% else %}
+					{% set url = site.social[link.pages].url %}
+
+				{% endif %}
+			{% endif %}
+			{% if url %}
+				<li class=""> 
+					<a href='{{ url }}' class="{{ page.header.btn_class }}" {% if link.isNewWindow %} target="_blank" {% endif %}
+			>
+						{{ link.text }}
+					</a>
+				</li>
+			{% endif %}
+			
+			{{ dump(link) }}
+		{% endfor %}
+	</ul>
+</div>

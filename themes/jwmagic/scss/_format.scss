@@ -1,0 +1,109 @@
+
+h2, h3, .section-title, .page-title, .title-heading {
+	font-weight: 100;
+	text-align: center;
+}
+
+h2, .page-title {
+	font-size: 3.75rem;
+	margin-top: 0;
+	margin-bottom: 20px;
+	padding: 10px 0 20px;
+	font-weight: 100;
+}
+
+h3, .section-title {
+	font-size: 3.25rem;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+}
+
+h4, h5, h6 {
+	&,
+	&.title-heading {
+		font-weight: 300;
+	}
+}
+
+h4 {
+	font-size: 2.75rem;
+}
+h5 {
+	font-size: 2rem;
+}
+h6 {
+	font-size: 1.5rem;
+}
+
+.slide-title {
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+.back-page {
+	section {
+		padding: 20px 0;
+		&.quick-links-section {
+			padding: 30px 0;
+		}
+		@media (min-width: $screen-sm) {
+			padding: 40px 0;
+			&.quick-links-section {
+				padding: 50px;
+			}
+		}
+	}
+}
+
+section {
+	article {
+		padding: 20px 0;
+		&:not(:last-child) {
+			border-bottom: 1px solid $gray-light;
+			margin-bottom: 10px;
+		}
+	}
+
+}
+
+@media (min-width: $screen-sm) {
+
+	h2, .page-title {
+		font-size: 4rem;
+	}
+	h3, .section-title {
+		font-size: 3rem;
+		padding-bottom: 20px;
+	}
+
+
+
+	section {
+		article {
+			padding: 30px 0;
+		}
+	}
+
+}
+
+@media (min-width: $screen-lg) {
+
+	h2, .page-title {
+		font-size: 5rem;
+		margin-bottom: 30px;
+		padding: 20px 0 50px;
+	}
+	h3, .section-title {
+		font-size: 3.5rem;
+		margin-bottom: 20px;
+		xpadding-bottom: 10px;
+	}
+
+
+	section {
+		article {
+			padding: 30px 0 45px;
+		}
+	}
+
+}

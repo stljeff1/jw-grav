@@ -1,0 +1,198 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block header %}{% endblock %}
+{% block pageContent %}
+    <div class="front-page-container">
+        <div class="block-left front-page-block">
+            <div class="block-inner">
+
+                <div class="top-image-container">
+                    <div class="top-image">
+                                    <img src='{{ url('theme://images/headshot.jpg') }}' class="img-responsive img-circle"/>
+                                </div>
+
+                </div>
+                <div class="front-page-blurb white-text ">
+                    <h1>
+                        <span>Jeff Wilkerson</span>
+                        <small class="red">Front End Developer</small>
+                        <small>Since Netscape 4.7 and IE 3!!!</small>
+                    </h1>
+                    <p>I live in Portland, Oregon where I am cultivating magical powers to destroy obstacles and create oppotunity.<p>
+<ul class="social-icons-list list-inline text-center">
+            <li>
+            <a href="https://www.linkedin.com/in/jeffrwilkerson" target="_blank" title="Jeff Wilkerson on LinkedIn">
+                <img src="{{ url('theme://images/linkedin-icon.png') }}">
+            </a>
+        </li>
+            <li>
+            <a href="https://github.com/stljeff1/" target="_blank" title="Jeff Wilkerson on Github">
+                <img src="{{ url('theme://images/github-icon.png') }}">
+            </a>
+        </li>
+            <li>
+            <a href="https://twitter.com/cPalsyYogi" target="_blank" title="Jeff Wilkerson on Twitter">
+                <img src="{{ url('theme://images/twitter-icon.png') }}">
+            </a>
+        </li>
+            <li>
+            <a href="https://www.instagram.com/runningantelope/" target="_blank" title="Jeff Wilkerson on Instagram">
+                <img src="{{ url('theme://images/instagram-icon.png') }}">
+            </a>
+        </li>
+    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="block-right front-page-block">
+            <div class="jw-logo-fixed">
+                <a href='#top' class=" collapsed front-page-nav-toggle" data-toggle="collapse" data-target="#front-page-nav"  aria-expanded="false">
+                    <img src="{{ url('theme://images/jw-red-icon-small.png') }}" alt="Portlan Web Developer Jeff Wilkerson">
+                </a>
+                <nav id="front-page-nav" class="collapse">
+
+                        <ul class="list-unstyled">
+                            <li class=""><a href="{{ base_url}}/qualifications" class="">My Skills</a></li>
+                            <li class=""><a href="{{ base_url}}/projects" class="">Portfolio</a></li>
+                            <li class=""><a href="{{ base_url}}/services" class="">Services</a></li>
+                        </ul>
+                </nav>
+            </div>
+            <div class="block-content">
+                <section>
+                    <h2>About</h2>
+                    <p class="text-main">Hi! Do you need a functional website? Because I'm a guy who makes websites.</p>
+
+                    <p>I possess diverse professional experience, including:</p>
+                    <ul class="text-main">
+                        <li>Enterprise Software</li>
+                        <li>Agency Work</li>
+                        <li>Branding</li>
+                        <li>UI/UX/IA</li>
+                    </ul>
+                    <p class="text-main">I work well with designers, content specialists, and backend developers. I am interested in tackling challenges in content management and web applications.   </p>
+
+                </section>
+                <section>
+                    <h2>Things I <span>do</span> well</h2>
+                    <p>I got my first webdev gig as a freshman in college. Here is a short list of skills learned since then.</p>
+                    <h3>Fundamentals</h3>
+                    <p>HTML, CSS, jQuery. SEO. Photoshop. Copy 'n Paste. </p>
+
+                    <h3>Javascript Frameworks</h3>
+                    <p>Kendo UI, AngularJS, KnockoutJS</p>
+
+                    <h3>Modern Technologies</h3>
+                    <p>Git, SASS, LESS, Task Managers</p>
+
+                    <p class="quick-links"><a href='{{ page.find('/qualifications').url }}#_skills' class="btn btn-default">See More Details</a></p>
+
+                </section>
+
+                <section class="quick-tab-btns">
+                    <h2>Check It Out</h2>
+                    <div class="">
+                        <ul class="block-grid-sm-3">
+                            <li class="block-grid-item"><a href="{{ base_url}}/qualifications" class="btn btn-default">My Skills</a></li>
+                            <li class="block-grid-item"><a href="{{ base_url}}/projects" class="btn btn-default">Portfolio</a></li>
+                            <li class="block-grid-item"><a href="{{ base_url}}/services" class="btn btn-default">Services</a></li>
+                            <li class="block-grid-item"><a href="http://blog.jeffwilkerson.net" class="btn btn-default">My Blog</a></li>
+                            <li class="block-grid-item"><a href="{{ site.social['github'].url }}" class="btn btn-default" target="_blank">Me on Github </a></li>
+                            <li class="block-grid-item"><a href="http://blog.jeffwilkerson.net/about" class="btn btn-default">More About Me</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+
+                <section class="client-list">
+                    <h2>Past Clients Include</h2>
+
+                    <div class="xrow hidden-xs">
+                        <ul class="block-grid-sm-2 block-grid-sm-4">
+                            <li class="block-grid-item text-center">
+                                <h4 class="title-three title-main mywhite">Papa Murphy's Franchising</h4>
+                                <img class="img-responsive" src="{{ url('theme://images/papa-murphys-logo.png')}}" alt="Papa Murphy's Franchising" />
+                            </li>
+
+                            <li class="block-grid-item text-center">
+                                <h4 class="title-three title-main mywhite">Singing Success</h4>
+                                <img class="img-responsive" src="{{ url('theme://images/ss360-logo.png')}}" alt="Singing Success" />
+                            </li>
+                            <li class="block-grid-item text-center">
+                                <h4 class="title-three title-main mywhite">Adidas, Inc.</h4>
+                                <img class="img-responsive" src="{{ url('theme://images/adidas-logo.png')}}" alt="Adidas, Inc." />
+                            </li>
+                            <li class="block-grid-item text-center">
+                                <h4 class="title-three title-main mywhite">Penske Auto Group</h4>
+                                <img class="img-responsive" src="{{ url('theme://images/penske-auto-logo.png')}}" alt="Penske Auto Group" />
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div id='client-slideshow' class='visible-xs carousel slide text-center' data-ride='carousel' data-interval="2500"> 
+                        <ol class="carousel-indicators">
+                            <li data-target="#client-slideshow" data-slide-to="0" class="active"></li>
+                            <li data-target="#client-slideshow" data-slide-to="1"></li>
+                            <li data-target="#client-slideshow" data-slide-to="2"></li>
+                            <li data-target="#client-slideshow" data-slide-to="3"></li>
+                            <li data-target="#client-slideshow" data-slide-to="4"></li>
+                            <li data-target="#client-slideshow" data-slide-to="5"></li>
+                        </ol>
+                        <div class='carousel-inner' role='listbox'>
+                            <div class='item active'>
+                                <h4 class="title-three title-main mywhite">Papa Murphy's Franchising</h4>
+                                <img class="img-responsive" src="{{ url('theme://images/papa-murphys-logo.png')}}" alt="Papa Murphy's Franchising" />
+                            </div>
+                            <div class='item'>
+
+                                <h4 class="title-three title-main mywhite">Singing Success</h4>
+                                <img class="img-responsive" src="{{ url('theme://images/ss360-logo.png')}}" alt="Singing Success" />
+                            </div>
+                            <div class='item'>
+                                <h4 class="title-three title-main mywhite">Adidas, Inc.</h4>
+                                <img class="img-responsive" src="{{ url('theme://images/adidas-logo.png')}}" alt="Adidas, Inc." />
+                            </div>
+                            <div class='item'>
+                                <h4 class="title-three title-main mywhite">Penske Auto Group</h4>
+                                <img class="img-responsive" src="{{ url('theme://images/penske-auto-logo.png')}}" alt="Penske Auto Group" />
+                            </div>
+                            <div class='item'>
+                                <h4 class="title-three title-main mywhite">Dimmit Auto Group</h4>
+                                <img class="img-responsive" src="{{ url('theme://images/dimmit-logo.jpg')}}" alt="Dimmit Auto Group" />
+                            </div>
+                        </div>
+
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#client-slideshow" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#client-slideshow" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </section>
+                                                                        
+
+                <section>
+                    <h2>Blog Posts...</h2>
+                    <p>Coming soon. For now, go to <a href="http://blog.jeffwilkerson.net/">blog.jeffwilkerson.net</a>.</p>
+                </section>
+                <section>
+                    <h2>Silly Instagrams...</h2>
+                    <ul class="block-grid-sm-3">
+                        <li class="block-grid-item"><img  class="img-responsive img-round" src="{{ url('theme://images/welcome-to-oregon.jpg') }}"/></li>
+                        <li class="block-grid-item"><img  class="img-responsive img-round" src="{{ url('theme://images/suzy-springtime.jpg') }}"/></li>
+                        <li class="block-grid-item"><img  class="img-responsive img-round" src="{{ url('theme://images/grandmas-house.jpg') }}"/></li>
+                        <li class="block-grid-item"><img  class="img-responsive img-round" src="{{ url('theme://images/jeff-does-yoga.jpg') }}"/></li>
+                        <li class="block-grid-item"><img  class="img-responsive img-round" src="{{ url('theme://images/cardinals-baseball.jpg') }}"/></li>
+                        <li class="block-grid-item"><img  class="img-responsive img-round" src="{{ url('theme://images/suzy-greenburg.jpg') }}"/></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+{% endblock %}

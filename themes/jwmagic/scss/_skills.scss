@@ -1,0 +1,61 @@
+@mixin fillMeter($n) {
+	width: percentage($n/100);
+ }
+
+.skills-listing {
+	.media {
+		margin-bottom: 20px;
+
+	}
+	.media-heading {
+		font-size: 1.5rem;
+		color: $navy;
+	}
+	.icon-skill { 
+		min-width: 75px;
+		text-align: center;
+	}
+	.meter-skill {
+		background: rgba(77, 87, 99, 0.13);
+		padding: 5px;
+		border-radius: 4px;
+		margin-top: 10px;
+		.this-skill {
+			border-radius: 4px;
+			height: 1.25rem;
+			$i: 10;
+			@while $i < 101 {
+				&.skill-fill-#{$i} {
+					@include fillMeter($i);
+				}
+				$i: $i + 10;
+			}
+		}
+	}
+}
+
+.other-skills {
+	padding-top: 20px;
+	.title-heading {
+		text-align: left;
+		height: 2.2em;
+	}
+	.oSkill {
+		margin-bottom: 10px;
+		strong {
+			padding: .8rem;
+			font-size: 1.2rem;
+			color: $gray-blue2;
+			padding: 1rem 0;
+			line-height: 3rem;
+		}
+		.icon {
+			max-height: 3rem;
+			margin: 0 auto;
+		}
+		&.row {
+			strong {
+			}
+		}
+	}
+}

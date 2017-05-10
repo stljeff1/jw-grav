@@ -1,0 +1,94 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
+{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
+
+{% block javascripts %}
+{% endblock %}
+
+
+{% block bottom %}
+    {{ parent() }}
+{% endblock %}
+{% block header %}
+    <header class="site-header">
+        <div class="top-nav">
+            <div class="container clearfix">
+                <div class="site-name-container">
+
+                        <h1 class="site-name">
+                            <a class="" href="{{ home_url }}">
+                                Jeff Wilkerson
+
+                            </a>
+                        </h1>
+                </div>
+                <div class="navigation-container">
+
+                    {% block header_navigation %}
+                        {% include 'partials/navigation.html.twig' %}
+                    {% endblock %}
+                </div>
+                <div class="hidden-md hidden-lg">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="glyphicon glyphicon-menu-hamburger"></i>
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+            
+            </div><!-- /.container-fluid -->
+        </div>
+        <div class="page-title-container">
+            <h2 class="page-title">{{ page.title }} </h2>
+        </div>
+    </header>
+{% endblock %}
+
+{% block pageContent %}
+    {{ page.content }}
+    {% for module in page.collection() %}
+        
+        <section id="{{ module.slug }}" class="{{ module.header.body_classes}}">
+            <div class="container">
+                
+                {{ module.content }}
+            </div>
+        </section>
+    {% endfor %}
+{% endblock %}
+
+
+{% block footer %}
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <a href="{{ home_url }}" class="jw-link" title="Jeff Wilkerson - HTML, Javascript, CSS">
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="{{ url('theme://images/jw-red-icon-small.png') }}" alt="Portlan Web Developer Jeff Wilkerson">
+                            </div>
+                            <div class="media-body">
+                                <div class="media-heading">
+                                    Jeff Wilkerson<br/>
+                                    &copy; 2017
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ page.find('/connect').url }}">Connect with Me</a></li>
+                        <li><a href="#top">Back to Top</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+{% endblock %}

@@ -1,0 +1,464 @@
+
+@import "colors";
+
+$grid-gutter-width: 15px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+
+@import "block-grid";
+@import "format";
+
+html, body  {
+	height: 100%;
+	margin: 0 auto;
+	font-family: 'Roboto',Helvetica,Arial,sans-serif;
+	font-size: 16px;
+	color: $black;
+	background-color: $gray-light;
+}
+
+
+a, a:visited, a:link {
+	color: $gray-blue2;
+	&:hover {
+		color: lighten($gray-blue2, 15%);;
+	}
+	.red-bg & {
+		color: $white;
+		&:hover {
+			color: $highlight-color;
+		}
+	}
+}
+
+
+.row {
+	&.no-gutter {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+blockquote p {
+	margin-bottom: 0;
+}
+
+
+.img-responsive {
+	margin: 0 auto;
+}
+
+.white-text {
+	color: #fff;
+}
+.red-text {
+	color: $red;
+}
+
+
+.color-a {
+	color: #1E2431;
+}
+.color-b {
+	color: #d80033;
+}
+.color-c {
+	color: #1E2431;
+}
+
+.red-bg { 
+	background-color: $red-light;
+}
+.blue-bg {
+	background-color: $navy;
+}
+.red-bg, .blue-bg {
+	.section-title {
+		color: $white;
+	}
+}
+
+.light-colored-bg {
+	background-color: #fff;
+}
+
+.box-item {
+
+	padding: 1.5rem;
+	border-radius: 7px;
+	margin-bottom: 1.25rem;
+}
+
+
+.btn, a.btn {
+	border-color: $navy;
+	border-width: 2px;
+	color: $navy;
+	background-color: $gray-light;
+	text-align: center;
+	font-size: 1em;
+	font-weight: 300;
+	&:hover {
+		border-color: lighten($navy, 15%);
+		background-color: $white;
+		color: lighten($navy, 15%);
+	}
+	&.btn-round {
+		border-radius: 50px;
+	}
+	.red-bg &, 
+	.blue-bg &,
+	.dark-bg & {
+
+		border-color: $white;
+		color: $white;
+		background-color: transparent;
+		&:hover {
+			background-color: $white;
+			color: $navy;
+			text-decoration: underline;
+		}
+	}
+}
+
+.jw-icon {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f5f6+0,e3eaed+37,c8d7dc+100;Grey+3D+%234 */
+	background: #f2f5f6; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	position: relative;
+	z-index: 1;
+	object svg {
+
+		width: 100%;
+		height: 100%;
+		xposition: absolute;
+		xtop: 0;
+		xleft: 0;
+	}
+
+
+}
+.site-header {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#262c38+0,000715+100 */
+	background: #262c38; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #262c38 0%, #000715 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, #262c38 0%,#000715 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, #262c38 0%,#000715 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	border-bottom: 3px solid $red;
+	h2 {
+		color: $white;
+		text-align: center;
+	}
+}
+
+.top-nav {
+	//background-color: $navy;
+	font-size: 1.5rem;
+
+	.container {
+		& > div {
+			margin-top: 0px;
+		}	
+	}
+	h1 a,
+	li a {
+		padding: 0px 20px 8px;
+	}
+
+	h1, li {
+		& >a,
+		& > span {
+			xheight: 1.5em;
+			font-size: 1em;
+
+			line-height:  1.2em;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+
+	nav {
+		li {
+			& > a {
+				font-size: 1.2rem;
+				color: $white;
+				margin: 0;
+				&:hover {
+					background-color: transparent;
+					text-decoration: underline;
+				}
+			}
+			&.dropdown {
+				&.open > a {
+					color: $gray-dark2;
+				}
+				ul {
+					a {
+						color: $navy;
+					}
+				}
+			}
+		}
+	}
+
+	.navbar-toggle { 
+		color: $white;
+		padding: 10px;
+		margin-top: 10px;
+			z-index: 9999;
+		.glyphicon-remove {
+			xcolor: $navy;
+		}
+		.glyphicon-menu-hamburger {
+			display: none;
+		}
+		&.collapsed {
+			.glyphicon-remove {
+				display: none;
+			}
+			.glyphicon-menu-hamburger {
+				display: block;
+			}
+		}
+	}
+	.site-name-container {
+		padding-top: 20px;
+		width: 75%;
+		float: left;
+	}
+	.navigation-container {
+		width: 25%;
+		float: right;
+	}
+
+	@media (min-width: $screen-md) {
+
+		.container {
+			& > div {
+				margin-top: 20px;
+			}	
+		}
+		.site-name-container {
+			width: 25%;
+			padding-top: 0;
+		}
+		.navigation-container {
+			width: 75%;
+		}    	
+	}
+
+	@media (max-width: $screen-md) {	
+		.navbar-collapse.collapse {
+			display: none !important;
+			&.in {
+				display: block !important;
+			}
+		}
+		.navbar-toggle {
+			display: block;
+		}
+		nav {
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+			background-color: $gray-blue2;
+			padding-top: 20px;
+			z-index: 999;
+			li {
+				a {
+					color: $gray-light2;
+					padding: 10px 20px;
+					xheight: a
+				}
+			}
+		}
+	}
+	@media (min-width: $screen-sm) and (max-width: $screen-md) {
+		.navbar-toggle {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+
+}
+
+footer {
+	padding: 15px 0;
+	border-top: 1px solid $gray-light2;
+	.jw-link {
+		line-height: 1rem;
+		img {
+			max-height: 2.5rem;
+		}
+	}
+	.nav {
+		& > li {
+			& > a {
+				&:hover {
+					background-color: transparent;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+h1.site-name {
+	font-size: 1em;
+	margin-top: 0;
+	margin-bottom: 0;
+	a {
+		padding-left: 2em;
+		color: #fff;
+		background: transparent url('../images/jw-red-icon-small.png') top left no-repeat;
+		background-size: 1.5em;
+		strong {
+			font-weight: 200;
+		}
+		&:hover {
+			color: $highlight-color;
+		}
+	}
+}
+
+
+.quick-tab-btns, .quick-links {
+	.btn {
+		padding: 10px 20px;
+		border-radius: 50px;
+		font-size: 1.25em;
+	}
+}
+
+@import "front-page";
+@import "skills";
+@import "tabs";
+@import "project-spotlight";
+
+
+
+.social-icons-container {
+	li {
+		padding: 5px 10px;
+	}
+	a {
+		padding: 20px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+
+		-webkit-transition: all .3s;
+		transition: all .3s;
+		display: inline-block;
+
+		&:hover {
+			border-color: rgba(255, 255, 255, 0.23);
+		}
+	}
+	&.blue-bg {
+		a:hover {
+			background-color: $red;
+		}
+	}
+	&.red-bg {
+		a:hover {
+			background-color: $gray-blue;
+		}
+	}
+}
+
+.carousel { 
+
+	.carousel-control, 
+	.carousel-control:hover {
+		background: transparent;
+		color: #d80033;
+	}
+	.carousel-indicators {
+		bottom:  0;
+	}
+	.carousel-indicators li {
+		border-color: #d80033;
+		&.active {
+			background-color: $red;
+		}
+	}
+
+}
+
+#client_slideshow {
+	.item {
+		text-align: center;
+		img {
+			max-width: 400px;
+		}
+	}
+}
+
+
+
+
+.other-project {
+
+	background-color: #fff;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	max-width: 900px;
+	margin: 0 auto 20px;
+	padding: 10px;
+
+
+}
+
+.my-services {
+	blockquote {
+
+		border: 0;
+		text-align: center;
+		padding: 1.5rem 0;
+		font-size: 2rem;
+		color: $red;
+
+	}
+}
+
+.connections-container {
+	.label, 
+	.value {
+		line-height: 2.5rem;
+		font-size: 1.25rem;
+		padding: 0 20px;
+	}
+	.label {
+		text-align: right;
+		color: $gray-dark;
+	}
+	.row {
+		border-bottom: 1px solid $gray-light;
+		margin-bottom: 10px;
+		max-width: 550px;
+		padding: 10px 0;
+		margin: 0 auto;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getLanguage ?: 'en' }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    {% include 'partials/metadata.html.twig' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,100italic,300italic,400" rel="stylesheet" type="text/css">
+    
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'/>
+    {% do assets.addCss('theme://css-compiled/main.css', 100) %}
+    {{ assets.css() }}
+
+    {% block javascripts %}
+        {% do assets.addJs('theme://js/modernizr.custom.71422.js', 100) %}
+    {% endblock %}
+    {{ assets.js() }}
+
+{% endblock head %}
+</head>
+<body id="top" class="{{ page.header.body_classes }} {% if not page.home %} back-page {% endif %}">
+    
+    {% block header %} {% endblock %}
+
+    {% block pageContent %} {% endblock %}
+
+    {% block footer %} {% endblock %}
+
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    {% block bottom %}
+        <script>
+        $(function () {
+            $(document).ready(function() {
+              $('.email-link').attr('href', 'mailto:jeff@jeffwilkerson.net').text('jeff@jeffwilkerson.net');
+              $('.front-page-nav-toggle').click(function(e) {
+                e.preventDefault();
+              })
+            });
+        });
+        </script>
+    {% endblock %}
+</body>
+</html>

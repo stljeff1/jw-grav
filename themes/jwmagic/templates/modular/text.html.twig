@@ -1,0 +1,48 @@
+{% if page.header.title is not null %}
+     <h3 class="section-title">{{ page.header.title }}</h3>
+ {% endif %}
+
+{% if page.header.sub_headline is defined %}
+
+    <blockquote>{{ page.header.sub_headline|markdown }}</blockquote>
+
+
+{% endif %}
+
+<div class="row grav-text-module {{ page.header.body_class }} ">
+    {% set image = page.media.images|first %}
+    {% if image %}
+        {% set smallCol = 4 %}
+        {% set largeCol = 8 %}
+        {% if page.header.theme is defined %}
+            {% if page.header.theme == 'sevenbyfive' %}
+                {% set smallCol = 5 %}
+                {% set largeCol = 7 %}
+            {% endif %}
+            {% if page.header.theme == 'ninebythree' %}
+                {% set smallCol = 3 %}
+                {% set largeCol = 9 %}
+            {% endif %}   
+        {% endif %}
+{{ dump(page.header.theme, smallCol) }}
+        {% set smallColClass = 'col-md-' ~ smallCol %}
+        {% set largeColClass = 'col-md-' ~ largeCol %}         
+
+		{% if page.header.image_align == 'left' %}
+            {% set smallColClass = smallColClass ~ ' col-pull-sm-8 col-md-pull-' ~ largeCol %}
+            {% set largeColClass = largeColClass ~ ' col-push-sm-4 col-md-push-' ~ smallCol %}
+        {% endif %}
+
+		<div class="col-sm-8 {{ largeColClass }}">
+    		{{ content }}
+		</div>
+		<div class="col-sm-4 {{ smallColClass }}">
+			{{ image.cropResize(400,400).html('','', 'img-responsive') }}
+		</div>
+	{% else %}	
+		<div class="col-xs-12">
+			{{ content }}
+		</div>
+    {% endif %}
+
+</div>

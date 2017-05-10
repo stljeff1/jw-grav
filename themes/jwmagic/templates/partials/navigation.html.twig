@@ -1,0 +1,68 @@
+{% macro loop(page) %}
+    {% for p in page.children.visible %}
+        {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+        {% if p.children.visible.count > 0 %}
+            <li class="has-children {{ current_page }}">
+                <a href="{{ p.url }}">
+                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
+                    {{ p.menu }}
+                    <span></span>
+                </a>
+                <ul>
+                    {{ _self.loop(p) }}
+                </ul>
+            </li>
+        {% else %}
+            <li class="{{ current_page }}">
+                <a href="{{ p.url }}">
+                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
+                    {{ p.menu }}
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+    {% if theme_config.dropdown.enabled %}
+        {{ _self.loop(pages) }}
+    {% else %}
+        {% for page in pages.children.visible %}
+            {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                {{ dump(page) }}
+             {% if not page.home and page.slug != 'connect' %}
+            <li class="{{ current_page }}">
+                <a href="{{ page.url }}">
+                    {% if page.header.icon %}<i class="fa fa-{{ page.header.icon }}"></i>{% endif %}
+                    {{ page.menu }}
+                </a>
+            </li>
+        {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% for mitem in site.menu %}
+        <li>
+            <a href="{{ mitem.url }}">
+                {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
+                {{ mitem.text }}
+            </a>
+        </li>
+    {% endfor %}
+    {% if config.plugins.login.enabled and grav.user.username %}
+        <li><i class="fa fa-lock"></i> {% include 'partials/login-status.html.twig' %}</li>
+    {% endif %}    
+
+        <li class="dropdown">
+          <a href="{{ page.find('/connect').url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connect <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ site.social['github'].url }}">Code Samples on Github</a></li>
+            <li><a href="http://blog.jeffwilkerson.com/">My Blog (more code samples)</a></li>
+            <li><a href="{{ page.find('/connect').url }}">Other Connections</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav><!-- /.navbar-collapse -->
+    

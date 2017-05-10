@@ -1,0 +1,20 @@
+title: Social Icons
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.theme:
+                      type: select
+                      label: Select theme
+                      default: darkbg
+                      options:
+                        darkbg: Dark Background
+                        lightbg: Light Background

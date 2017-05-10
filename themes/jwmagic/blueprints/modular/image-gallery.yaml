@@ -1,0 +1,48 @@
+title: Tabs
+@extends: 
+    type: default
+    context: blueprints://pages 
+
+form:
+  fields:
+    tabs:
+      fields:
+        tabs:
+          type: tab
+          title: Images
+          fields:
+            header.ui_id:
+              type: text
+              required: true
+              default: my_slideshow
+              label: ID of Slideshow
+            header.show_indicators:
+              type: toggle
+              label: Show Indicators?
+              highlight: 1
+              default: 1
+              options:
+                1: 'Yes'
+                0: 'No'
+              validate:
+                type: bool
+            header.images:
+              name: images
+              type: list
+              label: images
+
+              fields:
+                .image:
+                  type: file
+                  label: Image
+                  destination: 'page@'
+                  limit: 1
+                  multiple: false
+                  accept:
+                    - image/*
+                .title:
+                  type: text
+                  label: Image Title
+                .caption:
+                  type: text
+                  label: Caption

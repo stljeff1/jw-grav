@@ -1,0 +1,119 @@
+title: Quick Links
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        options:
+          type: tab
+          title: Optins
+
+          fields:
+            header.title:
+              type: text
+              label: Title
+            header.body_classes:
+              type: text
+              label: Body Class
+              default: 'quick-links-section'
+            header.btn_class: 
+              type: text
+              label: Button Class
+              default: 'btn btn-round'
+            header.links:
+              type: list
+              name: links
+              label: Links
+              fields:
+                .pages:
+                  type: Pages
+                  label: page
+                  show_all: false
+                  show_modular: false
+                  options:
+                    twitter: twitter
+                    github: github
+                .external:
+                  type: text
+                  label: External URL (will override)
+                .text:
+                  type: text
+                  label: Text
+                .isNewWindow:
+                  type: toggle
+                  label: Open in New Window?
+                  highlight: 0
+                  default: 0
+                  options:
+                    1: 'Yes'
+                    0: 'No'
+                  validate:
+                    type: bool
+
+        advanced:
+          type: tab
+          title: PLUGIN_ADMIN.ADVANCED
+
+          fields:
+            columns:
+              type: columns
+              fields:
+                column1:
+                  type: column
+                  fields:
+
+                    settings:
+                      type: section
+                      title: PLUGIN_ADMIN.SETTINGS
+                      underline: true
+
+                    folder:
+                      type: text
+                      label: PLUGIN_ADMIN.FOLDER_NAME
+                      validate:
+                        rule: slug
+
+                    route:
+                      type: parents
+                      label: PLUGIN_ADMIN.PARENT
+                      classes: fancy
+
+                    name:
+                      type: select
+                      classes: fancy
+                      label: PLUGIN_ADMIN.PAGE_FILE
+                      help: PLUGIN_ADMIN.PAGE_FILE_HELP
+                      default: default
+                      data-options@: '\Grav\Common\Page\Pages::pageTypes'
+
+                    header.body_classes:
+                      type: text
+                      label: PLUGIN_ADMIN.BODY_CLASSES
+
+
+                column2:
+                  type: column
+
+                  fields:
+                    order_title:
+                      type: section
+                      title: PLUGIN_ADMIN.ORDERING
+                      underline: true
+
+                    ordering:
+                      type: toggle
+                      label: PLUGIN_ADMIN.FOLDER_NUMERIC_PREFIX
+                      help: PLUGIN_ADMIN.FOLDER_NUMERIC_PREFIX_HELP
+                      highlight: 1
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
+
+                    order:
+                      type: order
+                      label: PLUGIN_ADMIN.SORTABLE_PAGES
+                      sitemap:

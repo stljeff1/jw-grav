@@ -1,0 +1,31 @@
+title: Tabs
+@extends: 
+    type: default
+    context: blueprints://pages 
+
+form:
+  fields:
+    tabs:
+      fields:
+        tabs:
+          type: tab
+          title: Tabs
+          fields:
+            header.tabs:
+              name: tabs
+              type: list
+              label: Tabs
+
+              fields:
+                .tabText:
+                  type: text
+                  label: Button Text
+                .title:
+                  type: text
+                  label: Title
+                .subtitle:
+                  type: text
+                  label: Subtitle
+                .content:
+                  type: Markdown
+                  label: Content

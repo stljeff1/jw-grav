@@ -1,0 +1,19 @@
+title: Listing
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+
+                  fields:
+                    settings:
+                      fields:
+                        header.list_item_class:
+                          label: List Item Class
+                          type: text

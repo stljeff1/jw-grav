@@ -1,0 +1,11 @@
+<div class="{{ page.header.body_classes }}">
+	<h3 class="section-title">{{page.title}}</h3>
+    {% for module in page.children() %}
+        <article id="{{ _self.pageLinkName(module.menu) }}" class="{{ page.header.list_item_class }}">
+            <div class="container">
+                
+                {{ module.content }}
+            </div>
+        </article>
+    {% endfor %}
+</div>

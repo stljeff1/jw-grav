@@ -1,0 +1,37 @@
+{% if page.header.title is not null %}
+     <h3 class="section-title">{{ page.header.title }}</h3>
+ {% endif %}
+ 
+{{ content }}
+
+<ul class="nav nav-tabs" role="tablist">
+	{% set i = 1 %}
+	{% for tab in page.header.tabs %}
+		<li role="presentation"
+			{% if i == 1 %} {{ 'class="active"' }} {% endif %} 
+		>
+			<a href="#{{ tab.tabText|replace({' ': ''}) ~ i }}" role="tab" data-toggle="tab" aria-expanded="false">{{ tab.tabText }}</a>
+		</li>
+		{% set i = i + 1 %}
+	{% endfor %}
+</ul>
+
+<div class="tab-content">
+	{% set i = 1 %}
+	
+	{% for tab in page.header.tabs %}
+		  	<!-- Tab 1 -->
+	    <div role="tabpanel" 
+	    	class="tab-pane fade {% if i == 1 %} {{ 'active in' }} {% endif %}" 
+	    	id="{{ tab.tabText|replace({' ': ''}) ~ i }}">
+	    		<h4 class="red-text">{{ tab.title}}</h4>
+			<p class="wk-company">{{ tab.subtitle }}</p>
+			<div class="tab-content">
+				{{ tab.content|markdown }}
+			</div>
+	    </div>
+	    {% set i = i + 1 %}
+
+	 
+	{% endfor %}
+</div>

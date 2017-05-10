@@ -1,0 +1,45 @@
+title: Text
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.theme:
+                      type: select
+                      label: Select theme
+                      default: sevenbyfive
+                      options:
+                        sevenbyfive: 7 x 5
+                        eightbyfour: 8 x 4
+                        ninebythree: 9 x 3
+                    name:
+                      default: modular/text
+                      '@data-options': '\Grav\Common\Page\Pages::modularTypes'
+            overrides:
+              fields:
+                header.template:
+                  default: modular/text
+                  '@data-options': '\Grav\Common\Page\Pages::modularTypes'
+        content:
+          fields:
+            header.sub_headline:
+              type: Markdown
+              label: Sub Headline
+            uploads:
+              label: Page Media (first one will be displayed next to your content)
+            header.image_align:
+              type: select
+              label: Image position
+              classes: fancy
+              default: left
+              options:
+                'left': 'Left'
+                'right': 'Right'
+              type:

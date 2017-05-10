@@ -1,0 +1,62 @@
+{% if page.header.title is not null %}
+     <h3 class="section-title">{{ page.header.title }}</h3>
+ {% endif %}
+
+{{ content }}
+
+<div class="skills-listing">
+	<div class="row no-gutter">
+		{% for skill in page.header.skills %}
+
+			<div class="col-md-6 separ">
+				<div class="media">
+
+					<div class="hidden-xs media-left media-bottom icon-skill">
+						{{ page.media[skill.image].html(skill.title, skill.title) }}
+					</div>
+					<div class="media-body">
+						<div class="media-heading title-skill">{{ skill.name }}</div>
+						<div class="meter-skill">
+							<div class="this-skill {{ skill.meterClass }}-bg skill-fill-{{ skill.size }}"></div>
+						</div>
+					</div>
+				</div>
+
+		</div>
+		{% endfor %}
+	</div>
+
+	{% if page.header.otherSkills is not empty %}
+		<div class="row no-gutter other-skills-listing">
+			{% for oSkill in page.header.otherSkills %}
+					<div class="col-xs-12 col-md-4 other-skills">
+				<div class="light-colored-bg box-item">
+						<h4 class="{{ oSkill.headerClass }} title-heading">{{ oSkill.name }}</h4>
+						<ul class="list-unstyled">
+							{% for item in oSkill.items %}
+								<li>
+									{% if item.icon %}
+										<div class="row oSkill">
+											<div class="col-xs-3">
+												<img src="{{ url('theme://images/'~item.icon) }}" class="icon">
+											</div>
+											<div class="col-xs-9">
+												<strong>{{ item.name }}</strong>
+											</div>
+										</div>
+									{% else %}
+										<div class="oSkill">
+											<strong>{{ item.name }}</strong>
+										</div>
+									{% endif %}
+								</li>
+							{% endfor %}
+						</ul>	
+					</div>
+				</div>
+			{% endfor %}
+
+		</div>
+
+	{% endif %}
+</div>

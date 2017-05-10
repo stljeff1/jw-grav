@@ -1,0 +1,257 @@
+
+.front-page-container {
+	height: 100%;
+	width: 100%;
+	background: $gray-light;
+	xposition: relative;
+	xdisplay: flex;
+
+	h2, h3, h4, h5, h6 {
+		text-align: left;
+		margin-bottom: 10px;
+		color: $navy-dark;
+	}
+	h2 {
+		font-size: 3rem;
+		padding: 20px 0;
+		font-weight: 500;
+		span {
+			color: $red;
+		}
+	}
+
+	h3 {
+		font-size: 2.5rem;
+		padding: 10px 0 5px;
+		margin-bottom: 0;
+		margin-top: 0;
+		font-weight: 300;
+
+		&:xbefore { 
+		    position: relative;
+		    top: 1px;
+		    display: inline-block;
+		    font-family: 'Glyphicons Halflings';
+		    font-style: normal;
+		    font-weight: 400;
+		    line-height: 1;
+		    -webkit-font-smoothing: antialiased;
+
+		    content: "\00b7";
+		    color: $red;
+		}
+	}
+
+	h4 {
+		font-size: 1.25rem;
+		text-align: center;
+		font-weight: 300;
+
+	}
+
+	h5 {
+		font-size: 1.75rem;
+	}
+	h6 {
+		font-size: 1.5rem;
+	}
+
+
+
+
+
+	.front-page-block {
+
+	}
+	.block-cotent {
+		xzheight: 100%;
+	}
+	.block-left {
+		background-color: $navy-dark;
+		.block-inner {
+			xheight: 100%;
+		}
+		.block-content {
+			background: transparent url('../images/headshot.jpg') center top no-repeat;
+			background-size: cover;
+			xheight: 100%;
+
+		}
+
+	}
+	.block-right {
+		xwidth: 50%;
+		xmargin: 0 0 0 auto;
+		xposition: relative;
+		.block-content {
+			padding: 1px 30px 0;
+			section {
+				padding: 30px 0;
+				border-bottom: 1px solid $gray-blue2;
+			}
+		}
+		.jw-logo-fixed {
+			position: fixed;
+			top: 30px;
+			right: 30px;
+				text-align: right;
+			img {
+				max-height: 2rem;
+			}
+		}
+			nav {
+				border: 2px solid $navy-dark;
+				border-radius: 6px;
+				background-color: $navy;
+				ul {
+					margin-bottom: 0;
+				}
+				a {
+					line-height: 2;
+					padding: 5px 10px;
+					color: $highlight-color;
+					border-bottom: 2px solid $gray-dark;
+					&:hover {
+						background-color: lighten($navy, 10%);
+						color: $white;
+					}
+
+				}
+				li:last-child a {
+					border-bottom: 0
+				}
+
+			}
+
+	}
+	.top-image-container {
+
+		background: $gray-dark2; /* Old browsers */
+		background: -moz-radial-gradient(center, ellipse cover, $gray-blue3 0%, $navy-dark 100%); /* FF3.6-15 */
+		background: -webkit-radial-gradient(center, ellipse cover, $gray-blue3 0%, $navy-dark 100%); /* Chrome10-25,Safari5.1-6 */
+		background: radial-gradient(ellipse at center, $gray-blue3 0%, $navy-dark 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		
+	}
+	.top-image {
+		max-width: 400px;
+		padding: 30px 0;
+		margin: 0 auto;
+		xheight: 300px;
+		img {
+			border: 3px solid $navy;
+			max-height: 250px;
+		}
+	}
+	.front-page-blurb {
+		text-align: center;
+		background-color: $navy-dark;
+		xheight: 45%;
+		padding-top: 20px;
+		h1 {
+			margin-bottom: 14px;
+				color: $gray-light2;
+			span {
+				display: block;
+				margin-bottom: 10px;
+			}
+			small {
+				display: block;
+				color: $gray-light2;
+				&.red {
+					color: $red;
+				}
+			}
+		}
+		p {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+	.quick-tab-btns {
+		li {
+			text-align: center;
+		}
+	}
+	.social-icons-list {
+		padding: 10px 0;
+		a {
+			padding: 5px;
+			border: 0;
+		}
+		img {
+			max-height: 28px;
+		}
+	}
+
+	.client-list {
+		h4 {
+			height: 2em;
+		}
+	}
+
+	@media (min-width: $screen-md) {
+
+		.block-cotent {
+			height: 100%;
+		}
+		.block-left {
+			position: fixed;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 50%;
+			xbackground-color: $navy-dark;
+			.block-inner {
+				height: 100%;
+			}
+			.block-content {
+				background: transparent url('../images/headshot.jpg') center top no-repeat;
+				background-size: cover;
+				height: 100%;
+
+			}
+
+		}
+		.block-right {
+			width: 50%;
+			margin: 0 0 0 auto;
+			position: relative;
+			x.jw-logo-fixed {
+				position: fixed;
+				top: 30px;
+				right: 30px;
+				img {
+					max-height: 2rem;
+				}
+			}
+
+		}
+		.top-image {
+			height: 55%;
+			img {
+				max-height: 300px;
+			}
+		}
+		.front-page-blurb {
+			height: 45%;
+		}
+	}
+
+
+
+	@media (max-height: 475px) {
+		.top-image {
+			padding: 10px 0;
+			height: 50%;
+			img {
+				max-height: 150px;
+			}
+		}
+		.front-page-blurb {
+			height: 50%;
+			p {
+				display: none;
+			}
+		}
+	}
+}
