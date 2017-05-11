@@ -1,5 +1,5 @@
-{% if headers.seo_description is defined %}
-	<meta name="description" value="{{ seo_description }}"/>
+{% if header.seo_description is defined %}
+	<meta name="description" value="{{ header.seo_description }}"/>
 {% endif %}
 
 {% if headers.sharing_title is defined and headers.sharing_description is defined and headers.sharing_image is defined %}

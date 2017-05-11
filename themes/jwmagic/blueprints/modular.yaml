@@ -25,7 +25,10 @@ form:
               type: text
               label: Sharing Description
             header.sharing_image:
-              type: filepicker
-              folder: '@self'
-              preview_images: true
+              type: file
+              destination: 'page@'
+              limit: 1
+              multiple: false
+              accept:
+                - image/*
               label: Sharing Image
