@@ -1,0 +1,31 @@
+extends@:
+  - parent@
+  - type: modular
+    context: blueprints://pages
+
+
+form:
+  fields:
+    tabs:
+      type: tabs
+
+      fields:
+        options:
+          fields:
+            header.seo_title:
+              type: text
+              label: HTML Title
+            header.seo_description:
+              type: text
+              label: Meta Description
+            header.sharing_title:
+              type: text
+              label: Sharing Title
+            header.sharing_description:
+              type: text
+              label: Sharing Description
+            header.sharing_image:
+              type: filepicker
+              folder: '@self'
+              preview_images: true
+              label: Sharing Image

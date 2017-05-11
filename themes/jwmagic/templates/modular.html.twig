@@ -10,6 +10,8 @@
 {% block bottom %}
     {{ parent() }}
 {% endblock %}
+
+
 {% block header %}
     <header class="site-header">
         <div class="top-nav">
@@ -52,8 +54,12 @@
         
         <section id="{{ module.slug }}" class="{{ module.header.body_classes}}">
             <div class="container">
+
+                <!-- START module.conent -->
                 
                 {{ module.content }}
+
+                <!-- END module.content -->
             </div>
         </section>
     {% endfor %}

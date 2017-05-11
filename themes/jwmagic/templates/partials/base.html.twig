@@ -4,8 +4,18 @@
 <head>
 {% block head %}
     <meta charset="utf-8" />
-    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    {% set pageTitle = '' %}
+    {% if header.seo_title is defined %}
+        {% set pageTitle = header.seo_title %}
+    {% else %}
+        {% if header.title %}
+            {% set pageTitle = header.title|e('html') %}
+        {% endif %}
+    {% endif %}
+    <title>{{ pageTitle }} | {{ site.title|e('html') }}</title>
+
     {% include 'partials/metadata.html.twig' %}
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,100italic,300italic,400" rel="stylesheet" type="text/css">
     

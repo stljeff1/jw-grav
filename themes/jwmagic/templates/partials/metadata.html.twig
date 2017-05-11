@@ -1,3 +1,39 @@
+{% if headers.seo_description is defined %}
+	<meta name="description" value="{{ seo_description }}"/>
+{% endif %}
+
+{% if headers.sharing_title is defined and headers.sharing_description is defined and headers.sharing_image is defined %}
+
+
+<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="jeffwilkerson">
+	<meta name="twitter:title" content="{{ header.sharing_title }}">
+	<meta name="twitter:description" content="{{ header.sharing_description}}.">
+	<meta name="twitter:creator" content="cPalsyYogi">
+	<!-- Twitter Summary card images must be at least 120x120px -->
+	<meta name="twitter:image" content="{{ header.sharing_image }}">
+
+	<!-- Open Graph data -->
+	<meta property="og:title" content="{{ header.sharing_title}}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="{{ page.url(true) }}" />
+	<meta property="og:image" content="{{ header.sharing_image }}" />
+	<meta property="og:description" content="{{ header.sharing_description }}" />
+	<meta property="og:site_name" content="jeffwilkerson.net" />
+	<meta property="fb:admins" content="1593105951005165" />
+
+		<!-- Schema.org markup for Google+ -->
+	<meta itemprop="name" content="{{ headers.sharing_title }}">
+	<meta itemprop="description" content="{{ headers.sharing_description }}">
+	<meta itemprop="image" content="{{ headers.sharing_image }}">
+
+
+
+{% endif %}
+
+
+
 {% for meta in page.metadata %}
 <meta {% if meta.name %}name="{{ meta.name }}" {% endif %}{% if meta.http_equiv %}http-equiv="{{ meta.http_equiv }}" {% endif %}{% if meta.charset %}charset="{{ meta.charset }}" {% endif %}{% if meta.property %}property="{{ meta.property }}" {% endif %}{% if meta.content %}content="{{ meta.content }}" {% endif %}/>
 {% endfor %}
