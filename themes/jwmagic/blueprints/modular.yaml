@@ -26,7 +26,7 @@ form:
               label: Sharing Description
             header.sharing_image:
               type: file
-              destination: 'page@'
+              destination: 'self@'
               limit: 1
               multiple: false
               accept:
