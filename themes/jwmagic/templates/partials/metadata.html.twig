@@ -4,12 +4,10 @@
 
 
 {% if header.sharing_title is defined and header.sharing_description is defined and header.sharing_image is defined %}
-
+	{% set image_url = '' %}
 	{% for image in header.sharing_image %}
 		{% set image_url = base_url_absolute ~ '/' ~ image.path %}
-		{{ dump(page.media[image.name], image_url) }}
 	{% endfor %}
-		 
 <!-- Twitter Card data -->
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="jeffwilkerson">
