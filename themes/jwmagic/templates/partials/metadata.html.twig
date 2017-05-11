@@ -2,9 +2,14 @@
 	<meta name="description" value="{{ header.seo_description }}"/>
 {% endif %}
 
-{% if headers.sharing_title is defined and headers.sharing_description is defined and headers.sharing_image is defined %}
 
+{% if header.sharing_title is defined and header.sharing_description is defined and header.sharing_image is defined %}
 
+	{% for image in header.sharing_image %}
+		{{ dump(page.media) }}
+		{% set image_url = url(image.path) %}
+	{% endfor %}
+		
 <!-- Twitter Card data -->
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="jeffwilkerson">
@@ -12,13 +17,12 @@
 	<meta name="twitter:description" content="{{ header.sharing_description}}.">
 	<meta name="twitter:creator" content="cPalsyYogi">
 	<!-- Twitter Summary card images must be at least 120x120px -->
-	<meta name="twitter:image" content="{{ header.sharing_image }}">
-
+	<meta name="twitter:image" content="{{ image_url }}">
 	<!-- Open Graph data -->
 	<meta property="og:title" content="{{ header.sharing_title}}" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="{{ page.url(true) }}" />
-	<meta property="og:image" content="{{ header.sharing_image }}" />
+	<meta property="og:image" content="{{ image_url }}" />
 	<meta property="og:description" content="{{ header.sharing_description }}" />
 	<meta property="og:site_name" content="jeffwilkerson.net" />
 	<meta property="fb:admins" content="1593105951005165" />
@@ -26,7 +30,7 @@
 		<!-- Schema.org markup for Google+ -->
 	<meta itemprop="name" content="{{ headers.sharing_title }}">
 	<meta itemprop="description" content="{{ headers.sharing_description }}">
-	<meta itemprop="image" content="{{ headers.sharing_image }}">
+	<meta itemprop="image" content="{{ image_url }}">
 
 
 
