@@ -43,6 +43,12 @@ a, a:visited, a:link {
 			color: $highlight-color;
 		}
 	}
+	&.red-text {
+		color: $red;
+		&:hover {
+			color: darken($red, 20%);
+		}
+	}
 }
 
 
@@ -316,6 +322,15 @@ footer {
 					background-color: transparent;
 					text-decoration: underline;
 				}
+			}
+		}
+	}
+	@media (max-width: $screen-md) {
+		& {
+			text-align: center;
+			.media {
+				max-width: 200px;
+				margin: 0 auto;
 			}
 		}
 	}
