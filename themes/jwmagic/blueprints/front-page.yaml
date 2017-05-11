@@ -1,0 +1,34 @@
+extends@:
+  - parent@
+  - type: front-page
+    context: blueprints://pages
+
+
+form:
+  fields:
+    tabs:
+      type: tabs
+
+      fields:
+        options:
+          fields:
+            header.seo_title:
+              type: text
+              label: HTML Title
+            header.seo_description:
+              type: text
+              label: Meta Description
+            header.sharing_title:
+              type: text
+              label: Sharing Title
+            header.sharing_description:
+              type: text
+              label: Sharing Description
+            header.sharing_image:
+              type: file
+              destination: 'self@'
+              limit: 1
+              multiple: false
+              accept:
+                - image/*
+              label: Sharing Image
