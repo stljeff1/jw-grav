@@ -509,6 +509,11 @@ blockquote p {
       color: #030e1e;
       text-decoration: underline; }
 
+.quick-tab-btns .btn, .quick-links .btn {
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1.25em; }
+
 .jw-icon {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f5f6+0,e3eaed+37,c8d7dc+100;Grey+3D+%234 */
   background: #f2f5f6;
@@ -650,11 +655,6 @@ h1.site-name {
       font-weight: 200; }
     h1.site-name a:hover {
       color: #ffffd5; }
-
-.quick-tab-btns .btn, .quick-links .btn {
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 1.25em; }
 
 .front-page-container {
   height: 100%;
@@ -980,13 +980,31 @@ h1.site-name {
 .connections-container .label {
   text-align: right;
   color: #222; }
-.connections-container .row {
+
+.form-container .form-field:before, .form-container .form-field:after {
+  content: " ";
+  display: table; }
+.form-container .form-field:after {
+  clear: both; }
+.form-container .form-field .form-label {
+  width: 20%;
+  float: left;
+  text-align: right;
+  padding: 6px 12px;
+  line-height: 1.4286; }
+.form-container .form-field .form-data {
+  width: 80%;
+  float: left; }
+
+.connections-container .row,
+.form-container .form-field {
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 10px;
   max-width: 550px;
   padding: 10px 0;
   margin: 0 auto; }
-  .connections-container .row:last-child {
+  .connections-container .row:last-child,
+  .form-container .form-field:last-child {
     border-bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */
