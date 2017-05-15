@@ -3,6 +3,7 @@ title: Connect
 form:
     name: my-nice-form
     action: /connect
+    classes: form-horizontal
     fields:
         - name: name
           id: name
