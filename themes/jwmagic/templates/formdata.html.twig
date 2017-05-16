@@ -1,6 +1,12 @@
 {% extends 'partials/base.html.twig' %}
 
-{% block content %}
+{% block header %}
+
+    {% include "partials/header.html.twig" %}
+
+{% endblock %}
+
+{% block pageContent %}
 
     {{ content }}
 
@@ -10,3 +16,9 @@
     {% include "forms/data.html.twig" %}
 
 {% endblock %}
+
+
+{% block footer %}
+    {% include "partials/footer.html.twig" %}
+{% endblock %}
+

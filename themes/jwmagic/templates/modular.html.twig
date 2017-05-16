@@ -13,39 +13,9 @@
 
 
 {% block header %}
-    <header class="site-header">
-        <div class="top-nav">
-            <div class="container clearfix">
-                <div class="site-name-container">
 
-                        <h1 class="site-name">
-                            <a class="" href="{{ home_url }}">
-                                Jeff Wilkerson
+    {% include "partials/header.html.twig" %}
 
-                            </a>
-                        </h1>
-                </div>
-                <div class="navigation-container">
-
-                    {% block header_navigation %}
-                        {% include 'partials/navigation.html.twig' %}
-                    {% endblock %}
-                </div>
-                <div class="hidden-md hidden-lg">
-
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="glyphicon glyphicon-menu-hamburger"></i>
-                        <i class="glyphicon glyphicon-remove"></i>
-                    </button>
-                </div>
-            
-            </div><!-- /.container-fluid -->
-        </div>
-        <div class="page-title-container">
-            <h2 class="page-title">{{ page.title }} </h2>
-        </div>
-    </header>
 {% endblock %}
 
 {% block pageContent %}
@@ -67,42 +37,5 @@
 
 
 {% block footer %}
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                    <a href="{{ home_url }}" class="jw-link" title="Jeff Wilkerson - HTML, Javascript, CSS">
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="{{ url('theme://images/jw-red-icon-small.png') }}" alt="Portlan Web Developer Jeff Wilkerson">
-                            </div>
-                            <div class="media-body">
-                                <div class="media-heading">
-                                    Jeff Wilkerson<br/>
-                                    &copy; 2017
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{ page.find('/connect').url }}">Connect with Me</a></li>
-                        <li><a href="#top">Back to Top</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-                    <div class="row">
-                        <div class="col-xs-12 text-center">
-                            <p>This side built with <a href="http://www.getgrav.org/" target="_blank" class="red-text">Grav CMS</a>!<br/>
-                            See the <a href="{{ site.social.github.url }}jw-grav" class="red-text" target="_blank">source code for this website</a>.
-                            </p>
-                        </div>
-                    </div>
-        </div>
-    </footer>
+    {% include "partials/footer.html.twig" %}
 {% endblock %}

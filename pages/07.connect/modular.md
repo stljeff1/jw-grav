@@ -33,11 +33,18 @@ form:
           type: textarea
           validate:
             required: true
+        - name: g-recaptcha-response
+          label: Captcha
+          type: captcha
+          recaptcha_site_key: ENTER_YOUR_CAPTCHA_SITE_KEY
+          recaptcha_not_validated: 'Captcha not valid!'
+          validate:
+            required: true
 
     buttons:
         - type: submit
           value: Submit
-          classes: btn btn-primary btn-block
+          classes: btn btn-primary 
 
     process:
         - email:
