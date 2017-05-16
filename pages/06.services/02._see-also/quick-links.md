@@ -1,7 +1,7 @@
 ---
 title: 'See Also'
 body_classes: red-bg
-btn_class: 'btn btn-round'
+btn_class: btn
 links:
     -
         pages: /projects
