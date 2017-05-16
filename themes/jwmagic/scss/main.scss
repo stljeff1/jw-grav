@@ -18,7 +18,8 @@ $screen-lg: 1200px;
 	}
 }
 
-
+@import "css-toggle-switch/toggle-switch";
+@import "css-toggle-switch/toggle-switch-rem";
 @import "block-grid";
 @import "format";
 
@@ -244,6 +245,9 @@ blockquote p {
 }
 
 .connections-container {
+	.row {
+		max-width: 550px;
+	}
 	.label, 
 	.value {
 		line-height: 2.5rem;
@@ -257,6 +261,8 @@ blockquote p {
 }
 
 .form-container {
+	max-width: 550px;
+	margin: 0 auto;
 	.form-field {
 		@include clearfix();
 		.form-label {
@@ -271,13 +277,22 @@ blockquote p {
 			float: left;
 		}
 	}
+	.buttons {
+		text-align: center;
+		.btn.btn-primary {
+			background-color: $navy;
+			color: $white;
+			&:hover {
+				background-color: darken($navy, 20%);
+			}
+		}
+	}
 }
 
 .connections-container .row,
 .form-container .form-field {
 	border-bottom: 1px solid $gray-light;
 	margin-bottom: 10px;
-	max-width: 550px;
 	padding: 10px 0;
 	margin: 0 auto;
 	&:last-child {

@@ -1,0 +1,45 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
+{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
+
+{% block javascripts %}
+{% endblock %}
+
+
+{% block bottom %}
+    {{ parent() }}
+{% endblock %}
+
+
+{% block header %}
+
+    {% include "partials/header.html.twig" %}
+
+{% endblock %}
+
+{% block pageContent %}
+    {{ page.content }}
+
+    <div class="row">
+    {% for module in page.collection() %}
+        <div class="col-xs-12 coll-sm-6">
+            <section id="{{ module.slug }}" class="{{ module.header.body_classes}}">
+                <div class="container">
+
+                    <!-- START module.conent -->
+                    
+                    {{ module.content }}
+
+                    <!-- END module.content -->
+                </div>
+            </section>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+
+{% block footer %}
+    {% include "partials/footer.html.twig" %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "forms/field.html.twig" %}
+
+
+{% block input_attributes %}
+    type="checkbox"
+    {{ parent() }}
+{% endblock %}
+
+
+{% block append %}
+
+	<span class="">
+      <span>Off</span>
+      <span>On</span>
+      <a></a>
+    </span>
+{% endblock append %}
+
+{% block input %}
+	{% set field = field|merge({'wrapper_classes': 'switch-light switch-holo'}) %}
+{{ parent() }}
+{% endblock %}

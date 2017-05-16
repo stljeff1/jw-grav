@@ -8,7 +8,21 @@
 
 {% block pageContent %}
 
-    {{ content }}
+	<section>
+		<div class="container">
+			{{ content }}
+{{ dump(form.fields['fullname']['name']) }}
+			<p class="lead text-center">Thanks for the feedback, {{ form.name }}!!</p>
+		</div>
+	</section>
+
+	<section class="blue-bg">
+		<div class="container">
+			{% include "modular/social.html.twig" %}
+		</div>
+	</section>
+
+
 
     <div class="alert">{{ form.message }}</div>
     <p>Here is the summary of what you wrote to us:</p>
