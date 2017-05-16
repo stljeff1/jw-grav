@@ -1,8 +1,11 @@
+{% if page.header.title is not null %}
+     <h3 class="section-title">{{ page.header.title }}</h3>
+ {% endif %}
+
+{{ page.content }}
 
 <div class="form-container">
 	{% include "forms/form.html.twig" %}
 </div>
-
-{{ page.content }}
 
 <h1>wtf?</h1>
