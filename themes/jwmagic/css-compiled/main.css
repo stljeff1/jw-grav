@@ -2352,11 +2352,6 @@ h1.site-name {
       line-height: 1.4286; }
     .form-container .form-field .form-data {
       max-width: 500px; }
-  .form-container .buttons .btn.btn-primary {
-    background-color: #030e1e;
-    color: #fff; }
-    .form-container .buttons .btn.btn-primary:hover {
-      background-color: black; }
 
 .connections-list .row,
 .form-container .form-field {

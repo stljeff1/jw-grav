@@ -111,7 +111,7 @@ blockquote p {
 }
 
 
-.btn, a.btn {
+.btn, a.btn,  {
 	border-color: $navy;
 	border-width: 2px;
 	color: $white;
@@ -332,11 +332,6 @@ blockquote p {
 	}
 	.buttons {
 		.btn.btn-primary {
-			background-color: $navy;
-			color: $white;
-			&:hover {
-				background-color: darken($navy, 20%);
-			}
 		}
 	}
 }
