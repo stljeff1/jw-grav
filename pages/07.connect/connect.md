@@ -24,7 +24,7 @@ form:
         -
             name: fullname
             id: fullname
-            label: Name
+            label: false
             classes: 'form-control form-control-lg'
             placeholder: 'Enter your name'
             autocomplete: 'on'
@@ -35,7 +35,7 @@ form:
             name: email
             id: email
             classes: 'form-control form-control-lg'
-            label: Email
+            label: false
             placeholder: 'Enter your email address'
             type: email
             validate:
@@ -43,7 +43,7 @@ form:
                 required: true
         -
             name: message
-            label: Message
+            label: false
             classes: 'form-control form-control-lg'
             size: long
             placeholder: 'Enter your message'
@@ -52,7 +52,7 @@ form:
                 required: true
         -
             name: g-recaptcha-response
-            label: Captcha
+            label: false
             type: captcha
             recaptcha_site_key: ENTER_YOUR_CAPTCHA_SITE_KEY
             recaptcha_not_validated: 'Captcha not valid!'

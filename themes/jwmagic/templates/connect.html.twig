@@ -20,7 +20,7 @@
 
 {% block pageContent %}
     {{ page.content }}
-{{ dump(page.collection, 'hey') }}
+{{ dump(page.find('/connect/_contact'), 'hey') }}
                 <div class="container">
     <div class="row">
     {% for module in page.collection() %}
