@@ -82,7 +82,7 @@
 	.block-right {
 		xwidth: 50%;
 		xmargin: 0 0 0 auto;
-		xposition: relative;
+		position: relative;
 		.block-content {
 			padding: 1px 30px 0;
 			section {
@@ -90,16 +90,43 @@
 				border-bottom: 1px solid $gray-blue2;
 			}
 		}
-		.jw-logo-fixed {
+		.front-page-nav-container {
 			position: fixed;
-			top: 30px;
-			right: 30px;
-				text-align: right;
-			img {
-				max-height: 2rem;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: $white;
+			
+			
+			xvisibility: hidden;
+			transition: all .4s ease-in-out;
+			&.affix {
+				background-color: rgba(255, 255, 255, 1);
+				
+				xvisibility: visible;
+				nav {
+					a {
+						color: $gray-blue2;
+					}
+				}
 			}
-		}
+			.nav-toggle {
+				position: absolute;
+				top: 10px;
+				right: 30px;
+				text-align: right;
+				z-index: 999;
+				img {
+					max-height: 2rem;
+				}
+			}
 			nav {
+				border-bottom: 3px solid $navy;
+				a {
+					font-weight: bold;
+				}
+			}
+			xnav {
 				border: 2px solid $navy-dark;
 				border-radius: 6px;
 				background-color: $navy;
@@ -122,6 +149,7 @@
 				}
 
 			}
+		}
 
 	}
 	.top-image-container {
@@ -216,6 +244,27 @@
 			width: 50%;
 			margin: 0 0 0 auto;
 			position: relative;
+			.front-page-nav-container {
+				left: 50%;
+				right: 0%;
+				width: auto;
+				background-color: rgba(255, 255, 255, 0);
+				border-bottom: 3px solid $gray-light;
+				nav {
+					border: none;
+					a {
+						color: $gray-light2;
+						&:hover {
+							color: lighten($gray-blue2, 20%);
+						}
+					}
+				}
+				&.affix {
+					border-color: $navy;
+
+				}
+
+			}
 			x.jw-logo-fixed {
 				position: fixed;
 				top: 30px;

@@ -1705,7 +1705,7 @@ html, body {
 a, a:visited, a:link {
   color: #2D2A32; }
   a:hover, a:visited:hover, a:link:hover {
-    color: #524d5c; }
+    color: #5f5969; }
   .red-bg a, .red-bg a:visited, .red-bg a:link {
     color: #fff; }
     .red-bg a:hover, .red-bg a:visited:hover, .red-bg a:link:hover {
@@ -1749,7 +1749,7 @@ blockquote p {
 .red-bg .section-title, .blue-bg .section-title {
   color: #fff; }
 
-.light-colored-bg {
+.light-colored-bg, .white-bg {
   background-color: #fff; }
 
 .box-item {
@@ -1891,7 +1891,7 @@ blockquote p {
         padding: 10px 20px;
         xheight: a; } }
   @media (min-width: 768px) and (max-width: 992px) {
-    .top-nav .navbar-toggle {
+    .top-nav x.navbar-toggle {
       position: absolute;
       left: 0;
       top: 0; } }
@@ -1927,6 +1927,7 @@ h1.site-name {
     h1.site-name a:hover {
       color: #ffffd5; }
 
+/*@import "nav";*/
 .front-page-container {
   height: 100%;
   width: 100%;
@@ -1981,35 +1982,53 @@ h1.site-name {
   .front-page-container .block-right {
     xwidth: 50%;
     xmargin: 0 0 0 auto;
-    xposition: relative; }
+    position: relative; }
     .front-page-container .block-right .block-content {
       padding: 1px 30px 0; }
       .front-page-container .block-right .block-content section {
         padding: 30px 0;
         border-bottom: 1px solid #2D2A32; }
-    .front-page-container .block-right .jw-logo-fixed {
+    .front-page-container .block-right .front-page-nav-container {
       position: fixed;
-      top: 30px;
-      right: 30px;
-      text-align: right; }
-      .front-page-container .block-right .jw-logo-fixed img {
-        max-height: 2rem; }
-    .front-page-container .block-right nav {
-      border: 2px solid #000715;
-      border-radius: 6px;
-      background-color: #030e1e; }
-      .front-page-container .block-right nav ul {
-        margin-bottom: 0; }
-      .front-page-container .block-right nav a {
-        line-height: 2;
-        padding: 5px 10px;
-        color: #ffffd5;
-        border-bottom: 2px solid #222; }
-        .front-page-container .block-right nav a:hover {
-          background-color: #08244c;
-          color: #fff; }
-      .front-page-container .block-right nav li:last-child a {
-        border-bottom: 0; }
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      xvisibility: hidden;
+      transition: all .4s ease-in-out; }
+      .front-page-container .block-right .front-page-nav-container.affix {
+        background-color: white;
+        xvisibility: visible; }
+        .front-page-container .block-right .front-page-nav-container.affix nav a {
+          color: #2D2A32; }
+      .front-page-container .block-right .front-page-nav-container .nav-toggle {
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        text-align: right;
+        z-index: 999; }
+        .front-page-container .block-right .front-page-nav-container .nav-toggle img {
+          max-height: 2rem; }
+      .front-page-container .block-right .front-page-nav-container nav {
+        border-bottom: 3px solid #030e1e; }
+        .front-page-container .block-right .front-page-nav-container nav a {
+          font-weight: bold; }
+      .front-page-container .block-right .front-page-nav-container xnav {
+        border: 2px solid #000715;
+        border-radius: 6px;
+        background-color: #030e1e; }
+        .front-page-container .block-right .front-page-nav-container xnav ul {
+          margin-bottom: 0; }
+        .front-page-container .block-right .front-page-nav-container xnav a {
+          line-height: 2;
+          padding: 5px 10px;
+          color: #ffffd5;
+          border-bottom: 2px solid #222; }
+          .front-page-container .block-right .front-page-nav-container xnav a:hover {
+            background-color: #08244c;
+            color: #fff; }
+        .front-page-container .block-right .front-page-nav-container xnav li:last-child a {
+          border-bottom: 0; }
   .front-page-container .top-image-container {
     background: #2D2E2E;
     /* Old browsers */
@@ -2077,6 +2096,20 @@ h1.site-name {
       width: 50%;
       margin: 0 0 0 auto;
       position: relative; }
+      .front-page-container .block-right .front-page-nav-container {
+        left: 50%;
+        right: 0%;
+        width: auto;
+        background-color: rgba(255, 255, 255, 0);
+        border-bottom: 3px solid #eaeaea; }
+        .front-page-container .block-right .front-page-nav-container nav {
+          border: none; }
+          .front-page-container .block-right .front-page-nav-container nav a {
+            color: #BCABAE; }
+            .front-page-container .block-right .front-page-nav-container nav a:hover {
+              color: #5f5969; }
+        .front-page-container .block-right .front-page-nav-container.affix {
+          border-color: #030e1e; }
       .front-page-container .block-right x.jw-logo-fixed {
         position: fixed;
         top: 30px;
@@ -2243,50 +2276,84 @@ h1.site-name {
   font-size: 2rem;
   color: #d80033; }
 
-.connections-container .row {
-  max-width: 550px; }
-.connections-container .label,
-.connections-container .value {
+.connections-list .row {
+  xmax-width: 550px; }
+.connections-list .label,
+.connections-list .value {
   line-height: 2.5rem;
   font-size: 1.25rem;
-  padding: 0 20px; }
-.connections-container .label {
-  text-align: right;
-  color: #222; }
+  padding-left: 15px;
+  padding-right: 15px; }
+.connections-list .label {
+  color: #030e1e;
+  text-align: left; }
+@media (max-width: 992px) {
+  .connections-list .label,
+  .connections-list .value {
+    line-height: 1; }
+  .connections-list .label {
+    padding: .6em .6em 0; } }
+
+.connections-page {
+  height: auto;
+  background-color: #fff; }
+  .connections-page > .row {
+    margin-left: 0;
+    margin-right: 0; }
+  .connections-page section {
+    padding-top: 15px;
+    padding-bottom: 0; }
+  @media (min-width: 992px) {
+    .connections-page {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+66,0+67 */
+      background: -moz-linear-gradient(left, white 0%, white 66.67%, rgba(255, 255, 255, 0) 66.671%, rgba(255, 255, 255, 0) 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, white 0%, white 66.67%, rgba(255, 255, 255, 0) 66.671%, rgba(255, 255, 255, 0) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, white 0%, white 66.67%, rgba(255, 255, 255, 0) 66.671%, rgba(255, 255, 255, 0) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+      .connections-page #_contact {
+        max-width: 780px;
+        margin: 0 0 0 auto; }
+      .connections-page #_connections {
+        max-width: 390px;
+        margin: 0 auto 0 0; } }
+  .connections-page .section-title {
+    text-align: left;
+    font-weight: 300; }
+  .connections-page hr {
+    background-color: #2D2A32;
+    border-color: #2D2A32; }
+  .connections-page a:hover {
+    color: #d80033; }
 
 .form-container {
-  max-width: 550px;
+  xmax-width: 550px;
   margin: 0 auto; }
-  .form-container .form-field:before, .form-container .form-field:after {
-    content: " ";
-    display: table; }
-  .form-container .form-field:after {
-    clear: both; }
-  .form-container .form-field .form-label {
-    width: 20%;
-    float: left;
-    text-align: right;
-    padding: 6px 12px;
-    line-height: 1.4286; }
-  .form-container .form-field .form-data {
-    width: 80%;
-    float: left; }
-  .form-container .buttons {
-    text-align: center; }
-    .form-container .buttons .btn.btn-primary {
-      background-color: #030e1e;
-      color: #fff; }
-      .form-container .buttons .btn.btn-primary:hover {
-        background-color: black; }
+  .form-container .form-field {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    .form-container .form-field:before, .form-container .form-field:after {
+      content: " ";
+      display: table; }
+    .form-container .form-field:after {
+      clear: both; }
+    .form-container .form-field .form-label {
+      width: 20%;
+      float: left;
+      text-align: right;
+      padding: 6px 12px;
+      line-height: 1.4286; }
+    .form-container .form-field .form-data {
+      max-width: 500px; }
+  .form-container .buttons .btn.btn-primary {
+    background-color: #030e1e;
+    color: #fff; }
+    .form-container .buttons .btn.btn-primary:hover {
+      background-color: black; }
 
-.connections-container .row,
+.connections-list .row,
 .form-container .form-field {
-  border-bottom: 1px solid #eaeaea;
-  margin-bottom: 10px;
-  padding: 10px 0;
-  margin: 0 auto; }
-  .connections-container .row:last-child,
-  .form-container .form-field:last-child {
-    border-bottom: 0; }
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=main.css.map */

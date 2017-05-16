@@ -36,7 +36,7 @@ html, body  {
 a, a:visited, a:link {
 	color: $gray-blue2;
 	&:hover {
-		color: lighten($gray-blue2, 15%);;
+		color: lighten($gray-blue2, 20%);;
 	}
 	.red-bg & {
 		color: $white;
@@ -99,7 +99,7 @@ blockquote p {
 	}
 }
 
-.light-colored-bg {
+.light-colored-bg, .white-bg {
 	background-color: #fff;
 }
 
@@ -147,11 +147,12 @@ blockquote p {
 	.btn {
 		padding: 10px 20px;
 		border-radius: 50px;
-		font-size: 1.25em;
+			font-size: 1.25em;
 	}
 }
 
 @import "site-header";
+/*@import "nav";*/
 @import "front-page";
 @import "skills";
 @import "tabs";
@@ -244,27 +245,80 @@ blockquote p {
 	}
 }
 
-.connections-container {
+.connections-list {
 	.row {
-		max-width: 550px;
+		xmax-width: 550px;
 	}
 	.label, 
 	.value {
 		line-height: 2.5rem;
 		font-size: 1.25rem;
-		padding: 0 20px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	.label {
-		text-align: right;
-		color: $gray-dark;
+		color: $navy;
+		text-align: left;
+	}
+	@media (max-width: $screen-md) {
+		.label,
+		.value {
+			line-height: 1;
+		}
+		.label {
+			padding: .6em .6em 0;
+		}
+	}
+}
+.connections-page {
+	height: auto;
+	
+	& > .row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	background-color: $white;
+		section {
+			padding-top: 15px;
+			padding-bottom: 0;
+		}
+	@media (min-width: $screen-md) {
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+66,0+67 */
+		background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 66.67%, rgba(255,255,255,0) 66.671%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 66.67%,rgba(255,255,255,0) 66.671%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 66.67%,rgba(255,255,255,0) 66.671%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		
+		#_contact { 
+			max-width: 780px;
+			margin: 0 0 0 auto;
+		}
+		#_connections {
+			max-width: 390px;
+			margin: 0 auto 0 0;
+		}
+
+	}
+	.section-title {
+		text-align: left;
+		font-weight: 300
+	}
+	hr {
+		background-color: $gray-blue2;
+		border-color: $gray-blue2;
+	}
+	a:hover {
+		color: $red;
 	}
 }
 
 .form-container {
-	max-width: 550px;
+	xmax-width: 550px;
 	margin: 0 auto;
 	.form-field {
 		@include clearfix();
+		padding-top: 10px;
+		padding-bottom: 10px;
 		.form-label {
 			width: 20%;
 			float: left;
@@ -273,12 +327,10 @@ blockquote p {
 			line-height: 1.4286;
 		}
 		.form-data {
-			width: 80%;
-			float: left;
+			max-width: 500px;
 		}
 	}
 	.buttons {
-		text-align: center;
 		.btn.btn-primary {
 			background-color: $navy;
 			color: $white;
@@ -289,13 +341,7 @@ blockquote p {
 	}
 }
 
-.connections-container .row,
+.connections-list .row,
 .form-container .form-field {
-	border-bottom: 1px solid $gray-light;
 	margin-bottom: 10px;
-	padding: 10px 0;
-	margin: 0 auto;
-	&:last-child {
-		border-bottom: 0;
-	}
 }
