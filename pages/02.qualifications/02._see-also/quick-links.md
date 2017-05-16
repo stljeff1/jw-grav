@@ -1,14 +1,14 @@
 ---
 title: 'See Also...'
 body_classes: blue-bg
-btn_class: 'btn btn-round'
+btn_class: 'btn '
 links:
     -
         pages: /projects
         text: 'Current Projects'
         isNewWindow: false
     -
-        pages: github
+        pages: twitter
         text: 'Code Snippets'
         isNewWindow: true
     -
