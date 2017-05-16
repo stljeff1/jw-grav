@@ -1,6 +1,6 @@
 ---
 body_classes: 'red-bg quick-links-section'
-btn_class: 'btn btn-round'
+btn_class: 'btn '
 links:
     -
         pages: /qualifications
