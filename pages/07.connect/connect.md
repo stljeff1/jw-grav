@@ -66,8 +66,8 @@ form:
     process:
         -
             email:
-                from: '{{ config.plugins.email.from }}'
-                to: ['{{ config.plugins.email.from }}', '{{ form.value.email }}']
+                from: ['{{ config.plugins.email.from }}', '{{ form.value.email }}']
+                to: '{{ config.plugins.email.from }}'
                 subject: '[Feedback] {{ form.value.name|e }}'
                 body: '{% include ''forms/data.html.twig'' %}'
         -
