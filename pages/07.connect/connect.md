@@ -54,7 +54,7 @@ form:
             name: g-recaptcha-response
             label: false
             type: captcha
-            recaptcha_site_key: ENTER_YOUR_CAPTCHA_SITE_KEY
+            recaptcha_site_key: 6LdCiSEUAAAAAOW-5Q6zy1nQifMd3N_p8f-mZ0j3
             recaptcha_not_validated: 'Captcha not valid!'
             validate:
                 required: false
@@ -64,6 +64,9 @@ form:
             value: Submit
             classes: 'btn btn-primary'
     process:
+        - 
+            captcha:
+                recaptcha_secret: 6LdCiSEUAAAAALaAxx_XaPUDC5ybfImjHal_ZlzK
         -
             email:
                 from: ['{{ config.plugins.email.from }}', '{{ form.value.email }}']
