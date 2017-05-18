@@ -1701,6 +1701,9 @@ html, body {
   font-size: 16px;
   color: #0F0F0F;
   background-color: #eaeaea; }
+  @media (max-width: 992px) {
+    html, body {
+      font-size: 14px; } }
 
 a, a:visited, a:link {
   color: #2D2A32; }
@@ -1945,13 +1948,13 @@ h1.site-name {
     margin-bottom: 10px;
     color: #000715; }
   .front-page-container h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 20px 0;
     font-weight: 300; }
     .front-page-container h2 span {
       color: #d80033; }
   .front-page-container h3 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     padding: 10px 0 5px;
     margin-bottom: 0;
     margin-top: 0;
@@ -1968,13 +1971,13 @@ h1.site-name {
       content: "\00b7";
       color: #d80033; }
   .front-page-container h4 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: 300; }
   .front-page-container h5 {
-    font-size: 1.75rem; }
+    font-size: 1.25rem; }
   .front-page-container h6 {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .front-page-container p.quick-links {
     margin-top: 30px; }
   .front-page-container .block-cotent {
@@ -2086,6 +2089,12 @@ h1.site-name {
   .front-page-container .client-list h4 {
     height: 2em; }
   @media (min-width: 992px) {
+    .front-page-container h2 {
+      font-size: 4rem; }
+    .front-page-container h3 {
+      font-size: 2.5rem; }
+    .front-page-container h4 {
+      font-size: 1.75rem; }
     .front-page-container .block-cotent {
       height: 100%; }
     .front-page-container .block-left {

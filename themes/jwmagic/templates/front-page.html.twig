@@ -75,7 +75,9 @@
                         <li>UI/UX/IA</li>
                     </ul>
                     <p class="text-main">I work well with designers, content specialists, and backend developers. I am interested in tackling challenges in content management and web applications.   </p>
-
+                    <div class="hidden-md hidden-lg">
+                        <img src="{{ url('theme://images/wilkerson-suzygram.jpg') }}" alt="I have a dog. We live in Portland." class="img-responsive" />
+                    </div>
                 </section>
                 <section>
                     <h2>Things I <span>do</span> well</h2>
@@ -199,8 +201,11 @@
 
                 <section>
                     <h2>Blog Posts...</h2>
-                    <p>Coming soon. For now, go to <a href="http://blog.jeffwilkerson.net/">blog.jeffwilkerson.net</a>.</p>
+                
+                    {{ ListBlogPosts() }}
                 </section>
+
+
                 <section>
                     <h2>Silly Instagrams...</h2>
                     <ul class="block-grid-xs-2 block-grid-sm-3">
