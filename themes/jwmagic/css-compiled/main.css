@@ -1945,9 +1945,9 @@ h1.site-name {
     margin-bottom: 10px;
     color: #000715; }
   .front-page-container h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 20px 0;
-    font-weight: 500; }
+    font-weight: 300; }
     .front-page-container h2 span {
       color: #d80033; }
   .front-page-container h3 {
@@ -1955,7 +1955,7 @@ h1.site-name {
     padding: 10px 0 5px;
     margin-bottom: 0;
     margin-top: 0;
-    font-weight: 300; }
+    font-weight: 500; }
     .front-page-container h3:xbefore {
       position: relative;
       top: 1px;
@@ -1975,6 +1975,8 @@ h1.site-name {
     font-size: 1.75rem; }
   .front-page-container h6 {
     font-size: 1.5rem; }
+  .front-page-container p.quick-links {
+    margin-top: 30px; }
   .front-page-container .block-cotent {
     xzheight: 100%; }
   .front-page-container .block-left {
@@ -2000,6 +2002,7 @@ h1.site-name {
       left: 0;
       width: 100%;
       background-color: #fff;
+      z-index: 9999;
       xvisibility: hidden;
       transition: all .4s ease-in-out; }
       .front-page-container .block-right .front-page-nav-container.affix {
@@ -2090,7 +2093,7 @@ h1.site-name {
       left: 0;
       top: 0;
       height: 100%;
-      width: 50%;
+      width: 40%;
       xbackground-color: #000715; }
       .front-page-container .block-left .block-inner {
         height: 100%; }
@@ -2099,11 +2102,11 @@ h1.site-name {
         background-size: cover;
         height: 100%; }
     .front-page-container .block-right {
-      width: 50%;
+      width: 60%;
       margin: 0 0 0 auto;
       position: relative; }
       .front-page-container .block-right .front-page-nav-container {
-        left: 50%;
+        left: 40%;
         right: 0%;
         width: auto;
         background-color: rgba(255, 255, 255, 0);
@@ -2128,7 +2131,7 @@ h1.site-name {
         max-height: 300px; }
     .front-page-container .front-page-blurb {
       height: 45%; } }
-  @media (max-height: 475px) {
+  @media (max-height: 620px) {
     .front-page-container .top-image {
       padding: 10px 0;
       height: 50%; }

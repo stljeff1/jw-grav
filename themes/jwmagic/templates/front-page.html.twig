@@ -50,7 +50,7 @@
             <div class="front-page-nav-container" data-spy="affix" data-offset-top="1">
 
                 <a href='#top' class=" collapsed  nav-toggle" data-toggle="collapse" data-target="#front-page-nav"  aria-expanded="false">
-                    <img src="{{ url('theme://images/jw-red-icon-small.png') }}" alt="Portlan Web Developer Jeff Wilkerson">
+                    <img src="{{ url('theme://images/jw-red-icon-small.png') }}" alt="Portland Web Developer Jeff Wilkerson">
                 </a>
                 <nav id="front-page-nav" class="collapse navbar-collapse">
 
@@ -80,17 +80,34 @@
                 <section>
                     <h2>Things I <span>do</span> well</h2>
                     <p>I got my first webdev gig as a freshman in college. Here is a short list of skills learned since then.</p>
-                    <h3>Fundamentals</h3>
-                    <p>HTML, CSS, jQuery. SEO. Photoshop. Copy 'n Paste. </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9 col-md-8">
+                            <h3>Fundamentals</h3>
+                            <ul class="list-inline">
+                                <li>Semantic HTML,</li> <li>CSS,</li> <li>jQuery,</li> <li>OOP Principles,</li> <li>Mobile-first designing.</li> 
+                            </ul>
 
-                    <h3>Javascript Frameworks</h3>
-                    <p>Kendo UI, AngularJS, KnockoutJS</p>
+                            <h3>Javascript Frameworks</h3>
+                            <ul class="list-inline">
+                                <li>Kendo UI,</li> <li>AngularJS,</li> <li>KnockoutJS.</li>
+                            </ul>
 
-                    <h3>Modern Technologies</h3>
-                    <p>Git, SASS, LESS, Task Managers</p>
+                            <h3>Modern Technologies</h3>
+                            <ul class="list-inline">
+                                <li>Git,</li> <li> SASS,</li> <li> LESS,</li> <li> AJAX,</li> <li> RESTful Services,</li> <li> Task Managers,</li> <li> Twig,</li> <li> Jade,</li> <li> Handlebars...</li>
+                            </ul>
 
-                    <p class="quick-links"><a href='{{ page.find('/qualifications').url }}#_skills' class="btn btn-default">See More Details</a></p>
+                            <h3>Content Management</h3>
+                            <ul class="list-inline">
+                                <li>Wordpress,</li> <li> GravCMS,</li> <li> CraftCMS,</li> <li> Apostrophe,</li> <li> Propietary.</li>
+                            </ul>
 
+                            <p class="quick-links"><a href='{{ page.find('/qualifications').url }}#_skills' class="btn btn-default">See More Details</a></p>
+                        </div>
+                        <div class="hidden-xs col-sm-3 col-md-4">
+                            <img src="{{ url('theme://images/jeff-website-portland-guy.jpg') }}" alt="Portland Web Developer Jeff Wilkerson" class="img-responsive" alt="Originally born in St. Louis, 8 states later, I'm making my home in Portland, OR">        
+                        </div>
+                    </div>
                 </section>
 
                 <section class="quick-tab-btns">
@@ -186,7 +203,7 @@
                 </section>
                 <section>
                     <h2>Silly Instagrams...</h2>
-                    <ul class="block-grid-sm-3">
+                    <ul class="block-grid-xs-2 block-grid-sm-3">
                         <li class="block-grid-item"><img  class="img-responsive img-round" src="{{ url('theme://images/welcome-to-oregon.jpg') }}"/></li>
                         <li class="block-grid-item"><img  class="img-responsive img-round" src="{{ url('theme://images/suzy-springtime.jpg') }}"/></li>
                         <li class="block-grid-item"><img  class="img-responsive img-round" src="{{ url('theme://images/grandmas-house.jpg') }}"/></li>
