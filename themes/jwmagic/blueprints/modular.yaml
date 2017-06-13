@@ -1,14 +1,13 @@
+title: MyPage
 extends@:
   - parent@
-  - type: modular
+  - type: default
     context: blueprints://pages
-
 
 form:
   fields:
     tabs:
       type: tabs
-
       fields:
         options:
           fields:
