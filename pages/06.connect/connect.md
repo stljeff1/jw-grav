@@ -64,7 +64,7 @@ form:
             value: Submit
             classes: 'btn btn-primary'
     process:
-        - 
+        -
             captcha:
                 recaptcha_secret: 6LdCiSEUAAAAALaAxx_XaPUDC5ybfImjHal_ZlzK
         -
