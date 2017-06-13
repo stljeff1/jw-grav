@@ -2088,6 +2088,15 @@ h1.site-name {
       max-height: 28px; }
   .front-page-container .client-list h4 {
     height: 2em; }
+  .front-page-container .recent-blog-posts {
+    margin-bottom: 10px; }
+    .front-page-container .recent-blog-posts .blog-title {
+      text-align: left;
+      font-size: 1.25rem;
+      margin-bottom: 0; }
+    .front-page-container .recent-blog-posts .blog-info a {
+      color: #d80033;
+      text-decoration: underline; }
   @media (min-width: 992px) {
     .front-page-container h2 {
       font-size: 4rem; }

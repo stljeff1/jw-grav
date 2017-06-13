@@ -199,21 +199,35 @@
                 </section>
                                                                         
 
-                <section>
+                <section class="recent-blog-posts">
                     <h2>Blog Posts...</h2>
                     
-                    {% set posts = ListBlogPosts() %}
-                    {{ dump(posts) }}
                     <ul class='list-unstyled'>
-                    {% for post in posts %}
+                    {% for post in recent_blog_bosts[0:5] %}
                          <li>
-                            <i class='glyphicon glyphicon-menu-right'></i>
-                            <h4>
+                            <h4 class="blog-title">
                                 <a href="{{ post.link }}" class="myred text-main">
+                                    <i class='glyphicon glyphicon-menu-right'></i>
                                     {{ post.title }}
                                 </a>
                             </h4>
-                            <p>{{ post.date }}</p>
+                            <p class="blog-info">{{ post.date }} | 
+                                    {% if post.tags %}
+                                    Tags: 
+                                        {% for tag in post.tags %} 
+                                            <a href="{{ tag.link }}">{{ tag.name }}</a>{% if not loop.last %}, {% endif %}
+                                        {% endfor %}
+                                    {% else %}
+                                        {% if post.categories|length > 1 %}
+                                            Categories:
+                                        {% else %}
+                                            Category: 
+                                        {% endif %}
+                                           {% for tag in post.categories %} 
+                                            <a href="{{ tag.link }}">{{ tag.name }}</a>{% if not loop.last %}, {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
+                                </p>
                         </li>
                     {% endfor %}
                     </ul>

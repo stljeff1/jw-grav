@@ -226,6 +226,19 @@
 		}
 	}
 
+	.recent-blog-posts {
+		.blog-title {
+			text-align: left;
+			font-size: 1.25rem;
+			margin-bottom: 0;
+		}
+		.blog-info a {
+			color: $red;
+			text-decoration: underline;
+		}
+		margin-bottom: 10px;
+	}
+
 	@media (min-width: $screen-md) {
 
 		h2 { font-size: 4rem; }
