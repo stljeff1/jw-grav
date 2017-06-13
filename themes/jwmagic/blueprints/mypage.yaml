@@ -1,7 +1,6 @@
 title: MyPage
-extends@:
-  - parent@
-  - type: default
+'extends@':
+    type: modular
     context: blueprints://pages
 
 form:
@@ -10,6 +9,8 @@ form:
       type: tabs
       fields:
         meta:
+          type: tab
+          title: meta
           fields:
             header.seo_title:
               type: text

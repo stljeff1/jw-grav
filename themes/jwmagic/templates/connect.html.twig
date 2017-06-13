@@ -22,22 +22,22 @@
     <div class="connections-page">
         {{ page.content }}
         {% set form = page.find('/connect/_contact') %}
-            {% set connections_list = page.find('/connect/_connections') %}
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-8">
-                            <section id="{{ form.slug }}" class="{{ form.header.body_classes}}">
+        {% set connections_list = page.find('/connect/_connections') %}
+        <div class="row">
+            <div class="col-xs-12 col-sm-8">
+                <section id="{{ form.slug }}" class="{{ form.header.body_classes}}">
 
-                                {{ form.content }}
-                            </section>
-                        </div>
-                        <div class="col-xs-12 col-sm-4">
-                            <section id="{{ connections_list.slug }}" class="{{ connections_list.header.body_classes}}">
-
-                                {{ connections_list.content }}
-                            </section>
-                        </div>
-                    </div>
+                    {{ form.content }}
+                </section>
             </div>
+            <div class="col-xs-12 col-sm-4">
+                <section id="{{ connections_list.slug }}" class="{{ connections_list.header.body_classes}}">
+
+                    {{ connections_list.content }}
+                </section>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 
