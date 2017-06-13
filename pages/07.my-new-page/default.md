@@ -1,4 +1,0 @@
----
-title: 'my new page'
----
-
