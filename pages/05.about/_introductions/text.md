@@ -8,7 +8,9 @@ First introduced to HTML and CSS in 1999, I quickly latched on to the technologi
 
 Today, there exists a plethora of tools available to make websites. Good standards are quickly adopted on a mass scale. Copywriters can operate independently of designers, and collaboration within cross-functional teams happens effortlessly if given the right foundation.
 
-However, my challenge as a web developer remains the same. How do I get "target audience" to act upon "call to action item" and produce a "conversion".
+However, my challenge as a web developer remains the same. 
+
+<blockquote> <p>How do I get **"target audience"** to act upon **"call-to-action-item"** and produce a **"conversion"**.</p></blockquote>
 
 <p class='text-center lead red-text'>But What does it all mean</p>
 

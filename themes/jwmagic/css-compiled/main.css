@@ -1718,6 +1718,9 @@ a, a:visited, a:link {
     a.red-text:hover, a:visited.red-text:hover, a:link.red-text:hover {
       color: #72001b; }
 
+p a {
+  text-decoration: underline; }
+
 .row.no-gutter {
   margin-left: 0;
   margin-right: 0; }

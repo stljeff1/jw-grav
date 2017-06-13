@@ -55,6 +55,10 @@ a, a:visited, a:link {
 	}
 }
 
+p a {
+	text-decoration: underline;
+}
+
 
 .row {
 	&.no-gutter {
