@@ -8,7 +8,7 @@
 
 	}
 	.media-heading {
-		font-size: 1.5rem;
+		font-size: 1.5em;
 		color: $navy;
 	}
 	.icon-skill { 
@@ -39,18 +39,19 @@
 	.title-heading {
 		text-align: left;
 		height: 2.2em;
+		font-size: 2.2em;
 	}
 	.oSkill {
 		margin-bottom: 10px;
 		strong {
-			padding: .8rem;
-			font-size: 1.2rem;
+			padding: .8em;
+			font-size: 1em;
 			color: $gray-blue2;
-			padding: 1rem 0;
-			line-height: 3rem;
+			padding: 1em 0;
+			line-height: 3em;
 		}
 		.icon {
-			max-height: 3rem;
+			max-height: 3em;
 			margin: 0 auto;
 		}
 		&.row {

@@ -1624,18 +1624,18 @@
     .block-grid-lg-12 > .block-grid-item:nth-of-type(12n+1) {
       clear: both; } }
 h2, h3, .section-title, .page-title, .title-heading {
-  font-weight: 100;
+  font-weight: 300;
   text-align: center; }
 
 h2, .page-title {
-  font-size: 3.75rem;
+  font-size: 3.75em;
   margin-top: 0;
   margin-bottom: 20px;
   padding: 10px 0 20px;
   font-weight: 100; }
 
 h3, .section-title {
-  font-size: 3.25rem;
+  font-size: 3.25em;
   margin-bottom: 15px;
   padding-bottom: 10px; }
 
@@ -1643,16 +1643,16 @@ h4, h4.title-heading, h5, h5.title-heading, h6, h6.title-heading {
   font-weight: 300; }
 
 h4 {
-  font-size: 2.75rem; }
+  font-size: 2.75em; }
 
 h5 {
-  font-size: 2rem; }
+  font-size: 2em; }
 
 h6 {
-  font-size: 1.5rem; }
+  font-size: 1.5em; }
 
 .slide-title {
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: 400; }
 
 .back-page section {
@@ -1673,22 +1673,22 @@ section article {
 
 @media (min-width: 768px) {
   h2, .page-title {
-    font-size: 4rem; }
+    font-size: 4em; }
 
   h3, .section-title {
-    font-size: 3rem;
+    font-size: 3em;
     padding-bottom: 20px; }
 
   section article {
     padding: 30px 0; } }
 @media (min-width: 1200px) {
   h2, .page-title {
-    font-size: 5rem;
+    font-size: 5em;
     margin-bottom: 30px;
     padding: 20px 0 50px; }
 
   h3, .section-title {
-    font-size: 3.5rem;
+    font-size: 3.5em;
     margin-bottom: 20px;
     xpadding-bottom: 10px; }
 
@@ -1744,7 +1744,7 @@ blockquote p {
   color: #1E2431; }
 
 .red-bg {
-  background-color: #F53440; }
+  background-color: #d80033; }
 
 .blue-bg {
   background-color: #030e1e; }
@@ -1756,9 +1756,9 @@ blockquote p {
   background-color: #fff; }
 
 .box-item {
-  padding: 1.5rem;
+  padding: 1.5em;
   border-radius: 7px;
-  margin-bottom: 1.25rem; }
+  margin-bottom: 1.25em; }
 
 .btn, a.btn {
   border-color: #030e1e;
@@ -1948,13 +1948,13 @@ h1.site-name {
     margin-bottom: 10px;
     color: #000715; }
   .front-page-container h2 {
-    font-size: 3rem;
+    font-size: 3em;
     padding: 20px 0;
     font-weight: 300; }
     .front-page-container h2 span {
       color: #d80033; }
   .front-page-container h3 {
-    font-size: 2.25rem;
+    font-size: 2.25em;
     padding: 10px 0 5px;
     margin-bottom: 0;
     margin-top: 0;
@@ -1971,13 +1971,13 @@ h1.site-name {
       content: "\00b7";
       color: #d80033; }
   .front-page-container h4 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     text-align: center;
     font-weight: 300; }
   .front-page-container h5 {
-    font-size: 1.25rem; }
+    font-size: 1.25em; }
   .front-page-container h6 {
-    font-size: 1.2rem; }
+    font-size: 1.2em; }
   .front-page-container p.quick-links {
     margin-top: 30px; }
   .front-page-container .block-cotent {
@@ -2092,18 +2092,18 @@ h1.site-name {
     margin-bottom: 10px; }
     .front-page-container .recent-blog-posts .blog-title {
       text-align: left;
-      font-size: 1.25rem;
+      font-size: 1.25em;
       margin-bottom: 0; }
     .front-page-container .recent-blog-posts .blog-info a {
       color: #d80033;
       text-decoration: underline; }
   @media (min-width: 992px) {
     .front-page-container h2 {
-      font-size: 4rem; }
+      font-size: 4em; }
     .front-page-container h3 {
-      font-size: 2.5rem; }
+      font-size: 2.5em; }
     .front-page-container h4 {
-      font-size: 1.75rem; }
+      font-size: 1.75em; }
     .front-page-container .block-cotent {
       height: 100%; }
     .front-page-container .block-left {
@@ -2167,7 +2167,7 @@ h1.site-name {
 .skills-listing .media {
   margin-bottom: 20px; }
 .skills-listing .media-heading {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: #030e1e; }
 .skills-listing .icon-skill {
   min-width: 75px;
@@ -2205,23 +2205,24 @@ h1.site-name {
   padding-top: 20px; }
   .other-skills .title-heading {
     text-align: left;
-    height: 2.2em; }
+    height: 2.2em;
+    font-size: 2.2em; }
   .other-skills .oSkill {
     margin-bottom: 10px; }
     .other-skills .oSkill strong {
-      padding: .8rem;
-      font-size: 1.2rem;
+      padding: .8em;
+      font-size: 1em;
       color: #2D2A32;
-      padding: 1rem 0;
-      line-height: 3rem; }
+      padding: 1em 0;
+      line-height: 3em; }
     .other-skills .oSkill .icon {
-      max-height: 3rem;
+      max-height: 3em;
       margin: 0 auto; }
 
 .nav-tabs {
   border-bottom: 0px;
   text-align: center;
-  margin-bottom: 2rem; }
+  margin-bottom: 2em; }
   .nav-tabs > li {
     float: none;
     margin-bottom: 0px;
@@ -2232,7 +2233,7 @@ h1.site-name {
       margin-right: 10px;
       margin-bottom: 10px;
       line-height: 1.42857143;
-      font-size: 1.5rem;
+      font-size: 1.5em;
       padding: 10px 20px;
       font-weight: 300;
       border-radius: 50px;
@@ -2254,6 +2255,8 @@ h1.site-name {
 .project-spotlight .title-heading {
   text-align: left;
   color: #030e1e; }
+.project-spotlight:not(:last-child) {
+  border-bottom: 2px solid #0F0F0F; }
 
 .social-icons-container li {
   padding: 5px 10px; }
@@ -2299,16 +2302,16 @@ h1.site-name {
 .my-services blockquote {
   border: 0;
   text-align: center;
-  padding: 1.5rem 0;
-  font-size: 2rem;
+  padding: 1.5em 0;
+  font-size: 2em;
   color: #d80033; }
 
 .connections-list .row {
   xmax-width: 550px; }
 .connections-list .label,
 .connections-list .value {
-  line-height: 2.5rem;
-  font-size: 1.25rem;
+  line-height: 2.5em;
+  font-size: 1.25em;
   padding-left: 15px;
   padding-right: 15px; }
 .connections-list .label {

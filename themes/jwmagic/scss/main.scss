@@ -91,7 +91,7 @@ blockquote p {
 }
 
 .red-bg { 
-	background-color: $red-light;
+	background-color: $red;
 }
 .blue-bg {
 	background-color: $navy;
@@ -108,9 +108,9 @@ blockquote p {
 
 .box-item {
 
-	padding: 1.5rem;
+	padding: 1.5em;
 	border-radius: 7px;
-	margin-bottom: 1.25rem;
+	margin-bottom: 1.25em;
 }
 
 
@@ -241,8 +241,8 @@ blockquote p {
 
 		border: 0;
 		text-align: center;
-		padding: 1.5rem 0;
-		font-size: 2rem;
+		padding: 1.5em 0;
+		font-size: 2em;
 		color: $red;
 
 	}
@@ -254,8 +254,8 @@ blockquote p {
 	}
 	.label, 
 	.value {
-		line-height: 2.5rem;
-		font-size: 1.25rem;
+		line-height: 2.5em;
+		font-size: 1.25em;
 		padding-left: 15px;
 		padding-right: 15px;
 	}

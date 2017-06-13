@@ -3,4 +3,7 @@
 		text-align: left;
 		color: $navy;
 	}
+	&:not(:last-child) {
+		border-bottom: 2px solid $black;
+	}
 }

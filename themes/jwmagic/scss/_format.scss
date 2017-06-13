@@ -1,11 +1,11 @@
 
 h2, h3, .section-title, .page-title, .title-heading {
-	font-weight: 100;
+	font-weight: 300;
 	text-align: center;
 }
 
 h2, .page-title {
-	font-size: 3.75rem;
+	font-size: 3.75em;
 	margin-top: 0;
 	margin-bottom: 20px;
 	padding: 10px 0 20px;
@@ -13,7 +13,7 @@ h2, .page-title {
 }
 
 h3, .section-title {
-	font-size: 3.25rem;
+	font-size: 3.25em;
 	margin-bottom: 15px;
 	padding-bottom: 10px;
 }
@@ -26,17 +26,17 @@ h4, h5, h6 {
 }
 
 h4 {
-	font-size: 2.75rem;
+	font-size: 2.75em;
 }
 h5 {
-	font-size: 2rem;
+	font-size: 2em;
 }
 h6 {
-	font-size: 1.5rem;
+	font-size: 1.5em;
 }
 
 .slide-title {
-	font-size: 2rem;
+	font-size: 2em;
 	font-weight: 400;
 }
 
@@ -69,10 +69,10 @@ section {
 @media (min-width: $screen-sm) {
 
 	h2, .page-title {
-		font-size: 4rem;
+		font-size: 4em;
 	}
 	h3, .section-title {
-		font-size: 3rem;
+		font-size: 3em;
 		padding-bottom: 20px;
 	}
 
@@ -89,12 +89,12 @@ section {
 @media (min-width: $screen-lg) {
 
 	h2, .page-title {
-		font-size: 5rem;
+		font-size: 5em;
 		margin-bottom: 30px;
 		padding: 20px 0 50px;
 	}
 	h3, .section-title {
-		font-size: 3.5rem;
+		font-size: 3.5em;
 		margin-bottom: 20px;
 		xpadding-bottom: 10px;
 	}

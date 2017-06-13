@@ -12,7 +12,7 @@
 		color: $navy-dark;
 	}
 	h2 {
-		font-size: 3rem;
+		font-size: 3em;
 		padding: 20px 0;
 		font-weight: 300;
 		span {
@@ -21,7 +21,7 @@
 	}
 
 	h3 {
-		font-size: 2.25rem;
+		font-size: 2.25em;
 		padding: 10px 0 5px;
 		margin-bottom: 0;
 		margin-top: 0;
@@ -43,17 +43,17 @@
 	}
 
 	h4 {
-		font-size: 1.5rem;
+		font-size: 1.5em;
 		text-align: center;
 		font-weight: 300;
 
 	}
 
 	h5 {
-		font-size: 1.25rem;
+		font-size: 1.25em;
 	}
 	h6 {
-		font-size: 1.2rem;
+		font-size: 1.2em;
 	}
 
 	p.quick-links {
@@ -229,7 +229,7 @@
 	.recent-blog-posts {
 		.blog-title {
 			text-align: left;
-			font-size: 1.25rem;
+			font-size: 1.25em;
 			margin-bottom: 0;
 		}
 		.blog-info a {
@@ -241,9 +241,9 @@
 
 	@media (min-width: $screen-md) {
 
-		h2 { font-size: 4rem; }
-		h3 { font-size: 2.5rem; }
-		h4 { font-size: 1.75rem; }
+		h2 { font-size: 4em; }
+		h3 { font-size: 2.5em; }
+		h4 { font-size: 1.75em; }
 
 		.block-cotent {
 			height: 100%;
