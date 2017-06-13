@@ -1,5 +1,4 @@
-'extends@':
-  - parent@
+'@extends':
   - type: default
     context: blueprints://pages
 

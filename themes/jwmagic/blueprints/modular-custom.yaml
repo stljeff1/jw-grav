@@ -1,4 +1,4 @@
-title: MyPage
+title: Modular
 'extends@':
     type: modular
     context: blueprints://pages
