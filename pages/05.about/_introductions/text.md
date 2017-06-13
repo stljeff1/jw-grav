@@ -10,7 +10,7 @@ Today, there exists a plethora of tools available to make websites. Good standar
 
 However, my challenge as a web developer remains the same. 
 
-<blockquote> <p>How do I get **"target audience"** to act upon **"call-to-action-item"** and produce a **"conversion"**.</p></blockquote>
+<blockquote> <p>How do I get <b>"target audience"</b> to act upon <b>"call-to-action-item"</b> and produce a <b>"conversion"</b>.</p></blockquote>
 
 <p class='text-center lead red-text'>But What does it all mean</p>
 
