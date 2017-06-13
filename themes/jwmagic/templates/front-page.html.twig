@@ -201,8 +201,23 @@
 
                 <section>
                     <h2>Blog Posts...</h2>
-                
-                    {{ ListBlogPosts() }}
+                    
+                    {% set posts = ListBlogPosts() %}
+                    {{ dump(posts) }}
+                    <ul class='list-unstyled'>
+                    {% for post in posts %}
+                         <li>
+                            <i class='glyphicon glyphicon-menu-right'></i>
+                            <h4>
+                                <a href="{{ post.link }}" class="myred text-main">
+                                    {{ post.title }}
+                                </a>
+                            </h4>
+                            <p>{{ post.date }}</p>
+                        </li>
+                    {% endfor %}
+                    </ul>
+
                 </section>
 
 
