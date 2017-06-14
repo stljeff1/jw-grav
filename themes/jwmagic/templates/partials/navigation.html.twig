@@ -32,7 +32,6 @@
     {% else %}
         {% for page in pages.children.visible %}
             {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-                {{ dump(page) }}
              {% if not page.home and page.slug != 'connect' %}
             <li class="{{ current_page }}">
                 <a href="{{ page.url }}">
