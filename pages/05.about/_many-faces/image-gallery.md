@@ -5,11 +5,6 @@ show_indicators: true
 images:
     -
         image:
-            page@/IMG_20151130_000024.jpg:
-                name: IMG_20151130_000024.jpg
-                type: image/jpeg
-                size: 2293076
-                path: page@/IMG_20151130_000024.jpg
             page@/bear.jpg:
                 name: bear.jpg
                 type: image/jpeg
