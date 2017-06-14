@@ -2261,8 +2261,19 @@ h1.site-name {
 .project-spotlight:not(:last-child) {
   border-bottom: 2px solid #0F0F0F; }
 
-#_many-faces .carousel .item img {
-  max-width: 400px; }
+.about-container .section-title {
+  text-align: left;
+  font-size: 2.5em; }
+.about-container blockquote {
+  text-align: center;
+  font-size: 1.5em; }
+.about-container #_many-faces .carousel .item {
+  width: 80%;
+  margin: 0 auto; }
+  .about-container #_many-faces .carousel .item .slide-title {
+    display: none; }
+  .about-container #_many-faces .carousel .item img {
+    max-width: 400px; }
 
 .social-icons-container li {
   padding: 5px 10px; }

@@ -19,19 +19,25 @@
 {% endblock %}
 
 {% block pageContent %}
-    {% for module in page.collection() %}
-        
-        <section id="{{ module.slug }}" class="{{ module.header.body_classes}}">
-            <div class="container">
+    {{ page.content }}
+    {% set intro = page.find('/about/_introductions') %}
+    {% set faces =  page.find('/about/_many-faces') %}
+    <div class="container about-container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                <section id="{{intro.slug }}" class="{{ intro.header.body_classes }}">
+                    {{ intro.content }}
 
-                <!-- START module.conent -->
-                
-                {{ module.content }}
-
-                <!-- END module.content -->
+                </section>
             </div>
-        </section>
-    {% endfor %}
+            <div class="col-sm-12 col-md-4">
+                <section id="{{ faces.slug }}" class="{{ faces.header.body_classes }}">
+                    {{ faces.content }}
+
+                </section>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 
