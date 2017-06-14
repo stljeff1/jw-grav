@@ -10,14 +10,16 @@
 	#_many-faces {
 		
 		.carousel	{
+			.carousel-inner {
+			}
 			.item {
-				width: 80%;
+				xwidth: 80%;
 				margin: 0 auto;
 				.slide-title {
 					display: none;
 				}
 				img {
-				max-width: 400px;
+					border-radius: 50%;
 				}
 			}
 		}

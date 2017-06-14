@@ -2268,12 +2268,12 @@ h1.site-name {
   text-align: center;
   font-size: 1.5em; }
 .about-container #_many-faces .carousel .item {
-  width: 80%;
+  xwidth: 80%;
   margin: 0 auto; }
   .about-container #_many-faces .carousel .item .slide-title {
     display: none; }
   .about-container #_many-faces .carousel .item img {
-    max-width: 400px; }
+    border-radius: 50%; }
 
 .social-icons-container li {
   padding: 5px 10px; }
