@@ -1,6 +1,6 @@
 ---
 title: 'The Many Faces of Jeff'
-body_classes: blue-bg
+body_classes: white-bg
 ui_id: my_slideshow
 show_indicators: true
 images:
