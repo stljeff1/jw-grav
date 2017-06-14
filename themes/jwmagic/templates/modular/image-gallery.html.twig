@@ -4,7 +4,7 @@
 
 {{ content }}
 
-<div id='{{ page.header.ui_id }}' class='carousel slide' data-ride='carousel' data-interval="2500"> 
+<div id='{{ page.header.ui_id }}' class='carousel slide' data-ride='carousel' data-interval="{% if page.header.interval %}{{ page.header.interval }}{% else %}2500{% endif %}"> 
 	{% set imageCount = page.header.images|count %}
 	{% if page.header.show_indicators %}
 		<ol class="carousel-indicators">

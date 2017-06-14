@@ -16,6 +16,12 @@ form:
               required: true
               default: my_slideshow
               label: ID of Slideshow
+            header.interval:
+              type: text
+              label: interval
+              default: 2500
+              validate:
+                type: int
             header.show_indicators:
               type: toggle
               label: Show Indicators?
