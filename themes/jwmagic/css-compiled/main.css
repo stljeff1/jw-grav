@@ -2262,6 +2262,9 @@ h1.site-name {
 .project-spotlight:not(:last-child) {
   border-bottom: 2px solid #0F0F0F; }
 
+.about-page .img-responsive {
+  width: 100%; }
+
 .about-container .section-title {
   text-align: left;
   font-size: 2.5em;
