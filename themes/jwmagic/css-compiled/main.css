@@ -1771,7 +1771,8 @@ blockquote p {
   background-color: #030e1e;
   text-align: center;
   font-size: 1em;
-  font-weight: 300; }
+  font-weight: 300;
+  text-decoration: none; }
   .btn:hover, a.btn:hover {
     border-color: #0a2e64;
     background-color: #0c397b;

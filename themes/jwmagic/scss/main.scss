@@ -127,6 +127,7 @@ blockquote p {
 	text-align: center;
 	font-size: 1em;
 	font-weight: 300;
+	text-decoration: none;
 	&:hover {
 		border-color: lighten($navy, 15%);
 		background-color: lighten($navy, 20%);
