@@ -1,11 +1,11 @@
 ---
 title: About
+body_classes: about-page
 faces:
-	- jeff-face1
-	- jeff-face2
-	- jeff-face3
-	- jeff-face4
-
+    - jeff-face1
+    - jeff-face2
+    - jeff-face3
+    - jeff-face4
 content:
     items: '@self.modular'
     order:

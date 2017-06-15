@@ -7,10 +7,6 @@
 {% endblock %}
 
 
-{% block bottom %}
-    {{ parent() }}
-{% endblock %}
-
 
 {% block header %}
 
@@ -22,35 +18,104 @@
     {{ page.content }}
     {% set intro = page.find('/about/_introductions') %}
     {% set faces =  page.find('/about/_many-faces') %}
-    <div class="container about-container">
-        <div class="row">
-            <div class="col-sm-12 col-md-8">
-                <section id="{{intro.slug }}" class="{{ intro.header.body_classes }}">
-                    {{ intro.content }}
+    <section>
+        <div class="container about-container">
+            <div class="row">
+                <div class="col-sm-12 col-md-8">
+                    <div id="{{intro.slug }}" class="{{ intro.header.body_classes }}">
+                        {{ intro.content }}
 
-                </section>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <section id="{{ faces.slug }}" class="{{ faces.header.body_classes }}">
-                    <div id="many-faces" class="carousel slide" data-ride='carousel' data-interval="5000">
-                        <div class="carousel-inner" role='listbox'>
-                            {% for image in page.header.faces %}
-                                <div class="item {% if loop.first %} active {% endif %}">
-                                    <img src="{{ url('theme://images/'~image~'.jpg')}}"/>
-                                </div>
-                            {% endfor %}
-
-                        </div>
-                            <a class="left carousel-control" href="#many-faces" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#many-faces" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
                     </div>
-                </section>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div id="{{ faces.slug }}" class="{{ faces.header.body_classes }}">
+                        <div id="many-faces" class="carousel slide" data-ride='carousel' data-interval="5000">
+                            <div class="carousel-inner" role='listbox'>
+                                {% for image in page.header.faces %}
+                                    <div class="item {% if loop.first %} active {% endif %}">
+                                        <img src="{{ url('theme://images/'~image~'.jpg')}}" class="img-responsive" />
+                                    </div>
+                                {% endfor %}
+
+                            </div>
+                                <a class="left carousel-control" href="#many-faces" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#many-faces" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blue-bg additional-about">
+        <div class="container">
+            <h3 class="section-title">When not webdevving...</h3>
+            <p class="lead text-center">Other "hobbies" of mine include yoga and making my dog into an Instagram sensation.</p>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>About Yoga</h4>
+                    <p>I have found yoga to be most effective at neutralizing the effects of cerebral palsy, a nondegenerative neurological condition affecting muscle control. Yes, I live with cerebral palsy.</p>
+                    <p>The "style" of yoga I practce is called Iyengar yoga, which is a system of yoga that emphasizes timing, sequencing, and alignment. It is a unique method that has taught me how to be a better problem solver, how to bring more integrity to the work I produce, and most of all, how to approach my tasks with diligence and persistence.</p>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 col-md-push-8">
+                            <img src="{{ url('theme://images/jeff-yoga-stump-pose.jpg')}}" class="img-responsive yoga-img" />
+                        </div>
+                        <div class="col-sm-12 col-md-8 col-md-pull-4">
+                            <p>Iyengar yoga is best known for using "props" to support the body to highlight certain aspects of the pose. If you look at the picture shown, you can see that I am laying over a yoga blog, but its not that simple.</p>
+                            <ol>
+                                <li>The yoga block is supporting the thorasic spine, which in turn, opens my chest. </li>
+                                <li>My head is raised with the help of a blanket to keep my neck calm. </li>
+                                <li>My hands are reaching for a wall behind my head, which promotes my sholders to relax and stretch. </li>
+                                <li>My eyes are closed with the help of a weighted sleep mask, which softens the face and allows the brain to receed away from the front of the skull.</li>
+                                <li>My feet are pressing into a surface, so that my I can bring stability to my ankle and knee joints, while rotating my thighs in, effectively countering the natural tendencies of my thighs to roll out. </li>
+                                <li>Finally, I place weight on the tops of my thighs, which stablized the pelvis and relaxes my abdomen area, enhancing my ability to breathe.</li>
+                            </ol>
+
+                            <p>This picture illustrates how Iyengar Yoga teaches me the value of adaptation, persistence, and synergy, all values that make me a better web developer.</p>
+                            <p>By supporting my body in new positions that promote openness, I am essentially reprogramming my brain, learning new muscle memory and strengthening under utilized muscles. These actions directly counteracts the affects of cerebral palsy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Instagram Hashtags</h4>
+                    <p>I am the proud human of a dog named Suzy, who happens to be very photogenic. As a result, I've been posting pictures of her to Instagram, using the hashtag, #suzygram. There are even spinoffs!!* Check out #suzyhasaboyfriend and #suzysunnysundays.</p>
+                    
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="block-grid-xs-2 block-grid-md-4 suzygram-list">
+                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram1.jpg') }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram1.jpg') }}"/></a></li>
+                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram2.jpg') }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram2.jpg') }}"/></a></li>
+                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram3.jpg') }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram3.jpg') }}"/></a></li>
+                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram4.jpg') }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram4.jpg') }}"/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <div class="modal fade" id="suzygramModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <img src='' id="modal-image" class="img-responsive" />
+                </div>
             </div>
         </div>
     </div>
@@ -59,4 +124,21 @@
 
 {% block footer %}
     {% include "partials/footer.html.twig" %}
+{% endblock %}
+
+{% block bottom %}
+    {{ parent() }}
+    <script>
+    $(function() {
+        $('.suzygram-list a').attr('href', '#');
+        $('#suzygramModal').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget); // Button that triggered the modal
+          var target = button.find('img').attr('src');
+          // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+          // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+          var modal = $(this);
+          modal.find('#modal-image').attr('src', target);
+        });
+    })
+    </script>
 {% endblock %}

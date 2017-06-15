@@ -1750,7 +1750,8 @@ blockquote p {
   background-color: #d80033; }
 
 .blue-bg {
-  background-color: #030e1e; }
+  background-color: #030e1e;
+  color: #fff; }
 
 .red-bg .section-title, .blue-bg .section-title {
   color: #fff; }
@@ -2263,7 +2264,8 @@ h1.site-name {
 
 .about-container .section-title {
   text-align: left;
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  margin-bottom: 0px; }
 .about-container blockquote {
   text-align: center;
   font-size: 1.5em; }
@@ -2274,6 +2276,25 @@ h1.site-name {
     display: none; }
   .about-container #_many-faces .carousel .item img {
     border-radius: 50%; }
+    @media (max-width: 992px) {
+      .about-container #_many-faces .carousel .item img {
+        max-width: 300px; } }
+
+@media (max-width: 992px) {
+  .additional-about .yoga-img {
+    max-width: 75%;
+    margin: 20px auto; } }
+@media (max-width: 992px) {
+  .additional-about .suzygram-list img {
+    max-width: 300px; } }
+
+#suzygramModal .modal-dialog {
+  margin-top: 80px; }
+#suzygramModal button.close {
+  color: #0F0F0F;
+  opacity: .5; }
+#suzygramModal .modal-body img {
+  max-height: 60vh; }
 
 .social-icons-container li {
   padding: 5px 10px; }

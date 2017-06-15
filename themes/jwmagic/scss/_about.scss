@@ -2,6 +2,7 @@
 	.section-title {
 		text-align: left;
 		font-size: 2.5em;
+		margin-bottom: 0px;
 	}
 	blockquote {
 		text-align: center;
@@ -20,8 +21,39 @@
 				}
 				img {
 					border-radius: 50%;
+					@media (max-width: $screen-md) {
+						max-width: 300px;
+					}
 				}
 			}
 		}
-	}	
+	}
+}	
+.additional-about {
+	@media (max-width: $screen-md) {
+		.yoga-img {
+			max-width: 75%;
+			margin: 20px auto;
+
+		}
+	}
+	.suzygram-list {
+		@media (max-width: $screen-md) {
+			img{
+				max-width: 300px;
+			}
+		}
+	}
+}
+#suzygramModal {
+	.modal-dialog {
+		margin-top: 80px;
+	}
+	button.close {
+		color: $black;
+		opacity: .5;
+	}
+	.modal-body img {
+		max-height: 60vh;
+	}
 }
