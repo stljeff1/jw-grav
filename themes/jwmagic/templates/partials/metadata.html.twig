@@ -19,7 +19,7 @@
 	<!-- Open Graph data -->
 	<meta property="og:title" content="{{ header.sharing_title}}" />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="{{ page.url(true) }}" />
+	<meta property="og:url" content="{{ page.url(true) }}?sharing=1" />
 	<meta property="og:image" content="{{ image_url }}" />
 	<meta property="og:description" content="{{ header.sharing_description }}" />
 	<meta property="og:site_name" content="jeffwilkerson.net" />
@@ -34,7 +34,7 @@
 
 {% endif %}
 
-
+https://jeffwilkerson.net/about?nm=1
 
 {% for meta in page.metadata %}
 <meta {% if meta.name %}name="{{ meta.name }}" {% endif %}{% if meta.http_equiv %}http-equiv="{{ meta.http_equiv }}" {% endif %}{% if meta.charset %}charset="{{ meta.charset }}" {% endif %}{% if meta.property %}property="{{ meta.property }}" {% endif %}{% if meta.content %}content="{{ meta.content }}" {% endif %}/>
