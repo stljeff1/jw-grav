@@ -1755,6 +1755,8 @@ blockquote p {
 
 .red-bg .section-title, .blue-bg .section-title {
   color: #fff; }
+.red-bg a, .red-bg a:visited, .red-bg a.active, .blue-bg a, .blue-bg a:visited, .blue-bg a.active {
+  color: #ffffd5; }
 
 .light-colored-bg, .white-bg {
   background-color: #fff; }

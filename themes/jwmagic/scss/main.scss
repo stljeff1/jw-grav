@@ -105,6 +105,9 @@ blockquote p {
 	.section-title {
 		color: $white;
 	}
+	a, a:visited, a.active {
+		color: $highlight-color;
+	}
 }
 
 .light-colored-bg, .white-bg {
