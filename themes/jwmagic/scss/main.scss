@@ -123,10 +123,10 @@ blockquote p {
 
 
 .btn, a.btn,  {
+	background-color: $navy;
 	border-color: $navy;
 	border-width: 2px;
 	color: $white;
-	background-color: $navy;
 	text-align: center;
 	font-size: 1em;
 	font-weight: 300;
@@ -152,6 +152,15 @@ blockquote p {
 			text-decoration: underline;
 		}
 	}
+	&.btn-red {
+		background-color: $red;
+		border-color: $red;
+		&:hover {
+			background-color: darken($red, 10%);
+			border-color: darken($red, 10%);
+			color: $white;
+		}
+	}
 }
 
 
@@ -160,6 +169,13 @@ blockquote p {
 		padding: 10px 20px;
 		xborder-radius: 50px;
 			font-size: 1.25em;
+	}
+}
+
+@media (max-width: $screen-md) {
+	.no-js .btn.toggler-btn { display: none; }
+	.js .toggled-content {
+		display: none;
 	}
 }
 

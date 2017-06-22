@@ -172,6 +172,9 @@
 			border: 3px solid $navy;
 			max-height: 250px;
 		}
+		@media (min-width: $screen-sm) and (max-width: $screen-md) {
+			padding-top: 60px;
+		}
 	}
 	.front-page-blurb {
 		text-align: center;
