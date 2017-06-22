@@ -33,7 +33,7 @@
                             <div class="carousel-inner" role='listbox'>
                                 {% for image in page.header.faces %}
                                     <div class="item {% if loop.first %} active {% endif %}">
-                                        <img src="{{ url('theme://images/'~image~'.jpg')}}" class="img-responsive" />
+                                        <img src="{{ url('theme://images/'~image~'.jpg', true) }}" class="img-responsive" />
                                     </div>
                                 {% endfor %}
 
@@ -99,10 +99,10 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <ul class="block-grid-xs-2 block-grid-md-4 suzygram-list">
-                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram1.jpg') }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram1.jpg') }}"/></a></li>
-                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram2.jpg') }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram2.jpg') }}"/></a></li>
-                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram3.jpg') }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram3.jpg') }}"/></a></li>
-                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram4.jpg') }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram4.jpg') }}"/></a></li>
+                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram1.jpg', true) }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram1.jpg', true) }}"/></a></li>
+                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram2.jpg', true) }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram2.jpg', true) }}"/></a></li>
+                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram3.jpg', true) }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram3.jpg', true) }}"/></a></li>
+                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram4.jpg', true) }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram4.jpg', true) }}"/></a></li>
                             </ul>
                         </div>
                     </div>
