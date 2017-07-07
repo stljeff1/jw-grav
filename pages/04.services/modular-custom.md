@@ -12,10 +12,10 @@ sharing_description: 'Providing Wordpress Development, SEO Services, Legacy Syst
 body_classes: modular
 menu: 'Things I''ll Do'
 sharing_image:
-    user/pages/06.services/service-icon.png:
+    user/pages/04.services/service-icon.png:
         name: service-icon.png
         type: image/png
         size: 5486
-        path: user/pages/06.services/service-icon.png
+        path: user/pages/04.services/service-icon.png
 ---
 

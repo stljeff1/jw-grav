@@ -11,11 +11,11 @@ sharing_title: 'Connect w/ Jeff Wilkerson - Portland, OR - Front End Web Develop
 sharing_description: 'Content Management, Front End Development, Javascript, I do it all. Contact me  today!'
 body_classes: modular
 sharing_image:
-    user/pages/07.connect/jeff-wilkerson-html-js-css-guy.jpg:
+    user/pages/06.connect/jeff-wilkerson-html-js-css-guy.jpg:
         name: jeff-wilkerson-html-js-css-guy.jpg
         type: image/jpeg
         size: 194737
-        path: user/pages/07.connect/jeff-wilkerson-html-js-css-guy.jpg
+        path: user/pages/06.connect/jeff-wilkerson-html-js-css-guy.jpg
 form:
     name: my-nice-form
     action: /connect
