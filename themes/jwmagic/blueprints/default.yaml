@@ -9,7 +9,8 @@ form:
       type: tabs
 
       fields:
-        options:
+        meta:
+          type: tabs
           fields:
             header.seo_title:
               type: text

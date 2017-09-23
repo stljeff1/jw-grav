@@ -69,7 +69,7 @@ form:
                 recaptcha_secret: 6LdCiSEUAAAAALaAxx_XaPUDC5ybfImjHal_ZlzK
         -
             email:
-                from: ['{{ config.plugins.email.from }}', '{{ form.value.email }}']
+                from:  '{{ form.value.email }}'
                 to: '{{ config.plugins.email.from }}'
                 subject: '[Feedback] {{ form.value.name|e }}'
                 body: '{% include ''forms/data.html.twig'' %}'

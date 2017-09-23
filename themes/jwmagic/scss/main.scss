@@ -257,7 +257,14 @@ blockquote p {
 	max-width: 900px;
 	margin: 0 auto 20px;
 	padding: 10px;
-
+	.container {
+		width: auto;
+		max-width: 100%;
+		color: #0f0f0f;
+		a {
+			color: $red;
+		}
+	}
 
 }
 

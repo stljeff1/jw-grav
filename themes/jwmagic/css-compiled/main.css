@@ -2360,6 +2360,12 @@ h1.site-name {
   max-width: 900px;
   margin: 0 auto 20px;
   padding: 10px; }
+  .other-project .container {
+    width: auto;
+    max-width: 100%;
+    color: #0f0f0f; }
+    .other-project .container a {
+      color: #d80033; }
 
 .my-services blockquote {
   border: 0;
