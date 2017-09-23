@@ -1,6 +1,6 @@
 
         $(function () {
-              $('.email-link').attr('href', 'mailto:givemework@jeffwilkerson.net').text('givemework@jeffwilkerson.net');
+              $('.email-link').attr('href', 'mailto:hire@jeffwilkerson.net').text('hire@jeffwilkerson.net');
               $('.nav-toggle').click(function(e) {
                 e.preventDefault();
               });
