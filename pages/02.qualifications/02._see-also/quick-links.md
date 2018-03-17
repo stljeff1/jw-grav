@@ -8,7 +8,7 @@ links:
         text: 'Current Projects'
         isNewWindow: false
     -
-        pages: twitter
+        pages: github
         text: 'Code Snippets'
         isNewWindow: true
     -
