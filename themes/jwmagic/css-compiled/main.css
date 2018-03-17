@@ -1802,6 +1802,9 @@ blockquote p {
   xborder-radius: 50px;
   font-size: 1.25em; }
 
+@media (max-width: 768px) {
+  .quick-links li {
+    margin-bottom: 10px; } }
 @media (max-width: 992px) {
   .no-js .btn.toggler-btn {
     display: none; }

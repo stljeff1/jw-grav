@@ -5,7 +5,7 @@ tabs:
         tabText: 'Singing Success'
         title: 'Front End Web Developer'
         subtitle: 'Singing Success, LLC'
-        content: "A fantastic opportunity allowing me to work with latest web technologies to build engaging web pages and optimize web content.\r\n**(Bootstrap, AngularJS, CSS3, SEO)**\r\n\r\n2015 - CURRENT"
+        content: "A fantastic opportunity allowing me to work with latest web technologies to build engaging web pages and optimize web content.\r\n**(Bootstrap, AngularJS, CSS3, SEO)**\r\n\r\n2015 - 2016"
     -
         tabText: 'Dominion Dealer Solutions'
         title: 'Techical Support Specialist'
