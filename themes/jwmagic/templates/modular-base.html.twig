@@ -20,19 +20,6 @@
 
 {% block pageContent %}
     {{ page.content }}
-    {% for module in page.collection() %}
-        
-        <section id="{{ module.slug }}" class="{{ module.header.body_classes}}">
-            <div class="container">
-
-                <!-- START module.conent -->
-                
-                {{ module.content }}
-
-                <!-- END module.content -->
-            </div>
-        </section>
-    {% endfor %}
 {% endblock %}
 
 
