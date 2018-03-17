@@ -10,8 +10,11 @@ form:
       fields:
         content: 
           fields: 
+            header.media_order:
+              type: ignore
             screenshot:
               type: list
+              label: Screenshot
               fields:
                 .caption:
                   type: text
