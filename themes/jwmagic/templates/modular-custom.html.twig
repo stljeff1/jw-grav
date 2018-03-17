@@ -1,22 +1,5 @@
-{% extends 'partials/base.html.twig' %}
+{% extends 'partials/modular-base.html.twig' %}
 
-{% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
-{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
-
-{% block javascripts %}
-{% endblock %}
-
-
-{% block bottom %}
-    {{ parent() }}
-{% endblock %}
-
-
-{% block header %}
-
-    {% include "partials/header.html.twig" %}
-
-{% endblock %}
 
 {% block pageContent %}
     {{ page.content }}
@@ -33,9 +16,4 @@
             </div>
         </section>
     {% endfor %}
-{% endblock %}
-
-
-{% block footer %}
-    {% include "partials/footer.html.twig" %}
 {% endblock %}
