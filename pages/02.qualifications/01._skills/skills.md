@@ -41,14 +41,14 @@ otherSkills:
                 name: 'Version Control'
                 icon: github-icon-blue.png
             -
-                name: 'API Development'
-                icon: api-development-icon.png
-            -
-                name: 'Task Managers'
-                icon: task-mgr-icon.png
-            -
                 name: 'Content Management'
                 icon: programmer.png
+            -
+                name: 'Photoshop'
+                icon: photoshop-icon.png
+            -
+                name: 'Testing/Debugging'
+                icon: browserstack-icon.png
     -
         name: 'Javascript Knowledge'
         headerClass: color-b
@@ -56,11 +56,11 @@ otherSkills:
             -
                 name: 'NodeJS, Express, NPM'
             -
-                name: 'jQuery, Bootstrap'
+                name: 'jQuery, Gulp, Webpack'
             -
-                name: 'AngularJS, KnockoutJS'
+                name: 'KnockoutJS, React, Kendo UI'
             -
-                name: 'Kendo UI'
+                name: 'API, JSON, XML, data!'
     -
         name: 'Core Values'
         headerClass: color-c

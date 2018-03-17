@@ -170,6 +170,13 @@ blockquote p {
 		xborder-radius: 50px;
 			font-size: 1.25em;
 	}
+
+}
+
+@media (max-width: $screen-sm) {
+	.quick-links li {
+		margin-bottom: 10px;
+	}
 }
 
 @media (max-width: $screen-md) {
