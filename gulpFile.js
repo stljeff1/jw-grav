@@ -36,6 +36,7 @@ gulp.task('watch', function(done) {
   gulp.watch(themeRoot + paths.styles.src + '**/*.scss', ['build-sass']);
 });
 
+
 gulp.task('build', function() {
   runSequence('build-sass');
 });
