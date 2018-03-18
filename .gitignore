@@ -4,4 +4,4 @@
 !/pages/
 !/themes/**
 .sass-cache
-.sass-cache/*
+css-compiled/*
