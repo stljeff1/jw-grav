@@ -41,24 +41,23 @@
 
 	}
 	.container {
+		display: flex;
+		align-items: center;
 		& > div {
 			margin-top: 0px;
 		}	
 	}
 	h1 a,
 	li a {
-		padding: 0px 20px 8px;
+		padding: 0px 20px;
 	}
 
-	h1, li {
+	li {
 		& >a,
 		& > span {
-			xheight: 1.5em;
 			font-size: 1em;
 
 			line-height:  1.2em;
-			margin-top: 20px;
-			margin-bottom: 20px;
 		}
 	}
 
@@ -89,8 +88,8 @@
 
 	.navbar-toggle { 
 		color: $white;
-		padding: 10px;
-		margin-top: 10px;
+		padding: 0 10px;
+		margin: 0px 15px 0 0;
 			z-index: 9999;
 		.glyphicon-remove {
 			xcolor: $navy;
@@ -108,28 +107,24 @@
 		}
 	}
 	.site-name-container {
-		padding-top: 20px;
-		width: 75%;
-		float: left;
+		flex: 1;
 	}
 	.navigation-container {
-		width: 25%;
-		float: right;
+		max-width: 25%;
 	}
 
 	@media (min-width: $screen-md) {
 
 		.container {
-			& > div {
-				margin-top: 20px;
-			}	
+			min-height: 60px;
 		}
 		.site-name-container {
-			width: 25%;
-			padding-top: 0;
+			max-width: 25%;
+			flex: 1 0 auto;
 		}
 		.navigation-container {
-			width: 75%;
+			flex: 1 0 75%;
+			max-width: unset;
 		}    	
 	}
 
@@ -207,8 +202,10 @@ h1.site-name {
 	a {
 		padding-left: 2em;
 		color: #fff;
-		background: transparent url('../images/jw-red-icon-small.png') top left no-repeat;
+		background: transparent url('../images/jw-red-icon-small.png') center left no-repeat;
 		background-size: 1.5em;
+		line-height: 1.5;
+		display: block;
 		strong {
 			font-weight: 200;
 		}
