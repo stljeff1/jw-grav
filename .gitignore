@@ -1,0 +1,7 @@
+/**
+!/.gitignore
+!/gulpFile.js
+!/pages/
+!/themes/**
+.sass-cache
+.sass-cache/*
