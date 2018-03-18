@@ -1,5 +1,9 @@
-{% extends 'modular-custom.html.twig' %}
+{% extends 'partials/modular-base.html.twig' %}
 
+{% block header %}
+	<h1>Header</h1>
+
+{% endblock %}
 {% block pageContent %}
 	<h1>Project Details - {{ page.header.title }}</h1>
 {% endblock %}
