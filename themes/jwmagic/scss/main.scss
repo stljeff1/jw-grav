@@ -190,12 +190,9 @@ blockquote p {
 	}
 }
 .flex-gutter-row {
-	.left-column,
-	.right-column {
-		> section {
-			padding-left: 15px;
-			padding-right: 15px;
-		}
+	.content-col-inner {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	@media (max-width: $screen-sm) {
 		.left-column {
@@ -207,32 +204,32 @@ blockquote p {
 		.gutter-col {
 			flex: 1;
 		}
-		.left-column > section {
+		.left-column .content-col-inner {
 			margin: 0 0 0 auto;
 		}
-		.right-column > section {
+		.right-column .content-col-inner {
 			margin: 0 auto 0 0;
 		}
-		.left-column > section {
+		.left-column .content-col-inner {
 			width: .75 * $container-sm;
 		}
-		.right-column > section {
+		.right-column .content-col-inner {
 			width: .25 * $container-sm;
 		}
 	}
 	@media (min-width: $screen-md) {
-		.left-column  > section{
-			width: .75 * $container-md;
+		.left-column  .content-col-inner{
+			width: .6666 * $container-md;
 		}
-		.right-column > section {
-			width: .25 * $container-md;
+		.right-column .content-col-inner {
+			width: .3333 * $container-md;
 		}
 	}
 	@media (min-width: $screen-lg) {
-		.left-column > section {
+		.left-column .content-col-inner {
 			width: .6666 * $container-lg;
 		}
-		.right-column > section {
+		.right-column .content-col-inner {
 			width: .3333 * $container-lg;
 		}
 	}
@@ -366,14 +363,11 @@ blockquote p {
 	}
 }
 .connections-page {
-	height: auto;
-	
-	& > .row {
-		margin-left: 0;
-		margin-right: 0;
+	main {
+		height: auto;
 	}
 
-	section {
+	.content-col-inner {
 		padding-top: 15px;
 		padding-bottom: 0;
 	}
