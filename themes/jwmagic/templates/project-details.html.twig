@@ -13,11 +13,11 @@
 			<div class="container">
 				<h1>Project Details - {{ page.header.title }}</h1>
 				<p>{{ page.content }}</p>
+				{{ dump(page) }}
 				<div class="project-screenshots">
 					{{ dump(page.media) }}
-{% for imagesuploaded in page.header.screenshots %}
-	{% for image in imagesuploaded.image %}
-		{% set myimage = page.media[image.name].cropZoom(200,200) %} 
+	{% for imageuploaded in page.header.screenshots %}
+		{% set myimage = page.media[imageuploaded.image].cropZoom(200,200) %} 
 		<div style="text-align: center;">
 		}
 	fuck!!!!!!!!!!!!!!!!!
@@ -25,22 +25,11 @@
 			{{ dump(myimage) }}
 		<img src="{{ myimage.url }}"/>
 		</div>
+		<div>
+			<img src="{{ page.media[imageuploaded.image].url() }}">
 	{% endfor %}
-{% endfor %}
-					{*
-					{% for image in page.header.screenshots %}
-						<div class="item {% if loop.first %} active {% endif %}">
-							{% for key, item in image.image %}
-								
-								<div class="{{ page.header.ui_id }}-image">
-									<img src="{{ url(item.path)}}" alt="{{ image.title }}" class="img-responsive" />
-								</div>
-							{% endfor %}		
-						</div>
-					{% endfor %}
-					*}
-
-				</div>s
+	
+				</div>
 			</div>
 		</section>
 	</main>
