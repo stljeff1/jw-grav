@@ -35,3 +35,5 @@ screenshots:
                 size: 78846
                 path: user/pages/03.projects/project-details/01.singing-success/ss360-thumb4.jpg
 ---
+
+this was a fun project!!!
