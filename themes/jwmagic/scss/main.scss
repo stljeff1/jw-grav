@@ -6,6 +6,10 @@ $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
 
+$container-sm: 750px;
+$container-md: 970px;
+$container-lg: 1170px;
+
 
 @mixin clearfix() {
 	&:before,
@@ -185,6 +189,55 @@ blockquote p {
 		display: none;
 	}
 }
+.flex-gutter-row {
+	.left-column,
+	.right-column {
+		> section {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	@media (max-width: $screen-sm) {
+		.left-column {
+			padding-bottom: 10px;
+		}
+	}
+	@media (min-width: $screen-sm) {
+		display: flex;
+		.gutter-col {
+			flex: 1;
+		}
+		.left-column > section {
+			margin: 0 0 0 auto;
+		}
+		.right-column > section {
+			margin: 0 auto 0 0;
+		}
+		.left-column > section {
+			width: .75 * $container-sm;
+		}
+		.right-column > section {
+			width: .25 * $container-sm;
+		}
+	}
+	@media (min-width: $screen-md) {
+		.left-column  > section{
+			width: .75 * $container-md;
+		}
+		.right-column > section {
+			width: .25 * $container-md;
+		}
+	}
+	@media (min-width: $screen-lg) {
+		.left-column > section {
+			width: .6666 * $container-lg;
+		}
+		.right-column > section {
+			width: .3333 * $container-lg;
+		}
+	}
+	
+}
 
 @import "site-header";
 /*@import "nav";*/
@@ -320,27 +373,17 @@ blockquote p {
 		margin-right: 0;
 	}
 
-	background-color: $white;
-		section {
-			padding-top: 15px;
-			padding-bottom: 0;
-		}
-	@media (min-width: $screen-md) {
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+66,0+67 */
-		background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 66.67%, rgba(255,255,255,0) 66.671%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 66.67%,rgba(255,255,255,0) 66.671%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 66.67%,rgba(255,255,255,0) 66.671%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		
-		#_contact { 
-			max-width: 780px;
-			margin: 0 0 0 auto;
-		}
-		#_connections {
-			max-width: 390px;
-			margin: 0 auto 0 0;
-		}
-
+	section {
+		padding-top: 15px;
+		padding-bottom: 0;
 	}
+	//@media (min-width: $screen-md) {
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+66,0+67 */
+	//	background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 66.67%, rgba(255,255,255,0) 66.671%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	//	background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 66.67%,rgba(255,255,255,0) 66.671%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	//	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 66.67%,rgba(255,255,255,0) 66.671%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	//}
+	
 	.section-title {
 		text-align: left;
 		font-weight: 300

@@ -19,23 +19,26 @@
 {% endblock %}
 
 {% block pageContent %}
-    <div class="connections-page">
+    <div class="connections-page sidebar-layout">
         {{ page.content }}
         {% set form = page.find('/connect/_contact') %}
         {% set connections_list = page.find('/connect/_connections') %}
-        <div class="row">
-            <div class="col-xs-12 col-sm-8">
+        <div class="flex-gutter-row">
+            <div class="gutter-col white-bg"></div>
+            <div class="white-bg left-column">
                 <section id="{{ form.slug }}" class="{{ form.header.body_classes}}">
 
                     {{ form.content }}
                 </section>
             </div>
-            <div class="col-xs-12 col-sm-4">
+            <div class="xcol-xs-12 xcol-sm-4 right-column">
                 <section id="{{ connections_list.slug }}" class="{{ connections_list.header.body_classes}}">
 
                     {{ connections_list.content }}
                 </section>
             </div>
+
+            <div class="gutter-col"></div>
         </div>
     </div>
 {% endblock %}
