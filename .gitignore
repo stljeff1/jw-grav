@@ -2,7 +2,5 @@
 !/.gitignore
 !/gulpFile.js
 !/package.json
-!/pages/**
+!/pages/*
 !/themes/**
-.sass-cache
-/themes/**/css-compiled/
