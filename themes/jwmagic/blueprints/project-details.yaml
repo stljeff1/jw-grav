@@ -10,9 +10,7 @@ form:
       fields:
         content: 
           fields: 
-            header.media_order:
-              type: ignore
-            screenshot:
+            screenshots:
               type: list
               label: Screenshot
               fields:
@@ -20,12 +18,12 @@ form:
                   type: text
                   label: Caption
                 .image:                  
-                  type: file
-                  destination: 'self@'
-                  limit: 1
-                  multiple: false
+                  type: filepicker
+                  folder: 'self@'
+                  preview_images: true
                   accept:
-                    - image/*
+                    - .png
+                    - .jpg
         meta:
           type: tab
           title: meta

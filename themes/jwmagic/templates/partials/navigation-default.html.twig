@@ -1,0 +1,29 @@
+
+        <div class="top-nav" data-spy="affix" data-offset-top="1">
+            <div class="container clearfix">
+                <div class="site-name-container">
+
+                        <h1 class="site-name">
+                            <a class="" href="{{ home_url }}">
+                                Jeff Wilkerson
+
+                            </a>
+                        </h1>
+                </div>
+                <div class="navigation-container">
+
+                    {% block header_navigation %}
+                        {% include 'partials/navigation.html.twig' %}
+                    {% endblock %}
+                </div>
+                <div class="hidden-md hidden-lg">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="height: 55px;">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="glyphicon glyphicon-menu-hamburger"></i>
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+            
+            </div><!-- /.container-fluid -->
+        </div>

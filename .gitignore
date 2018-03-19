@@ -1,8 +1,7 @@
-/**
-!/.gitignore
-!/gulpFile.js
-!/package.json
-!/pages/
-!/themes/**
-.sass-cache
-css-compiled/*
+/accounts
+/blueprints
+/config
+!/config/site.yaml
+/data
+/node_modules
+/plugins

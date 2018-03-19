@@ -1,5 +1,6 @@
 ---
 title: Connect
+body_classes: connections-page
 content:
     items: '@self.modular'
     order:
@@ -9,7 +10,6 @@ seo_title: 'Connect w/ Jeff Wilkerson - Portland, OR - Front End Web Developer'
 seo_description: 'Looking to connect with web designers, content specialists, etc in Portland, Oregon area. Web Developer wanting to create websites'
 sharing_title: 'Connect w/ Jeff Wilkerson - Portland, OR - Front End Web Developer'
 sharing_description: 'Content Management, Front End Development, Javascript, I do it all. Contact me  today!'
-body_classes: modular
 sharing_image:
     user/pages/06.connect/jeff-wilkerson-html-js-css-guy.jpg:
         name: jeff-wilkerson-html-js-css-guy.jpg
@@ -69,7 +69,7 @@ form:
                 recaptcha_secret: 6LdCiSEUAAAAALaAxx_XaPUDC5ybfImjHal_ZlzK
         -
             email:
-                from:  '{{ form.value.email }}'
+                from: '{{ form.value.email }}'
                 to: '{{ config.plugins.email.from }}'
                 subject: '[Feedback] {{ form.value.name|e }}'
                 body: '{% include ''forms/data.html.twig'' %}'

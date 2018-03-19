@@ -1,0 +1,43 @@
+{% extends 'base/base.html.twig' %}
+
+
+
+{% block bottom %}
+    {{ parent() }}
+{% endblock %}
+
+
+{% block header %}
+
+    {% include "partials/header.html.twig" %}
+
+{% endblock %}
+
+{% block pageContent %}
+    <main class="sidebar-layout">
+        {{ page.content }}
+        <div class="flex-gutter-row">
+            <div class="gutter-col white-bg"></div>
+            <div class="content-col white-bg left-column">
+                <div class="content-col-inner">
+                    {% block leftColumn %} {% endblock %}
+                </div>
+                
+            </div>
+            <div class="content-col right-column">
+                
+                <div class="content-col-inner">
+                    {% block rightColumn %} {% endblock %}
+                </div>
+                
+            </div>
+
+            <div class="gutter-col"></div>
+        </div>
+    </main  >
+{% endblock %}
+
+
+{% block footer %}
+    {% include "partials/footer.html.twig" %}
+{% endblock %}
