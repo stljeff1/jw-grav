@@ -1,6 +1,7 @@
-/**
-!/.gitignore
-!/gulpFile.js
-!/package.json
-!/pages/**
-!/themes/
+/accounts
+/blueprints
+/config
+!/config/site.yaml
+/data
+/node_modules
+/plugins
