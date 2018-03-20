@@ -22,15 +22,15 @@
     <link rel="canonical" href="{{ page.url() }}?slwsdndfpaollwm=true" />
     
 
+
     {% include 'partials/metadata.html.twig' %}
 
 
 
     <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,100italic,300italic,400" rel="stylesheet" type="text/css">
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    {% do assets.addCss('theme://css-compiled/main.css', 100) %}
+    {% do assets.addCss('theme://css-compiled/jw-bootstrap.css', 1000) %}
+    {% do assets.addCss('theme://css-compiled/main.css', 10) %}
     {{ assets.css() }}
 
         {% do assets.addJs('theme://js/modernizr.custom.71422.js', 100) %}

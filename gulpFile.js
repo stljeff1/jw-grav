@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var cssnano = require('gulp-cssnano');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
+var sassGlob = require('gulp-sass-glob');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
 
@@ -13,14 +14,16 @@ var themeRoot = './themes/jwmagic/';
 var paths = {
   styles: {
     src: 'scss/',
-    dist: 'css-compiled/'
+    dist: 'css-compiled/',
+    entry: 'main.scss'
   }
 };
 
 gulp.task('build-sass', function () {
-  gulp.src(themeRoot + paths.styles.src + '**/*.scss')
+  gulp.src(themeRoot + paths.styles.src + '*.scss')
+    .pipe(sassGlob())
+    .pipe(sass({includePaths: ['node_modules/bootstrap/scss/']}).on('error', sass.logError))
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
