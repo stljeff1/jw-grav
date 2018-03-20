@@ -10,9 +10,27 @@ form:
       fields:
         content: 
           fields: 
-            screenshots:
+            header.media_order:
+              label: Images
+              ordering@: 3
+            header.details:
+              type: section
+              title: Project details
+              ordering@: 2
+              fields:
+                header.details.client:
+                  type: text
+                  label: Client
+                header.header.live_url:
+                  type: text
+                  label: Live Url
+                  placeholder: (if applicable)
+                header.details.date:
+                  type: text
+                  label: Project Date
+            header.screenshots:
               type: list
-              label: Screenshot
+              label: Screenshots
               fields:
                 .caption:
                   type: text

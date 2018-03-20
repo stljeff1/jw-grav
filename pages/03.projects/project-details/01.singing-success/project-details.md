@@ -1,5 +1,12 @@
 ---
 title: 'Singing Success'
+details:
+    client: 'Singing Success'
+    date: 'October, 2016'
+screenshots:
+    -
+        caption: first
+        image: ss360-thumb1.jpg
 content:
     items: '@self.modular'
     order:
