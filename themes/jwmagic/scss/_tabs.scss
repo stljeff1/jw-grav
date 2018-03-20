@@ -12,7 +12,7 @@
 
 			border: 2px solid $gray-blue;
 			color: $gray-blue;
-
+			background-color: transparent;
 			margin-right: 10px;
 			margin-bottom: 10px;
 			line-height: 1.42857143;
@@ -20,13 +20,12 @@
 
 			padding: 10px 20px;
 			font-weight: 300;
-			border-radius: 50px;
 			text-align: center;
 			&:hover,
 			{
 				color: $navy;
 				border-color: $navy;
-				background-color: transparent;
+				background-color: #fff;
 				text-decoration: underline;
 			}
 		}

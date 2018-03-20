@@ -13,7 +13,7 @@ ljkbvukjb
 			{% set details = proj.header.details %}
 			{% if image %}
 				<div class="project-image">
-					{{ image.cropResize(400,400).html(proj.header.title, proj.header.title, 'img-responsive') }}
+					{{ image.cropResize(400,400).html(proj.header.title, proj.header.title, 'img-fluid') }}
 				</div>
 			{% endif %}
 				<h4>{{ proj.title }}</h4>

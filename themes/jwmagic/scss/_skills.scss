@@ -3,7 +3,7 @@
  }
 
 .skills-listing {
-	.media {
+	.row {
 		margin-bottom: 20px;
 
 	}
@@ -12,8 +12,9 @@
 		color: $navy;
 	}
 	.icon-skill { 
-		min-width: 75px;
+		width: 75px;
 		text-align: center;
+
 	}
 	.meter-skill {
 		background: rgba(77, 87, 99, 0.13);

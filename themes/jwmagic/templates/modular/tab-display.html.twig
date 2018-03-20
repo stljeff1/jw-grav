@@ -10,7 +10,7 @@
 		<li role="presentation"
 			{% if i == 1 %} {{ 'class="active"' }} {% endif %} 
 		>
-			<a href="#{{ tab.tabText|replace({' ': ''}) ~ i }}" role="tab" data-toggle="tab" aria-expanded="false">{{ tab.tabText }}</a>
+			<a href="#{{ tab.tabText|replace({' ': ''}) ~ i }}" class='btn' role="tab" data-toggle="tab" aria-expanded="false">{{ tab.tabText }}</a>
 		</li>
 		{% set i = i + 1 %}
 	{% endfor %}

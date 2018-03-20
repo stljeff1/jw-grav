@@ -2,13 +2,15 @@
 @import "colors";
 
 $grid-gutter-width: 15px;
+$screen-xs: 576px;
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
 
-$container-sm: 750px;
-$container-md: 970px;
-$container-lg: 1170px;
+$container-xs: 540px;
+$container-sm: 720px;
+$container-md: 960px;
+$container-lg: 1140px;
 
 
 @mixin clearfix() {
@@ -20,6 +22,33 @@ $container-lg: 1170px;
 	&:after {
 		clear: both;
 	}
+}
+
+@mixin make-my-container {
+
+	@media (min-width: $screen-xs)
+	{
+	    max-width: $container-xs;
+	}
+	@media (min-width: $screen-sm)
+	{
+	    max-width: $container-sm;
+	}
+
+	@media (min-width: $screen-md)
+	{
+	    max-width: $container-md;
+	}
+	@media (min-width: $screen-lg)
+	{
+	    max-width: $container-lg;
+	}
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+
 }
 
 @import "css-toggle-switch/toggle-switch";
@@ -39,6 +68,9 @@ html, body  {
 	}
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 1rem;
+}
 
 a, a:visited, a:link {
 	color: $gray-blue2;
@@ -270,6 +302,11 @@ blockquote p {
 @import "project-spotlight";
 @import "about";
 
+ul.list-unstyled.row {
+	li {
+		margin-bottom: 15px;
+	}
+}
 
 .social-icons-container {
 	li {
@@ -311,16 +348,24 @@ blockquote p {
 		bottom:  0;
 	}
 	.carousel-indicators li {
-		border-color: #d80033;
+		border-radius: 10px;
+		margin: 1px 3px;
+		height: 10px;
+		max-width: 10px;
+		border: 1px solid #d80033;
+		background-color: transparent;
 		&.active {
 			background-color: $red;
+			max-width: 12px;
+			margin: 0 3px;
+			height: 12px;
 		}
 	}
 
 }
 
 #client_slideshow {
-	.item {
+	.carousel-item {
 		text-align: center;
 		img {
 			max-width: 400px;

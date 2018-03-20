@@ -33,6 +33,7 @@
 .top-nav {
 	//background-color: $navy;
 	font-size: 1.6rem;
+
 	.back-page &.affix {
 	z-index: 99999;
 		background-color: $navy; 
@@ -40,28 +41,16 @@
 		min-height: 60px;
 
 	}
-	.container {
-		display: flex;
-		align-items: center;
-		& > div {
-			margin-top: 0px;
-		}	
+	.navigation-container {
+			@include make-my-container;
 	}
 	h1 a,
 	li a {
 		padding: 0px 20px;
 	}
-
-	li {
-		& >a,
-		& > span {
-			font-size: 1em;
-
-			line-height:  1.2em;
-		}
-	}
-
 	nav {
+		flex: 1;
+		padding: 0 15px;
 		li {
 			& > a {
 				font-size: 1.2rem;
@@ -110,46 +99,51 @@
 			}
 		}
 	}
-	.site-name-container {
-		flex: 1;
-	}
-	.navigation-container {
-		max-width: 25%;
-	}
 
 	@media (min-width: $screen-md) {
 
 		.container {
 			min-height: 60px;
 		}
+		.navbar-list-container {
+			justify-content: flex-end;
+		}
 		.site-name-container {
 			max-width: 25%;
 			flex: 1 0 auto;
 		}
 		.navigation-container {
-			flex: 1 0 75%;
-			max-width: unset;
+			
+			height: 60px;
+			display: flex;
+			align-items: center;
 		}    	
 	}
 
 	@media (max-width: $screen-md) {	
-		.navbar-collapse.collapse {
+		x.navbar-collapse.collapse {
 			display: none !important;
 			&.in {
 				display: block !important;
 			}
 		}
-		.navbar-toggle {
-			display: block;
+		.navbar-toggler {
+		}
+		.navbar-brand {
+			display: flex;
+			height: 60px;
+			align-items: center;
+		}
+		.navigation-container {
+			background-color: $navy;
 		}
 		nav {
-			position: absolute;
+			/*position: absolute;
 			width: 100%;
 			top: 0;
 			left: 0;
-			background-color: $gray-blue2;
-			padding-top: 20px;
-			z-index: 999;
+			xbackground-color: $gray-blue2;
+			*/
 			li {
 				a {
 					color: $gray-light2;
@@ -157,13 +151,6 @@
 					xheight: a
 				}
 			}
-		}
-	}
-	@media (min-width: $screen-sm) and (max-width: $screen-md) {
-		x.navbar-toggle {
-			position: absolute;
-			left: 0;
-			top: 0;
 		}
 	}
 

@@ -33,7 +33,7 @@
                             <div class="carousel-inner" role='listbox'>
                                 {% for image in page.header.faces %}
                                     <div class="item {% if loop.first %} active {% endif %}">
-                                        <img src="{{ url('theme://images/'~image~'.jpg', true) }}" class="img-responsive" />
+                                        <img src="{{ url('theme://images/'~image~'.jpg', true) }}" class="img-fluid" />
                                     </div>
                                 {% endfor %}
 
@@ -63,7 +63,7 @@
                     <p>The "style" of yoga I practce is called Iyengar yoga, which is a system of yoga that emphasizes timing, sequencing, and alignment. It is a unique method that has taught me how to be a better problem solver, how to bring more integrity to the work I produce, and most of all, how to approach my tasks with diligence and persistence.</p>
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-md-push-8">
-                            <img src="{{ url('theme://images/jeff-yoga-stump-pose.jpg')}}" class="img-responsive yoga-img" />
+                            <img src="{{ url('theme://images/jeff-yoga-stump-pose.jpg')}}" class="img-fluid yoga-img" />
                         </div>
                         <div class="col-sm-12 col-md-8 col-md-pull-4">
                             <div class='text-center hidden-md hidden-lg'>
@@ -99,10 +99,10 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <ul class="block-grid-xs-2 block-grid-md-4 suzygram-list">
-                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram1.jpg', true) }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram1.jpg', true) }}"/></a></li>
-                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram2.jpg', true) }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram2.jpg', true) }}"/></a></li>
-                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram3.jpg', true) }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram3.jpg', true) }}"/></a></li>
-                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram4.jpg', true) }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-responsive" src="{{ url('theme://images/suzygram4.jpg', true) }}"/></a></li>
+                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram1.jpg', true) }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-fluid" src="{{ url('theme://images/suzygram1.jpg', true) }}"/></a></li>
+                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram2.jpg', true) }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-fluid" src="{{ url('theme://images/suzygram2.jpg', true) }}"/></a></li>
+                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram3.jpg', true) }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-fluid" src="{{ url('theme://images/suzygram3.jpg', true) }}"/></a></li>
+                                <li class="block-grid-item"><a href="{{ url('theme://images/suzygram4.jpg', true) }}" data-toggle="modal" data-target="#suzygramModal"><img class="img-fluid" src="{{ url('theme://images/suzygram4.jpg', true) }}"/></a></li>
                             </ul>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    <img src='' id="modal-image" class="img-responsive" />
+                    <img src='' id="modal-image" class="img-fluid" />
                 </div>
             </div>
         </div>

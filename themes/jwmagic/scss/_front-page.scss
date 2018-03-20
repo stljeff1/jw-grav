@@ -82,8 +82,6 @@
 
 	}
 	.block-right {
-		xwidth: 50%;
-		xmargin: 0 0 0 auto;
 		position: relative;
 		.block-content {
 			padding: 1px 30px 0;
@@ -99,21 +97,17 @@
 			width: 100%;
 			background-color: $white;
 			z-index: 9999;
-			
-			
-			xvisibility: hidden;
 			transition: all .4s ease-in-out;
 			&.affix {
 				background-color: rgba(255, 255, 255, 1);
 				
-				xvisibility: visible;
 				nav {
 					a {
 						color: $gray-blue2;
 					}
 				}
 			}
-			.nav-toggle {
+			.nav-toggler {
 				position: absolute;
 				top: 10px;
 				right: 30px;
@@ -128,29 +122,6 @@
 				a {
 					font-weight: bold;
 				}
-			}
-			xnav {
-				border: 2px solid $navy-dark;
-				border-radius: 6px;
-				background-color: $navy;
-				ul {
-					margin-bottom: 0;
-				}
-				a {
-					line-height: 2;
-					padding: 5px 10px;
-					color: $highlight-color;
-					border-bottom: 2px solid $gray-dark;
-					&:hover {
-						background-color: lighten($navy, 10%);
-						color: $white;
-					}
-
-				}
-				li:last-child a {
-					border-bottom: 0
-				}
-
 			}
 		}
 
@@ -167,7 +138,7 @@
 		max-width: 400px;
 		padding: 30px 0;
 		margin: 0 auto;
-		xheight: 300px;
+		text-align: center;
 		img {
 			border: 3px solid $navy;
 			max-height: 250px;
@@ -213,6 +184,7 @@
 		}
 	}
 	.social-icons-list {
+		list-style: none;
 		padding: 10px 0;
 		a {
 			padding: 5px;

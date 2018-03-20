@@ -2,7 +2,7 @@
 
 
 	{% for item in site.social %}
-		<li>
+		<li class="list-inline-item">
 			{% set icon = item.icon %}
 			{% if header.theme is defined and header.theme == 'lightbg' %}
 				{% set icon = icon ~ '-blue' %}

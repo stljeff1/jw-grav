@@ -1,8 +1,8 @@
 ---
 sub_headline: 'I am the **glue** for your website and your business objectives.'
 image_align: right
-body_classes: my-services
-theme: sevenbyfive
+body_classes: 'my-services  light-colored-bg'
+theme: eightbyfour
 ---
 
 #### Website Design and Development
