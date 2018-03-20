@@ -1,3 +1,14 @@
 {% macro input(name, value, type, size) %}
     <input type="{{ type|default('text') }}" name="{{ name }}" value="{{ value|e }}" size="{{ size|default(20) }}" />
 {% endmacro %}
+
+{% macro sidebarListGrid(label, value) %}
+	<div class="row">
+		<div class="label col-xs-12 col-md-4">
+			{{ label }}
+		</div>
+		<div class="value col-xs-12 col-md-8">
+			{{ value }}
+		</div>
+	</div>
+{% endmacro %}

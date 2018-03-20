@@ -8,14 +8,13 @@
 
 
 {% block header %}
-
     {% include "partials/header.html.twig" %}
 
 {% endblock %}
 
-{% block pageContent %}
+{% block main %}
     <main class="sidebar-layout">
-        {{ page.content }}
+        {% block aboveContent %} {{ page.content }} {% endblock %}
         <div class="flex-gutter-row">
             <div class="gutter-col white-bg"></div>
             <div class="content-col white-bg left-column">
@@ -34,7 +33,8 @@
 
             <div class="gutter-col"></div>
         </div>
-    </main  >
+        {% block belowContent %} {% endblock %}
+    </main>
 {% endblock %}
 
 

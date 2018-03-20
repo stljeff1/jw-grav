@@ -1,0 +1,24 @@
+{% if page.header.title is not null %}
+     <h3 class="section-title">{{ page.header.title }} - ibkbj</h3>
+ {% endif %}
+ljkbvukjb
+
+
+{% set projects = page.find('/projects/project-details').children %}
+{{ dump(projects) }}
+<div class="project-list flex-listing-row">
+	{% for proj in projects %}
+		<div class="flex-col">
+			{% set image = proj.media.images|first %}
+			{% set details = proj.header.details %}
+			{% if image %}
+				<div class="project-image">
+					{{ image.cropResize(400,400).html(proj.header.title, proj.header.title, 'img-responsive') }}
+				</div>
+			{% endif %}
+				<h4>{{ proj.title }}</h4>
+			{{ dump(proj) }}
+		</div>
+	{% endfor %}
+
+</div>

@@ -1,5 +1,6 @@
 ---
 title: 'Project Spotlight'
+published: false
 image_align: left
 projects:
     -
@@ -13,7 +14,10 @@ projects:
         notes:
             -
                 title: 'Technology Used'
-                items: ['Foundation CSS Framework, LESS, and jQuery.', 'Enforced semantic HTML to ease accessibility and searchability.', 'Built on top of .Net.']
+                items:
+                    - 'Foundation CSS Framework, LESS, and jQuery.'
+                    - 'Enforced semantic HTML to ease accessibility and searchability.'
+                    - 'Built on top of .Net.'
     -
         name: 'Singing Success'
         ui_id: ss360
@@ -25,6 +29,7 @@ projects:
         notes:
             -
                 title: Victories
-                items: ['Foundation CSS Framework, LESS, and jQuery.']
+                items:
+                    - 'Foundation CSS Framework, LESS, and jQuery.'
 ---
 

@@ -1,4 +1,4 @@
-{% extends 'partials/modular-base.html.twig' %}
+{% extends 'base/two-column.html.twig' %}
 
 {% block header %}
 
@@ -7,30 +7,76 @@
 
     </header>
 {% endblock %}
-{% block pageContent %}
-	<main>
-		<section>
-			<div class="container">
-				<h1>Project Details - {{ page.header.title }}</h1>
-				<p>{{ page.content }}</p>
-				{{ dump(page) }}
-				<div class="project-screenshots">
-					{{ dump(page.media) }}
-	{% for imageuploaded in page.header.screenshots %}
-		{% set myimage = page.media[imageuploaded.image].cropZoom(200,200) %} 
-		<div style="text-align: center;">
-		}
-	fuck!!!!!!!!!!!!!!!!!
-			{{ dump(image) }}
-			{{ dump(myimage) }}
-		<img src="{{ myimage.url }}"/>
-		</div>
-		<div>
-			<img src="{{ page.media[imageuploaded.image].url() }}">
-	{% endfor %}
+
+
+{% block aboveContent %}
+{% endblock %}
+
+
+{% block leftColumn  %}
 	
-				</div>
+	<div class="project-title">
+		<h2 class="section-title">Project Spotlight - {{ page.header.title }}</h2>
+		<p>Tags, tags, tags</p>
+	</div>
+	<section class="project-intro">
+		<h4>End Results</h4>
+		
+	</section>
+	<div class="project-screenshots">
+		{{ dump(page.media) }}
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		{% for imageuploaded in page.header.screenshots %}
+			{% set myimage = page.media[imageuploaded.image].cropZoom(200,200) %} 
+			<div style="text-align: center;">
+	
+				dump(image)
+				{{ dump(myimage) }}
+				<img src="{{ myimage.url }}"/>
 			</div>
-		</section>
-	</main>
+			<div style="display: none;">
+				<img src="{{ page.media[imageuploaded.image].url() }}">
+			</div>
+		{% endfor %}
+	
+	</div>
+	
+{% endblock %}
+
+{% block rightColumn  %}
+	<h4>Summary</h4>
+	{{ page.content }}
+	<div class="sidebar-list">
+		{{ siteMacros.sidebarListGrid('Client', header.details.client) }}
+		{{ siteMacros.sidebarListGrid('Project Date', header.details.date) }}
+	</div>
+
+{% endblock %}
+
+{% block belowContent %}
+
 {% endblock %}
