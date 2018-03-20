@@ -1,0 +1,74 @@
+$gray-dark: #222;
+$gray-light: #eaeaea;
+
+$gray-blue: #1E2431;
+$gray-blue2: #2D2A32;
+$gray-blue3: #3B4656;
+
+
+$gray-light2: #BCABAE;
+$gray-dark2: #2D2E2E;
+$black: #0F0F0F;
+
+$navy: #030e1e;
+$navy-dark: #000715;	
+
+
+$red: #d80033;
+$red-light: #F53440;
+$white: #fff;
+
+$highlight-color: #ffffd5;
+$yellow: #DDD92A;
+$yellow-light: #EAE151;
+
+
+$grid-gutter-width: 15px;
+$screen-xs: 576px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+$container-xs: 540px;
+$container-sm: 720px;
+$container-md: 960px;
+$container-lg: 1140px;
+
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin make-my-container {
+
+	@media (min-width: $screen-xs)
+	{
+	    max-width: $container-xs;
+	}
+	@media (min-width: $screen-sm)
+	{
+	    max-width: $container-sm;
+	}
+
+	@media (min-width: $screen-md)
+	{
+	    max-width: $container-md;
+	}
+	@media (min-width: $screen-lg)
+	{
+	    max-width: $container-lg;
+	}
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+
+}

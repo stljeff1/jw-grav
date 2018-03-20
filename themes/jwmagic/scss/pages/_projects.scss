@@ -1,0 +1,30 @@
+.project-spotlight {
+	.title-heading {
+		text-align: left;
+		color: $navy;
+	}
+	&:not(:last-child) {
+		border-bottom: 2px solid $black;
+	}
+}
+
+
+.other-project {
+
+	background-color: #fff;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	max-width: 900px;
+	margin: 0 auto 20px;
+	padding: 10px;
+	.container {
+		width: auto;
+		max-width: 100%;
+		color: #0f0f0f;
+		a {
+			color: $red;
+		}
+	}
+
+}
