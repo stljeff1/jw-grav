@@ -1,13 +1,5 @@
 {% extends 'base/two-column.html.twig' %}
 
-{% block header %}
-
-    <header class="site-header">
-        {% include "partials/navigation-default.html.twig" %}
-
-    </header>
-{% endblock %}
-
 
 {% block aboveContent %}
 {% endblock %}
@@ -16,52 +8,27 @@
 {% block leftColumn  %}
 	
 	<div class="project-title">
-		<h2 class="section-title">Project Spotlight - {{ page.header.title }}</h2>
-		<p>Tags, tags, tags</p>
-	</div>
-	<section class="project-intro">
-		<h4>End Results</h4>
+		<h2 class="section-title">Project Results</h2>
 		
-	</section>
+	</div>
 	<div class="project-screenshots">
+
 		{{ dump(page.media) }}
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		{% for imageuploaded in page.header.screenshots %}
-			{% set myimage = page.media[imageuploaded.image].cropZoom(200,200) %} 
-			<div style="text-align: center;">
-	
-				dump(image)
-				{{ dump(myimage) }}
-				<img src="{{ myimage.url }}"/>
-			</div>
-			<div style="display: none;">
-				<img src="{{ page.media[imageuploaded.image].url() }}">
-			</div>
-		{% endfor %}
+
+		<div class="project-thumbnail-row row">
+			{% for imageuploaded in page.header.screenshots %}
+				{% set myimage = page.media[imageuploaded.image] %} 
+				<div class="col-auto">
+					{{ dump(myimage) }}
+					<a href="{{ myimage.url}}" class="project-thumbnail">
+						<img src="{{ myimage.cropZoom(100,150).url }}" class="img-fluid" />
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="project-screenshot-viewport">
+
+		</div>
 	
 	</div>
 	
@@ -79,4 +46,19 @@
 
 {% block belowContent %}
 
+{% endblock %}
+
+{% block bottom %}
+	{{ parent() }}
+
+	<script>
+		$(function() {
+			console.log('go to bed');
+			$('.project-thumbnail').click(function(e) {
+				var link = this;
+				$('.project-screenshot-viewport').html('<img class="img-fluid" src="'+ link.href + '"/>');
+				return false;
+			});
+		});
+	</script>
 {% endblock %}

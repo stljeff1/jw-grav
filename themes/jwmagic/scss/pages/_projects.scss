@@ -8,6 +8,49 @@
 	}
 }
 
+.project-list {
+
+	.project-title {
+		margin: 10px;
+		color: $navy;
+		strong {
+			font-size: 60%;
+			display: block;
+			font-weight: bold;
+		}
+	}
+	.project-link {
+		text-align: center;
+		border: 2px solid $navy;
+		&:hover {
+			border-color: $red;
+			text-decoration: none;
+			.project-title {
+				color: $red;
+			}
+		}
+	}
+
+	@media (max-width: $screen-md) {
+		s.project-thumbnail {
+			display: flex;
+		}
+	}
+	@media (min-width: $screen-sm) {
+
+		.project-col {
+			display: flex;
+			flex-direction: 1;
+			.project-title {
+
+				font-size: 1.8rem;
+			}
+			.project-link {
+				flex: 1;
+			}
+		}
+	}
+}
 
 .other-project {
 

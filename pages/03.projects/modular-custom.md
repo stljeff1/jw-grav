@@ -5,10 +5,6 @@ content:
     order:
         by: default
         dir: asc
-        custom:
-            - _project-spotlight
-            - _quick-links
-            - _other-projects
 body_classes: modular
 menu: 'Stuff I''ve Done'
 seo_title: 'Current Web Projects - Jeff Wilkerson - Portland Web Developer'

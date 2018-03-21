@@ -3,6 +3,7 @@ title: 'Singing Success'
 details:
     client: 'Singing Success'
     date: 'October, 2016'
+blurb: 'Social Meta Tags, Jade, AngularJS'
 screenshots:
     -
         caption: first

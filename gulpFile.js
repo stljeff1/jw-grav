@@ -9,7 +9,6 @@ var sassGlob = require('gulp-sass-glob');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
 
-
 var themeRoot = './themes/jwmagic/';
 var paths = {
   styles: {
