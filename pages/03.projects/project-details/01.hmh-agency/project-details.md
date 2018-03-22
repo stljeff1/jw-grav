@@ -6,7 +6,7 @@ details:
 header:
     live_url: 'https://hmhagency.com/'
 blurb: 'Wordpress, Javascript'
-media_order: 'ss-work-thumbnail.jpg,ss-office-thumbnail.jpg,ss-home-thumbnail.jpg,ss-casestudy-thumbnail.jpg'
+media_order: 'ss-work-thumbnail.jpg,ss-office-thumbnail.jpg,ss-home-thumbnail.jpg,ss-casestudy-thumbnail.jpg,Screenshot-2018-3-20 HMH Agency Full Service Creative Agency.jpg'
 screenshots:
     -
         caption: 'This site featured open and colorful displays of content to showcase the agency''s creative work.'
@@ -20,5 +20,7 @@ screenshots:
     -
         caption: 'Aside from the heavy Wordpress customization and unique interactive elements, my favorite part of this project was the chance to master [CSS Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) understanding!'
         image: ss-office-thumbnail.jpg
+    -
+        image: 'Screenshot-2018-3-20 HMH Agency Full Service Creative Agency.jpg'
 ---
 

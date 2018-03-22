@@ -4,6 +4,10 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	.section-title {
+		text-align: left;
+		font-weight: 300
+	}
 	@media (max-width: $screen-sm) {
 		.left-column {
 			padding-bottom: 10px;
@@ -13,6 +17,9 @@
 		display: flex;
 		.gutter-col {
 			flex: 1;
+		}
+		.content-col-inner {
+			padding-bottom: 10px;
 		}
 		.left-column .content-col-inner {
 			margin: 0 0 0 auto;
@@ -28,6 +35,9 @@
 		}
 	}
 	@media (min-width: $screen-md) {
+		.content-col-inner {
+			padding-bottom: 20px;
+		}
 		.left-column  .content-col-inner{
 			width: .6666 * $container-md;
 		}
@@ -36,6 +46,10 @@
 		}
 	}
 	@media (min-width: $screen-lg) {
+
+		.content-col-inner {
+			padding-bottom: 30px;
+		}
 		.left-column .content-col-inner {
 			width: .6666 * $container-lg;
 		}

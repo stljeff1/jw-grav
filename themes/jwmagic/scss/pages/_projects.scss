@@ -22,6 +22,7 @@
 	.project-link {
 		text-align: center;
 		border: 2px solid $navy;
+		display: block;
 		&:hover {
 			border-color: $red;
 			text-decoration: none;
@@ -49,6 +50,12 @@
 				flex: 1;
 			}
 		}
+	}
+}
+
+.project-thumbnail-row {
+	> div {
+		margin-bottom: 15px;
 	}
 }
 

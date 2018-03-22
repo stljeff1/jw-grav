@@ -1,6 +1,7 @@
 {% extends 'base/two-column.html.twig' %}
 
-
+{% do assets.addCss('theme://css-compiled/magnific-popup.css', 100) %}
+{% do assets.addJs('theme://js/project-samples.js', {priority: 5, group: 'bottom'}) %}
 {% block aboveContent %}
 {% endblock %}
 
@@ -11,17 +12,18 @@
 		<h2 class="section-title">Project Results</h2>
 		
 	</div>
+
+
 	<div class="project-screenshots">
 
-		{{ dump(page.media) }}
-
+		{{ dump(assets.collections.bootstrap) }}
 		<div class="project-thumbnail-row row">
 			{% for imageuploaded in page.header.screenshots %}
 				{% set myimage = page.media[imageuploaded.image] %} 
 				<div class="col-auto">
 					{{ dump(myimage) }}
 					<a href="{{ myimage.url}}" class="project-thumbnail">
-						<img src="{{ myimage.cropZoom(100,150).url }}" class="img-fluid" />
+						<img src="{{ myimage.cropZoom(300,450).url }}" class="img-fluid" />
 					</a>
 				</div>
 			{% endfor %}
@@ -45,20 +47,13 @@
 {% endblock %}
 
 {% block belowContent %}
+	<section id="other-samples" class="blue-bg">
 
-{% endblock %}
+		<div class="container">
+			<h3 class="section-title">Other Projects</h3>
+			{% set projects = page.find('/projects/project-details').children %}
+			{{ siteMacros.projectListGrid(projects, 3) }}
+		</div>
 
-{% block bottom %}
-	{{ parent() }}
-
-	<script>
-		$(function() {
-			console.log('go to bed');
-			$('.project-thumbnail').click(function(e) {
-				var link = this;
-				$('.project-screenshot-viewport').html('<img class="img-fluid" src="'+ link.href + '"/>');
-				return false;
-			});
-		});
-	</script>
+	</section>
 {% endblock %}

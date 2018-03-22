@@ -1,0 +1,17 @@
+title: Project List
+'@extends': default
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            content:
+              type: ignore
+            header.number_cols:
+              type: select
+              label: Max Number of Cols
+              options:
+                3: 3
+                4: 4                
+                
