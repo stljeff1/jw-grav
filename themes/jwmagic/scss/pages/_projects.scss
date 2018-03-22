@@ -53,9 +53,32 @@
 	}
 }
 
+.project-summary {
+	margin-bottom: 20px;
+	.section-title {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	p {
+		margin-bottom: 20px;
+	}
+	strong {
+		color: $red;
+	}
+
+	@media (min-width: $screen-sm) {
+		p strong {
+			display: block;
+		}
+	}
+
+}
 .project-thumbnail-row {
 	> div {
 		margin-bottom: 15px;
+	}
+	.caption {
+		display: none;
 	}
 }
 

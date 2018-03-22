@@ -31,7 +31,7 @@
 				<a href="{{ proj.url }}" class="project-link box-item light-colored-bg">
 
 					{% set screenshot_el = proj.header.screenshots|first %}
-					{% set image = proj.media[screenshot_el.image] %}
+					{% set image = proj.media[screenshot_el.thumbnail] %}
 					{% set details = proj.header.details %}
 					{% if image %}
 						<div class="project-image">
