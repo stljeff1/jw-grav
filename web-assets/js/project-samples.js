@@ -7,21 +7,27 @@
 			console.log('go to bed');
 			$('.project-thumbnail').magnificPopup({
 				type: 'image',
+				mainClass: 'scrolling-image',
 				image: {
-					verticalFit: true,
+					markup: '<div class="mfp-figure">'+
+							'<div class="mfp-close-container"><div class="mfp-close"></div></div>'+
+							'<div class="scrolling-image-container">' +
+								'<div class="scrolling-viewport"><div class="mfp-img"></div></div>'+
+							'</div>' +
+							'<div class="mfp-bottom-bar">'+
+							'<div class="mfp-title"></div>'+
+							'<div class="mfp-counter"></div>'+
+						'</div>'+
+					'</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+					verticalFit: false,
 					titleSrc: function(item) {
-						return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+						console.log(item.el.find('.caption'));
+						return item.el.attr('data-caption');
 					}
 				},
 				gallery: {
 					enabled: true
-				},
-				zoom: {
-					enabled: true,
-					duration: 300, // don't foget to change the duration also in CSS
-					opener: function(element) {
-						return element.find('img');
-					}
 				}
 				
 			});
