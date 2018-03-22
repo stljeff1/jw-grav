@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
+var gulpif = require('gulp-if');
 var sass = require('gulp-sass');
 var cssnano = require('gulp-cssnano');
 var sourcemaps = require('gulp-sourcemaps');
@@ -29,6 +30,13 @@ var paths = {
 
 var vendorIncludes = require(paths.assets + paths.vendorIncludes);
 
+gulp.task('set-dev-node-env', function() {
+    return process.env.NODE_ENV = 'development';
+});
+
+gulp.task('set-prod-node-env', function() {
+    return process.env.NODE_ENV = 'production';
+});
 
 gulp.task('bootstrap', function () {
   gulp.src(paths.styles.src + paths.styles.bootstrap)
@@ -79,9 +87,8 @@ gulp.task("vendorIncludes", function() {
   console.log(vendorIncludes);
   gulp.src(vendorIncludes.css, {cwd: 'node_modules'})
     .pipe(gulp.dest(paths.styles.dist));
-})
+});
  
-gulp.task("default", ["scripts"]);
 
 gulp.task('watch', function(done) {
   gulp.watch(paths.styles.src + '**/*.scss', ['build-sass', 'js']);
@@ -93,6 +100,10 @@ gulp.task('build', function() {
   runSequence('vendorIncludes', 'build-sass', 'bootstrap', 'js');
 });
 
+gulp.task('build-prod', ['set-prod-node-env'], function() {
+  // maybe here manipulate config object  
+  console.log(process.env);
+});
 gulp.task('default', function() {
   runSequence('build-sass', 'js', 'watch');
 });
