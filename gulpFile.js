@@ -8,19 +8,30 @@ var autoprefixer = require('gulp-autoprefixer');
 var sassGlob = require('gulp-sass-glob');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
+var include = require("gulp-include");
 
 var themeRoot = './themes/jwmagic/';
 var paths = {
+  assets: "./web-assets/",
+  vendorIncludes: 'vendor-includes.json',
+  js: {
+    src: 'js/',
+    dist: themeRoot + 'js/'
+  },
   styles: {
-    src: 'scss/',
-    dist: 'css-compiled/',
+    src: themeRoot + 'scss/',
+    dist: themeRoot + 'css-compiled/',
+    bootstrap: 'jw-bootstrap.scss',
     entry: 'main.scss'
   }
 };
 
-gulp.task('build-sass', function () {
-  gulp.src(themeRoot + paths.styles.src + '*.scss')
-    .pipe(sassGlob())
+
+var vendorIncludes = require(paths.assets + paths.vendorIncludes);
+
+
+gulp.task('bootstrap', function () {
+  gulp.src(paths.styles.src + paths.styles.bootstrap)
     .pipe(sass({includePaths: ['node_modules/bootstrap/scss/']}).on('error', sass.logError))
     .pipe(sourcemaps.init())
     .pipe(autoprefixer({
@@ -28,21 +39,60 @@ gulp.task('build-sass', function () {
       cascade: false
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(themeRoot + paths.styles.dist))
+    .pipe(gulp.dest(paths.styles.dist))
     .pipe(cssnano())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(themeRoot + paths.styles.dist))
+    .pipe(gulp.dest(paths.styles.dist));
 });
 
+
+gulp.task('build-sass', function () {
+  gulp.src(paths.styles.src + paths.styles.entry)
+    .pipe(sourcemaps.init()).pipe(sassGlob())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(paths.styles.dist))
+    .pipe(cssnano())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.styles.dist));
+});
+
+gulp.task("js", function() {
+  console.log("-- gulp is running task 'scripts'");
+ 
+  gulp.src(paths.assets + paths.js.src + 'project-samples.js')
+    .pipe(include({
+
+      includePaths: [
+        __dirname + "/node_modules"       
+      ]
+    }))
+      .on('error', console.log)
+    .pipe(gulp.dest(paths.js.dist));
+});
+
+gulp.task("vendorIncludes", function() {
+  console.log(vendorIncludes);
+  gulp.src(vendorIncludes.css, {cwd: 'node_modules'})
+    .pipe(gulp.dest(paths.styles.dist));
+})
+ 
+gulp.task("default", ["scripts"]);
+
 gulp.task('watch', function(done) {
-  gulp.watch(themeRoot + paths.styles.src + '**/*.scss', ['build-sass']);
+  gulp.watch(paths.styles.src + '**/*.scss', ['build-sass', 'js']);
+  gulp.watch(paths.assets + paths.js.src + '**/*.js', ['js'])
 });
 
 
 gulp.task('build', function() {
-  runSequence('build-sass');
+  runSequence('vendorIncludes', 'build-sass', 'bootstrap', 'js');
 });
 
 gulp.task('default', function() {
-  runSequence('build-sass', 'watch');
+  runSequence('build-sass', 'js', 'watch');
 });
