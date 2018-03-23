@@ -34,6 +34,8 @@ $container-sm: 720px;
 $container-md: 960px;
 $container-lg: 1140px;
 
+$nav-height: 60px;
+
 
 @mixin clearfix() {
 	&:before,

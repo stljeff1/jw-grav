@@ -1,4 +1,54 @@
 
+.front-page-nav-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $white;
+	z-index: 9999;
+	transition: all .25s ease-in-out;
+	padding: 0;
+	.nav-toggler {
+		position: absolute;
+		top: 10px;
+		right: 30px;
+		text-align: right;
+		z-index: 999;
+		img {
+			max-height: 2rem;
+		}
+	}
+	nav {
+		xborder-bottom: 3px solid $navy;
+		margin: .5rem 15px;
+		a {
+			font-weight: bold;
+		}
+	}
+	@media (min-width: $screen-md) {
+
+		left: 40%;
+		right: 0%;
+		width: auto;
+		background-color: rgba(255, 255, 255, 0);
+		border-bottom: 3px solid $gray-light;
+		nav {
+			border: none;
+			a {
+				color: $gray-light2;
+				&:hover {
+					color: lighten($gray-blue2, 20%);
+				}
+			}
+		}
+		.scrolling & {
+			background-color: #fff;
+			border-color: $navy;
+
+		}
+	}
+
+}
 .front-page-container {
 	height: 100%;
 	width: 100%;
@@ -88,40 +138,6 @@
 			section {
 				padding: 30px 0;
 				border-bottom: 1px solid $gray-blue2;
-			}
-		}
-		.front-page-nav-container {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background-color: $white;
-			z-index: 9999;
-			transition: all .4s ease-in-out;
-			&.affix {
-				background-color: rgba(255, 255, 255, 1);
-				
-				nav {
-					a {
-						color: $gray-blue2;
-					}
-				}
-			}
-			.nav-toggler {
-				position: absolute;
-				top: 10px;
-				right: 30px;
-				text-align: right;
-				z-index: 999;
-				img {
-					max-height: 2rem;
-				}
-			}
-			nav {
-				border-bottom: 3px solid $navy;
-				a {
-					font-weight: bold;
-				}
 			}
 		}
 
@@ -245,27 +261,6 @@
 			width: 60%;
 			margin: 0 0 0 auto;
 			position: relative;
-			.front-page-nav-container {
-				left: 40%;
-				right: 0%;
-				width: auto;
-				background-color: rgba(255, 255, 255, 0);
-				border-bottom: 3px solid $gray-light;
-				nav {
-					border: none;
-					a {
-						color: $gray-light2;
-						&:hover {
-							color: lighten($gray-blue2, 20%);
-						}
-					}
-				}
-				&.affix {
-					border-color: $navy;
-
-				}
-
-			}
 			x.jw-logo-fixed {
 				position: fixed;
 				top: 30px;

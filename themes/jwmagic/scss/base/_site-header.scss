@@ -28,18 +28,22 @@
 		color: $white;
 		text-align: center;
 	}
+	.scrolling.back-page & {
+		padding-top: $nav-height;
+	}
 }
 
 .top-nav {
 	//background-color: $navy;
 	font-size: 1.6rem;
-
-	.back-page &.affix {
-	z-index: 99999;
-		background-color: $navy; 
+	transition: all .25s;
+	.scrolling.back-page & {
+		z-index: 99999;
 		width: 100%;
-		min-height: 60px;
-
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: $navy;
 	}
 	.navigation-container {
 			@include make-my-container;
