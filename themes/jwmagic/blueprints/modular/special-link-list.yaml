@@ -1,0 +1,29 @@
+title: Link List
+'@extends': default
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            content:
+              type: ignore
+            header.media_order:
+              type: ignore
+            header.links:
+              type: list
+              label: LinksCols
+              fields:
+                .label:
+                  type: text
+                  label: Label
+                .date:
+                  type: text
+                  label: Date
+                .tags:
+                  type: text
+                  label: Tags
+                .url:
+                  type: text
+                  label: URL          
+                

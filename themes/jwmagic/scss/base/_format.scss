@@ -53,7 +53,7 @@ h6 {
 a, a:visited, a:link {
 	color: $gray-blue2;
 	&:hover {
-		color: lighten($gray-blue2, 20%);;
+		color: lighten($gray-blue2, 25%);;
 	}
 	.red-bg & {
 		color: $white;
@@ -64,7 +64,7 @@ a, a:visited, a:link {
 	&.red-text {
 		color: $red;
 		&:hover {
-			color: darken($red, 20%);
+			color: darken($red, 25%);
 		}
 	}
 }
@@ -112,7 +112,10 @@ blockquote p {
 	}
 }
 
-.light-colored-bg, .white-bg {
+.light-colored-bg {
+	background-color: $gray-light;
+}
+.white-bg {
 	background-color: #fff;
 }
 

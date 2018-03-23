@@ -82,6 +82,18 @@
 	}
 }
 
+.code-samples-list {
+	.link-list {
+		padding: 15px;
+		a:hover {
+			color: $red;
+		}
+	}
+	.item-info {
+		font-size: 1.25rem;
+	}
+}
+
 .other-project {
 
 	background-color: #fff;

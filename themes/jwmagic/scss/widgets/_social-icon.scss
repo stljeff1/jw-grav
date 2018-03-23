@@ -1,6 +1,6 @@
 
 
-.social-icons-container {
+.social-icons-list {
 	li {
 		padding: 5px 10px;
 	}
@@ -14,17 +14,7 @@
 		display: inline-block;
 
 		&:hover {
-			border-color: rgba(255, 255, 255, 0.23);
-		}
-	}
-	&.blue-bg {
-		a:hover {
-			background-color: $red;
-		}
-	}
-	&.red-bg {
-		a:hover {
-			background-color: $gray-blue;
+			background-color: rgba(#fff, .1);
 		}
 	}
 }

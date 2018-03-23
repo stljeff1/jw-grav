@@ -28,7 +28,7 @@
 			{% if proj.active() == false %}
 			<div class="project-col {{ colClass }}">
 				{{ dump(proj.active()) }}
-				<a href="{{ proj.url }}" class="project-link box-item light-colored-bg">
+				<a href="{{ proj.url }}" class="project-link box-item white-bg">
 
 					{% set screenshot_el = proj.header.screenshots|first %}
 					{% set image = proj.media[screenshot_el.thumbnail] %}

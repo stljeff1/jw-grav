@@ -1,5 +1,6 @@
 ---
 title: social-icons
-theme: lightbg
+body_classes: red-bg
+theme: darkbg
 ---
 
