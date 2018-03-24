@@ -1,8 +1,10 @@
 
 
-.social-icons-list {
+ul.row.social-icons-list {
+	margin: 0;
 	li {
 		padding: 5px 10px;
+		margin-bottom: 0;
 	}
 	a {
 		padding: 20px;

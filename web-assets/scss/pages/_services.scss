@@ -2,8 +2,11 @@
 #client_slideshow {
 	.carousel-item {
 		text-align: center;
-		img {
-			max-width: 400px;
+		@media (min-width: $screen-sm) {
+
+			img {
+				max-width: 400px;
+			}
 		}
 	}
 }

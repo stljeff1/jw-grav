@@ -5,11 +5,12 @@
 		outline: 0;
 		border: 2px solid $red;
 		color: $red;
-			background-color: #fff;
+		background-color: #fff;
 		font-size: 1.5em;
-			padding: 10px 20px;
-			font-weight: 300;
-			text-align: center;
+		font-weight: 300;
+		text-align: center;
+		padding: 10px 20px;
+		margin-bottom: 10px;
 		&:hover
 		{
 			color: $red;

@@ -12,15 +12,15 @@ var runSequence = require('run-sequence');
 var include = require("gulp-include");
 
 var themeRoot = './themes/jwmagic/';
+var webAssets = "./web-assets/";
 var paths = {
-  assets: "./web-assets/",
   vendorIncludes: 'vendor-includes.json',
   js: {
     src: 'js/',
     dist: themeRoot + 'js/'
   },
   styles: {
-    src: themeRoot + 'scss/',
+    src: webAssets + 'scss/',
     dist: themeRoot + 'css-compiled/',
     bootstrap: 'jw-bootstrap.scss',
     entry: 'main.scss'
@@ -28,7 +28,7 @@ var paths = {
 };
 
 
-var vendorIncludes = require(paths.assets + paths.vendorIncludes);
+var vendorIncludes = require(webAssets + paths.vendorIncludes);
 
 gulp.task('set-dev-node-env', function() {
     return process.env.NODE_ENV = 'development';
@@ -39,6 +39,7 @@ gulp.task('set-prod-node-env', function() {
 });
 
 gulp.task('bootstrap', function () {
+  console.log(paths.styles.src + paths.styles.bootstrap);
   gulp.src(paths.styles.src + paths.styles.bootstrap)
     .pipe(sass({includePaths: ['node_modules/bootstrap/scss/']}).on('error', sass.logError))
     .pipe(sourcemaps.init())
@@ -55,6 +56,8 @@ gulp.task('bootstrap', function () {
 
 
 gulp.task('build-sass', function () {
+
+  console.log(paths.styles.src + paths.styles.entry);
   gulp.src(paths.styles.src + paths.styles.entry)
     .pipe(sourcemaps.init()).pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
@@ -72,7 +75,7 @@ gulp.task('build-sass', function () {
 gulp.task("js", function() {
   console.log("-- gulp is running task 'scripts'");
  
-  gulp.src(paths.assets + paths.js.src + 'project-samples.js')
+  gulp.src(webAssets + paths.js.src + 'project-samples.js')
     .pipe(include({
 
       includePaths: [
@@ -92,7 +95,7 @@ gulp.task("vendorIncludes", function() {
 
 gulp.task('watch', function(done) {
   gulp.watch(paths.styles.src + '**/*.scss', ['build-sass', 'js']);
-  gulp.watch(paths.assets + paths.js.src + '**/*.js', ['js'])
+  gulp.watch(webAssets + paths.js.src + '**/*.js', ['js'])
 });
 
 

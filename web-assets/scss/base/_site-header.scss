@@ -24,12 +24,20 @@
 	background: -webkit-radial-gradient(center, ellipse cover, #262c38 0%,#000715 100%); /* Chrome10-25,Safari5.1-6 */
 	background: radial-gradient(ellipse at center, #262c38 0%,#000715 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	border-bottom: 3px solid $red;
+	h1 {
+		display: inline;
+	}
 	h2 {
 		color: $white;
 		text-align: center;
 	}
-	.scrolling.back-page & {
+	@media (max-width: $screen-md) {
 		padding-top: $nav-height;
+	}
+	@media (min-width: $screen-md) {
+		.scrolling.back-page & {
+			padding-top: $nav-height;
+		}
 	}
 }
 
@@ -37,14 +45,7 @@
 	//background-color: $navy;
 	font-size: 1.6rem;
 	transition: all .25s;
-	.scrolling.back-page & {
-		z-index: 99999;
-		width: 100%;
-		position: fixed;
-		top: 0;
-		left: 0;
-		background-color: $navy;
-	}
+	
 	.navigation-container {
 			@include make-my-container;
 	}
@@ -105,6 +106,14 @@
 	}
 
 	@media (min-width: $screen-md) {
+		.scrolling.back-page & {
+			z-index: 99999;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: $navy;
+		}
 
 		.container {
 			min-height: 60px;
@@ -125,13 +134,22 @@
 	}
 
 	@media (max-width: $screen-md) {	
+		background-color: transparent;
 		x.navbar-collapse.collapse {
 			display: none !important;
 			&.in {
 				display: block !important;
 			}
 		}
+		.site-name-container {
+			xdisplay: none;
+		}
 		.navbar-toggler {
+			margin: 0 0 0 auto;
+			border: 0;
+			img {
+				max-width: 40px;
+			}
 		}
 		.navbar-brand {
 			display: flex;
@@ -139,15 +157,16 @@
 			align-items: center;
 		}
 		.navigation-container {
-			background-color: $navy;
+			
 		}
 		nav {
-			/*position: absolute;
+			background-color: $navy;
+			position: fixed;
 			width: 100%;
 			top: 0;
 			left: 0;
-			xbackground-color: $gray-blue2;
-			*/
+			z-index: 99999;
+			Xpadding: 15px 0;
 			li {
 				a {
 					color: $gray-light2;
