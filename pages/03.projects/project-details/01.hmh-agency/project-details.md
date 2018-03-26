@@ -24,3 +24,6 @@ screenshots:
         thumbnail: ss-office-thumbnail.jpg
 ---
 
+The HMH Agency project was an ambitious Wordpress project - ambitious meaning the site required lots of custom post types and lots of custom behaviors. They needed a bright and unique site to showcase all of their work. I worked closely with the HMH team to flush out content requirements for each post type, ensuring that the team had everything they needed to add to the site.
+
+Featured on this site is a [masonry-type grid](https://hmhagency.com/work/), [parallax-type scrolling](https://hmhagency.com/case-study/palmetto-bluff-living-high-in-the-low-country/) to tell stories, and lots of [use of CSS Flexbox](https://hmhagency.com/blog/just-the-ticket-or-in-this-case-the-card/).

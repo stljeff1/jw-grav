@@ -114,6 +114,13 @@
                     </div>
                 </section>
 
+                <section class="recent-projects">
+                    <h2>Recent Projects</h2>
+
+                    {% set projects = page.find('/projects/project-details').children %}
+                    {{ siteMacros.projectListGrid(projects, 2) }}
+                </section>
+
                 <section class="quick-tab-btns">
                     <h2>Check It Out</h2>
                     <div class="">

@@ -15,7 +15,9 @@
 
 {% macro projectListGrid(projects, n) %}
 	{% if n %}
-		{% if n == 3 %}
+		{% if n == 2 %}
+			{% set colClass = 'col col-sm-6 col-lg-3' %}
+		{% elseif n == 3 %}
 			{% set colClass = 'col-sm-4' %}
 		{% else %}
 			{% set colClass = 'col-md-6 col-lg-3' %}
@@ -28,7 +30,7 @@
 			{% if proj.active() == false %}
 			<div class="project-col {{ colClass }}">
 				{{ dump(proj.active()) }}
-				<a href="{{ proj.url }}" class="project-link box-item white-bg">
+				<a href="/projects/{{ proj.slug }}" class="project-link box-item white-bg">
 
 					{% set screenshot_el = proj.header.screenshots|first %}
 					{% set image = proj.media[screenshot_el.thumbnail] %}
@@ -40,7 +42,7 @@
 					{% endif %}
 					<h4 class="project-title">
 						{{ proj.title }}
-						<strong>HTML, CSS, JS</strong>
+						<strong>{{ details.proj_tags }}</strong>
 					</h4>
 				
 				</a>
