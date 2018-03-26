@@ -191,7 +191,17 @@
 
 
 
-
+	.recent-projects {
+		.project-list {
+			.project-link {
+				border-width: 2px;
+				padding: .5rem;
+			}
+			.project-title {
+				font-size: 1.5rem;
+			}
+		}
+	}
 
 
 	.quick-tab-btns {
