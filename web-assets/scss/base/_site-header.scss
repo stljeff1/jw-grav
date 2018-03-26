@@ -107,7 +107,7 @@
 
 	@media (min-width: $screen-md) {
 		.scrolling.back-page & {
-			z-index: 99999;
+			z-index: 999;
 			width: 100%;
 			position: fixed;
 			top: 0;

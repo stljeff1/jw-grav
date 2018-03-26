@@ -35,7 +35,7 @@
 						{% endif %}
 						<div class="col-6 col-md-3">
 							{{ dump(myimage) }}
-							<a href="{{ full.url}}" class="project-thumbnail" data-caption="{{ caption|escape }}">
+							<a href="{{ full.url}}" class="project-thumbnail" data-caption="{{ caption|escape('html_attr') }}">
 								<img src="{{ thumbnail.cropZoom(300,300).url }}" class="img-fluid" />
 							</a>
 						</div>

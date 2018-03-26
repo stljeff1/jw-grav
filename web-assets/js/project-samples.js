@@ -22,7 +22,6 @@
 
 					verticalFit: false,
 					titleSrc: function(item) {
-						console.log(item.el.find('.caption'));
 						return item.el.attr('data-caption');
 					}
 				},
@@ -30,6 +29,14 @@
 					enabled: true
 				}
 				
+			});
+
+			$('body').on('click', '.mfp-gallery a', function(e) {
+				if($.externalizeLink(this)) {
+					e.preventDefault()
+					e.stopPropagation();
+					window.open(this.href, '_blank');
+				}
 			});
 		});
 
