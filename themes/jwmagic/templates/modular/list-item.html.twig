@@ -6,13 +6,13 @@
 				{{ content }}
     			</div>
     			<div class="col-sm-4">
-    				{{ image.cropResize(400,400).html(page.header.title, page.header.title, 'img-responsive') }}
+    				{{ image.cropResize(400,400).html(page.header.title, page.header.title, 'img-fluid') }}
     			</div>
     		{% else %}
 
     			<div class="col-sm-4">
     				
-                    {{ image.cropResize(400,400).html(page.header.title, page.header.title, 'img-responsive') }}
+                    {{ image.cropResize(400,400).html(page.header.title, page.header.title, 'img-fluid') }}
     			</div>
     			<div class="col-sm-8">
     				{{ content }}

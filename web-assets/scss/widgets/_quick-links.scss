@@ -1,0 +1,15 @@
+
+.quick-tab-btns, .quick-links {
+	.btn {
+		padding: 10px 20px;
+		xborder-radius: 50px;
+			font-size: 1.25em;
+	}
+
+}
+
+@media (max-width: $screen-sm) {
+	.quick-links li {
+		margin-bottom: 10px;
+	}
+}

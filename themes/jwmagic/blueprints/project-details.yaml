@@ -10,16 +10,49 @@ form:
       fields:
         content: 
           fields: 
-            screenshots:
+            header.media_order:
+              label: Images
+              ordering@: 3
+            header.details:
+              type: section
+              title: Project details
+              ordering@: 2
+              fields:
+                header.details.client:
+                  type: text
+                  label: Client
+                header.details.live_url:
+                  type: text
+                  label: Live Url
+                  placeholder: (if applicable)
+                header.details.date:
+                  type: text
+                  label: Project Date
+                header.details.blurb:
+                  type: text
+                  label: Blurb, short summary
+                header.details.proj_tags:
+                  type: text
+                  label: Tags
+            header.screenshots:
               type: list
-              label: Screenshot
+              label: Screenshots
               fields:
                 .caption:
-                  type: text
+                  type: editor
                   label: Caption
-                .image:                  
+                .thumbnail:                  
                   type: filepicker
                   folder: 'self@'
+                  preview_images: true
+                  label: Thumbnail
+                  accept:
+                    - .png
+                    - .jpg
+                .full:                  
+                  type: filepicker
+                  folder: 'self@'
+                  label: Full  (if different than thumbnail)
                   preview_images: true
                   accept:
                     - .png

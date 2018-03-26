@@ -8,16 +8,12 @@ form:
       fields:
         options:
           type: tab
-          title: Optins
+          title: Options
 
           fields:
             header.title:
               type: text
               label: Title
-            header.body_classes:
-              type: text
-              label: Body Class
-              default: 'quick-links-section'
             header.btn_class: 
               type: text
               label: Button Class

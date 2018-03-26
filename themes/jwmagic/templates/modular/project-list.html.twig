@@ -1,0 +1,10 @@
+{% if page.header.title is not null %}
+     <h3 class="section-title">{{ page.header.title }}</h3>
+ {% endif %}
+
+
+{% import 'macros/macros.html.twig' as siteMacros %}
+{% set projects = page.find('/projects/project-details').children %}
+
+
+{{ siteMacros.projectListGrid(projects, page.headers.number_cols) }}

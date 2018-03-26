@@ -1,0 +1,221 @@
+html, body  {
+	height: 100%;
+	margin: 0 auto;
+	font-family: 'Roboto',Helvetica,Arial,sans-serif;
+	font-size: 16px;
+	color: $black;
+	background-color: $gray-light;
+	@media (max-width: $screen-md) {
+		font-size: 14px;
+	}
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 1rem;
+}
+
+h2, h3, .section-title, .page-title, .title-heading {
+	font-weight: 300;
+	text-align: center;
+}
+
+h2, .page-title {
+	font-size: 3.75rem;
+	margin-top: 0;
+	margin-bottom: 20px;
+	padding: 10px 0 20px;
+	font-weight: 100;
+}
+
+h3, .section-title {
+	font-size: 3.25rem;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+}
+
+h4, h5, h6 {
+	&,
+	&.title-heading {
+		font-weight: 300;
+	}
+}
+
+h4 {
+	font-size: 2.2rem;
+}
+h5 {
+	font-size: 1.8rem;
+}
+h6 {
+	font-size: 1.5rem;
+}
+
+a, a:visited, a:link {
+	color: $gray-blue2;
+	&:hover {
+		color: lighten($gray-blue2, 25%);;
+	}
+	.red-bg & {
+		color: $white;
+		&:hover {
+			color: $highlight-color;
+		}
+	}
+	&.red-text {
+		color: $red;
+		&:hover {
+			color: darken($red, 25%);
+		}
+	}
+}
+
+p a {
+	text-decoration: underline;
+}
+
+blockquote p {
+	margin-bottom: 0;
+}
+
+
+.white-text {
+	color: #fff;
+}
+.red-text {
+	color: $red;
+}
+
+
+.color-a {
+	color: #1E2431;
+}
+.color-b {
+	color: #d80033;
+}
+.color-c {
+	color: #1E2431;
+}
+
+.red-bg { 
+	background-color: $red;
+}
+.blue-bg {
+	background-color: $navy;
+	color: $white;
+}
+.red-bg, .blue-bg {
+	.section-title {
+		color: $white;
+	}
+	a, a:visited, a.active {
+		color: $highlight-color;
+	}
+}
+
+.light-colored-bg {
+	background-color: $gray-light;
+}
+.white-bg {
+	background-color: #fff;
+}
+
+.box-item {
+
+	padding: 1rem;
+	border-radius: 7px;
+	margin-bottom: 1.25rem;
+}
+
+
+@media (max-width: $screen-md) {
+	.no-js .btn.toggler-btn { display: none; }
+	.js .toggled-content {
+		display: none;
+	}
+}
+
+.flex-listing-row {
+	display: flex;
+	.flex-col {
+		flex: 1 0 33%;
+	}
+}
+
+.slide-title {
+	font-size: 2em;
+	font-weight: 400;
+}
+
+ul.list-unstyled.row {
+	li {
+		margin-bottom: 15px;
+	}
+}
+
+.back-page {
+	section {
+		padding: 20px 15px;
+		&.quick-links-section {
+			padding: 30px 0;
+		}
+		@media (min-width: $screen-sm) {
+			padding: 40px 0;
+			&.quick-links-section {
+				padding: 50px;
+			}
+		}
+	}
+}
+
+section {
+	article {
+		padding: 20px 0;
+		&:not(:last-child) {
+			border-bottom: 1px solid $gray-light;
+			margin-bottom: 10px;
+		}
+	}
+
+}
+
+@media (min-width: $screen-sm) {
+
+	h2, .page-title {
+		font-size: 4em;
+	}
+	h3, .section-title {
+		font-size: 3em;
+		padding-bottom: 20px;
+	}
+
+
+
+	section {
+		article {
+			padding: 30px 0;
+		}
+	}
+
+}
+
+@media (min-width: $screen-lg) {
+
+	h2, .page-title {
+		font-size: 5em;
+		margin-bottom: 30px;
+		padding: 20px 0 50px;
+	}
+	h3, .section-title {
+		font-size: 3.5em;
+		margin-bottom: 20px;
+		xpadding-bottom: 10px;
+	}
+
+
+	section {
+		article {
+			padding: 30px 0 45px;
+		}
+	}
+
+}
