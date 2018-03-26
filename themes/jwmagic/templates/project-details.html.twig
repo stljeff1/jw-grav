@@ -24,7 +24,6 @@
 			
 			<div class="project-screenshots">
 
-				{{ dump(assets.collections.bootstrap) }}
 				<div class="project-thumbnail-row row">
 					{% for screenshot in page.header.screenshots %}
 						{% set thumbnail = page.media[screenshot.thumbnail] %} 
@@ -34,7 +33,6 @@
 							{% set full = page.media[screenshot.full] %}
 						{% endif %}
 						<div class="col-6 col-md-3">
-							{{ dump(myimage) }}
 							<a href="{{ full.url}}" class="project-thumbnail" data-caption="{{ caption|escape('html_attr') }}">
 								<img src="{{ thumbnail.cropZoom(300,300).url }}" class="img-fluid" />
 							</a>
@@ -55,7 +53,7 @@
 		<div class="container">
 			<h3 class="section-title">Other Projects</h3>
 			{% set projects = page.find('/projects/project-details').children %}
-			{{ siteMacros.projectListGrid(projects, 3) }}
+			{{ siteMacros.projectListGrid(projects, 3, page) }}
 		</div>
 
 	</section>
