@@ -24,4 +24,3 @@ screenshots:
         thumbnail: ss-office-thumbnail.jpg
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus eleifend risus, ut ultricies dui venenatis vel. Curabitur sagittis purus urna, ut mollis sem sollicitudin non. Vivamus et ante at neque aliquam tincidunt. In sed malesuada neque. Integer at felis luctus, gravida odio sed, lacinia ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse volutpat in sapien eget rutrum. 

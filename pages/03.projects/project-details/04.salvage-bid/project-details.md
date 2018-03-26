@@ -8,7 +8,6 @@ details:
 media_order: 'ss-salvagebid-home-partial.jpg,ss-salvagebid-home-thumbnail.jpg'
 screenshots:
     -
-        caption: 'words and stuff'
         thumbnail: ss-salvagebid-home-thumbnail.jpg
         full: ss-salvagebid-home-full.jpg
     -

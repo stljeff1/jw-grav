@@ -1,15 +1,15 @@
 
-<ul class="social-icons-list list-inline text-center">
+<ul class="social-icons-list row list-unstyled  justify-content-center text-center">
 
 
 	{% for item in site.social %}
-		<li class="list-inline-item">
+		<li class="col-3 col-sm-auto">
 			{% set icon = item.icon %}
 			{% if header.theme is defined and header.theme == 'lightbg' %}
 				{% set icon = icon ~ '-blue' %}
 			{% endif %}
 			<a href="{{ item.url }}" target="_blank" title="Jeff Wilkerson on {{ item.name }}">
-				<img src="{{ url('theme://images/'~icon~'.png') }}"/>
+				<img class="img-fluid" src="{{ url('theme://images/'~icon~'.png') }}"/>
 			</a>
 		</li>
 	{% endfor %}
