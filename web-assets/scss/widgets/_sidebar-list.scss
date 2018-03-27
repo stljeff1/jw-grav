@@ -1,0 +1,29 @@
+
+.sidebar-list {
+	.section-title {
+
+	}
+	.row {
+		xmax-width: 550px;
+	}
+	.label, 
+	.value {
+		line-height: 2.5em;
+		font-size: 1.25em;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.label {
+		color: $navy;
+		text-align: left;
+	}
+	@media (max-width: $screen-md) {
+		.label,
+		.value {
+			line-height: 1;
+		}
+		.label {
+			padding: .6em .6em 0;
+		}
+	}
+}

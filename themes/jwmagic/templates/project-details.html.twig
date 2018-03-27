@@ -1,82 +1,65 @@
-{% extends 'base/two-column.html.twig' %}
+{% extends 'base/base.html.twig' %}
 
-{% block header %}
-
-    <header class="site-header">
-        {% include "partials/navigation-default.html.twig" %}
-
-    </header>
-{% endblock %}
-
-
+{% do assets.addCss('theme://css-compiled/magnific-popup.css', 100) %}
+{% do assets.addJs('theme://js/project-samples.js', {priority: 5, group: 'bottom'}) %}
 {% block aboveContent %}
 {% endblock %}
 
+{% set details = page.header.details %}
 
-{% block leftColumn  %}
+{% block main  %}
+	<section class="white-bg">
+		<div class="container">
+			<div class="project-summary text-center">
+				<h2 class="section-title">Summary</h2>
+
+				<p class="h4"><strong>{{ details.proj_tags }}</strong> {{ details.date }}</p>
+				{% if details.live_url %}
+					<p class="h4"><a href="{{ details.live_url }}" target="_blank">Live URL</a></p>
+				{% endif %}
+				{{ page.content|markdown }}
+			</div>
+			<h2 class="section-title">Project Results</h2>
+				
+			
+			<div class="project-screenshots">
+
+				<div class="project-thumbnail-row row">
+					{% for screenshot in page.header.screenshots %}
+						{% set thumbnail = page.media[screenshot.thumbnail] %} 
+						{% set caption = screenshot.caption|markdown %}
+						{% set full = thumbnail %}
+						{% if screenshot.full %}
+							{% set full = page.media[screenshot.full] %}
+						{% endif %}
+						<div class="col-6 col-md-3">
+							<a href="{{ full.url}}" class="project-thumbnail" data-caption="{{ caption|escape('html_attr') }}">
+								<img src="{{ thumbnail.cropZoom(300,300).url }}" class="img-fluid" />
+							</a>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="project-screenshot-viewport">
+
+				</div>
+			
+			</div>
+		</div>
 	
-	<div class="project-title">
-		<h2 class="section-title">Project Spotlight - {{ page.header.title }}</h2>
-		<p>Tags, tags, tags</p>
-	</div>
-	<section class="project-intro">
-		<h4>End Results</h4>
-		
 	</section>
-	<div class="project-screenshots">
-		{{ dump(page.media) }}
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		{% for imageuploaded in page.header.screenshots %}
-			{% set myimage = page.media[imageuploaded.image].cropZoom(200,200) %} 
-			<div style="text-align: center;">
-	
-				dump(image)
-				{{ dump(myimage) }}
-				<img src="{{ myimage.url }}"/>
-			</div>
-			<div style="display: none;">
-				<img src="{{ page.media[imageuploaded.image].url() }}">
-			</div>
-		{% endfor %}
-	
-	</div>
-	
+
+	<section id="other-samples" class="blue-bg">
+
+		<div class="container">
+			<h3 class="section-title">Other Projects</h3>
+			{% set projects = page.find('/projects/project-details').children %}
+			{{ siteMacros.projectListGrid(projects, 3, page) }}
+		</div>
+
+	</section>
 {% endblock %}
 
-{% block rightColumn  %}
-	<h4>Summary</h4>
-	{{ page.content }}
-	<div class="sidebar-list">
-		{{ siteMacros.sidebarListGrid('Client', header.details.client) }}
-		{{ siteMacros.sidebarListGrid('Project Date', header.details.date) }}
-	</div>
 
-{% endblock %}
-
-{% block belowContent %}
-
+{% block footer %}
+    {% include "partials/footer.html.twig" %}
 {% endblock %}

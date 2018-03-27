@@ -1,0 +1,42 @@
+
+.btn, a.btn,  {
+	background-color: $navy;
+	border-color: $navy;
+	border-width: 2px;
+	color: $white;
+	text-align: center;
+	font-size: 1em;
+	font-weight: 300;
+	text-decoration: none;
+	&:hover {
+		border-color: lighten($navy, 15%);
+		background-color: lighten($navy, 20%);
+		color: $highlight-color;
+	}
+	&.btn-round {
+		border-radius: 50px;
+	}
+	.red-bg &, 
+	.blue-bg &,
+	.dark-bg & {
+
+		border-color: $white;
+		color: $white;
+		background-color: transparent;
+		&:hover {
+			background-color: $white;
+			color: $navy;
+			text-decoration: underline;
+		}
+	}
+	&.btn-red {
+		background-color: $red;
+		border-color: $red;
+		&:hover {
+			background-color: darken($red, 10%);
+			border-color: darken($red, 10%);
+			color: $white;
+		}
+	}
+}
+

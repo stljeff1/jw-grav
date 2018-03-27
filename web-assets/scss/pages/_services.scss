@@ -1,0 +1,27 @@
+
+#client_slideshow {
+	.carousel-item {
+		text-align: center;
+		@media (min-width: $screen-sm) {
+
+			img {
+				max-width: 400px;
+			}
+		}
+	}
+}
+
+
+
+
+.my-services {
+	blockquote {
+
+		border: 0;
+		text-align: center;
+		padding: 1.5em 0;
+		font-size: 2em;
+		color: $red;
+
+	}
+}

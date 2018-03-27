@@ -25,12 +25,12 @@ skills:
     -
         name: jQuery
         size: 90
-        image: logo-jquery-dark.png
+        image: jquery-icon.png
         meterClass: red
     -
         name: 'Content Management Systems'
         size: 80
-        image: w_wp.png
+        image: wordpress-icon.png
         meterClass: blue
 otherSkills:
     -

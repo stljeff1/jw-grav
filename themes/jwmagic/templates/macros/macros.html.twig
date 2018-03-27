@@ -12,3 +12,42 @@
 		</div>
 	</div>
 {% endmacro %}
+
+{% macro projectListGrid(projects, n, myPage) %}
+	{% if n %}
+		{% if n == 2 %}
+			{% set colClass = 'col-12 col-sm-6 col-lg-3' %}
+		{% elseif n == 3 %}
+			{% set colClass = 'col-sm-4' %}
+		{% else %}
+			{% set colClass = 'col-md-6 col-lg-3' %}
+		{% endif %}	
+	{% else %}
+		{% set colClass = 'col-md-6 col-lg-3' %}
+	{% endif %}	
+	<div class="project-list row">
+		{% for proj in projects %}
+			{% if not myPage or proj.slug != myPage.slug %}
+			<div class="project-col {{ colClass }}">
+				<a href="/projects/{{ proj.slug }}" class="project-link box-item white-bg">
+
+					{% set screenshot_el = proj.header.screenshots|first %}
+					{% set image = proj.media[screenshot_el.thumbnail] %}
+					{% set details = proj.header.details %}
+					{% if image %}
+						<div class="project-image">
+							{{ image.cropZoom(200,200).html(proj.header.title, proj.header.title, 'img-fluid') }}
+						</div>
+					{% endif %}
+					<h4 class="project-title">
+						{{ proj.title }}
+						<strong>{{ details.proj_tags }}</strong>
+					</h4>
+				
+				</a>
+			</div>
+			{% endif %}	
+		{% endfor %}
+	</div>
+
+{% endmacro %}

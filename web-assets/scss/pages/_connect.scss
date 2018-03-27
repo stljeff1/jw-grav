@@ -1,0 +1,57 @@
+
+.connections-page {
+	main {
+		height: auto;
+	}
+
+	//@media (min-width: $screen-md) {
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+66,0+67 */
+	//	background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 66.67%, rgba(255,255,255,0) 66.671%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	//	background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 66.67%,rgba(255,255,255,0) 66.671%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	//	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 66.67%,rgba(255,255,255,0) 66.671%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	//}
+
+}
+
+.form-container {
+	xmax-width: 550px;
+	margin: 0 auto;
+	.form-field {
+		@include clearfix();
+		padding-top: 10px;
+		padding-bottom: 10px;
+		.form-label {
+			width: 20%;
+			float: left;
+			text-align: right;
+			padding: 6px 12px;
+			line-height: 1.4286;
+		}
+		.form-data {
+			max-width: 500px;
+		}
+	}
+	.buttons {
+		.btn.btn-primary {
+		}
+	}
+}
+
+.connections-list .row,
+.form-container .form-field {
+	margin-bottom: 10px;
+}
+
+.post-form-container {
+	background-color: $white;
+	max-width: 550px;
+	border-radius: 10px;
+	margin: 20px auto;
+	padding: 20px; 
+	img {
+		max-width: 350px;
+		width: 50%;
+		display: block;
+		margin: 0 auto 20px;
+	}
+}

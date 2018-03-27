@@ -1,0 +1,28 @@
+{% if page.header.container_class %}
+	{% set container = page.header.container_class %}
+{% else %}
+	{% set container = 'light-colored-bg' %}
+{% endif %}
+
+
+<div class="{{ page.header.body_classes }}">
+	<h3 class="section-title">{{page.title}}</h3>
+	<div class="container">
+		<div class='link-list box-item {{ container }}'>
+			<ul class="list-unstyled">
+			{% for item in page.header.links %}
+
+				<li>
+					<a href="{{ item.url }}" class="h4 {{ item.class }}">
+						{{ item.label }} 
+					</a>
+					<p class="item-info">
+						{{ item.date }} |
+						Tags: <strong>{{ item.tags }}</strong>
+					</p>
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>

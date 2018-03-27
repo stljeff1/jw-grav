@@ -22,35 +22,52 @@
     <link rel="canonical" href="{{ page.url() }}?slwsdndfpaollwm=true" />
     
 
+
     {% include 'partials/metadata.html.twig' %}
 
 
 
     <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,100italic,300italic,400" rel="stylesheet" type="text/css">
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'/>
-    {% do assets.addCss('theme://css-compiled/main.css', 100) %}
+    
+    {% do assets.addCss('theme://css-compiled/jw-bootstrap.css', 150) %}
+    {% do assets.addCss('theme://css-compiled/main.css', 10) %}
     {{ assets.css() }}
 
-        {% do assets.addJs('theme://js/modernizr.custom.71422.js', 100) %}
+    {% do assets.addJs('https://code.jquery.com/jquery-3.2.1.min.js', {priority: 1000, group: 'head'}) %}
+
+    {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', {priority: 1000, group: 'bottom'}) %}
+    {% do assets.addJs('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', {priority: 1000, group: 'bottom'}) %}
+
+
+    {% do assets.addJs('theme://js/main.js', {priority: 10, group: 'bottom'}) %}
+
+    {% do assets.addJs('theme://js/modernizr.custom.71422.js', 100) %}
+
+
     {% block javascripts %}
     {% endblock %}
-    {{ assets.js() }}
+    {{ assets.js('head') }}
 
 {% endblock head %}
 </head>
 <body id="top" class="{{ page.header.body_classes }} {% if not page.home %} back-page {% endif %}">
     
-    {% block header %} {% endblock %}
+    {% block header %} 
+        {% include "partials/site-header.html.twig" %}
+    {% endblock %}
 
     {% block main %} 
     {% endblock %}
 
     {% block footer %} {% endblock %}
-
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+   <!--
+   <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+-->
+    {{ assets.js('bootstrap') }}
+    {{ assets.js('bottom') }}
     {% block bottom %}
-        <script src="{{ url('theme://js/main.js') }}"></script>
     {% endblock %}
 </body>
 </html>

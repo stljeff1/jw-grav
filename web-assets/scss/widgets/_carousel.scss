@@ -1,0 +1,28 @@
+
+
+.carousel { 
+
+	.carousel-control, 
+	.carousel-control:hover {
+		background: transparent;
+		color: #d80033;
+	}
+	.carousel-indicators {
+		bottom:  0;
+	}
+	.carousel-indicators li {
+		border-radius: 10px;
+		margin: 1px 3px;
+		height: 10px;
+		max-width: 10px;
+		border: 1px solid #d80033;
+		background-color: transparent;
+		&.active {
+			background-color: $red;
+			max-width: 12px;
+			margin: 0 3px;
+			height: 12px;
+		}
+	}
+
+}

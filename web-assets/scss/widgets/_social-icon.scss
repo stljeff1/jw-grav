@@ -1,0 +1,22 @@
+
+
+ul.row.social-icons-list {
+	margin: 0;
+	li {
+		padding: 5px 10px;
+		margin-bottom: 0;
+	}
+	a {
+		padding: 20px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+
+		-webkit-transition: all .3s;
+		transition: all .3s;
+		display: inline-block;
+
+		&:hover {
+			background-color: rgba(#fff, .1);
+		}
+	}
+}
