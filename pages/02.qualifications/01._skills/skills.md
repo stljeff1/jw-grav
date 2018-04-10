@@ -41,8 +41,8 @@ otherSkills:
                 name: 'Version Control'
                 icon: github-icon-blue.png
             -
-                name: 'Content Management'
-                icon: programmer.png
+                name: 'SEO Management'
+                icon: seo-management-cion.png
             -
                 name: 'Photoshop'
                 icon: photoshop-icon.png

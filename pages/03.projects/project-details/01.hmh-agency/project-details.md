@@ -16,7 +16,7 @@ screenshots:
         thumbnail: ss-casestudy-thumbnail.jpg
         full: ss-casestudy-full.jpg
     -
-        caption: 'Another unquie layout, this page featured a fully responsive masonry type layout, effectively handling image blocks of varying widths and heights. Each cell triggered a custom modal window that loaded additional content dynamically'
+        caption: 'Another unique layout, this page featured a fully responsive masonry type layout, effectively handling image blocks of varying widths and heights. Each cell triggered a custom modal window that loaded additional content dynamically'
         thumbnail: ss-work-thumbnail.jpg
         full: ss-work-full.jpg
     -

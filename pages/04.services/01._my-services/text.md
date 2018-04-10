@@ -1,7 +1,7 @@
 ---
 sub_headline: 'I am the **glue** for your website and your business objectives.'
 image_align: right
-body_classes: 'my-services  light-colored-bg'
+body_classes: 'my-services white-bg'
 theme: eightbyfour
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Education
-body_classes: 'no-gutter light-colored-bg'
 image_align: right
+body_classes: 'no-gutter white-bg'
 theme: sevenbyfive
 ---
 
