@@ -4,7 +4,7 @@ image_align: left
 theme: sevenbyfive
 ---
 
-What shall I say about myself? Well, most of all, know that I build websites. No, I'm not a designer. No, I don't know how to hack the government. I'm a Front-End Developer.
+What shall I say about myself? Well, most of all, know that I build websites. No, I'm not a designer. No, I don't know how to hack the government. I am somewhere in between - I'm a Front-End Developer.
 
 I have chosen to be a Front End Developer because that is the area where my talents for problem solving, adaptabily, and empowerment are best utilized. I get the opportunity to work with designers, back end programmers, and business leaders, which in turn broadens my perspectives. Additionally, I enjoy the challenge of empathizing with the end user of websites. Users of a website have an objective when visiting a website, and its my job to ensure they fulfill that objective.
 
