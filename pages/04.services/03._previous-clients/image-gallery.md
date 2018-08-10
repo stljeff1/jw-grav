@@ -21,13 +21,13 @@ images:
                 size: 65001
                 path: page@/ss360-logo.png
     2:
-        title: 'Adidas, Inc.'
+        title: 'Append Media'
         image:
-            page@/adidas-logo.png:
-                name: adidas-logo.png
+            page@/append-media-logo.png:
+                name: append-media-logo.png
                 type: image/png
-                size: 20125
-                path: page@/adidas-logo.png
+                size: 44617
+                path: page@/append-media-logo.png
     5:
         title: NASA
         image:
