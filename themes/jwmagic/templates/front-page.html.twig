@@ -117,7 +117,7 @@
                 <section class="recent-projects">
                     <h2>Recent Projects</h2>
 
-                    {% set projects = page.find('/projects/project-details').children %}
+                    {% set projects = page.find('/projects/project-details').children|slice(0, 4) %}
                     {{ siteMacros.projectListGrid(projects, 2) }}
                 </section>
 
@@ -151,8 +151,8 @@
                                 <img class="img-fluid" src="{{ url('theme://images/ss360-logo.png')}}" alt="Singing Success" />
                             </li>
                             <li class="col text-center">
-                                <h4 class="title-three title-main mywhite">Append Media</h4>
-                                <img class="img-fluid" src="{{ url('theme://images/append-media-logo.png')}}" alt="Append Media" />
+                                <h4 class="title-three title-main mywhite">Bob's Red Mill</h4>
+                                <img class="img-fluid" src="{{ url('theme://images/logo-bobs-red-mill.png')}}" alt="Bob's Red Mill" />
                             </li>
                             <li class="col text-center">
                                 <h4 class="title-three title-main mywhite">NASA</h4>
@@ -182,8 +182,8 @@
                                 <img class="img-fluid" src="{{ url('theme://images/ss360-logo.png')}}" alt="Singing Success" />
                             </div>
                             <div class='carousel-item'>
-                                <h4 class="title-three title-main mywhite">Adidas, Inc.</h4>
-                                <img class="img-fluid" src="{{ url('theme://images/adidas-logo.png')}}" alt="Adidas, Inc." />
+                                <h4 class="title-three title-main mywhite">Bob's Red Mill</h4>
+                                <img class="img-fluid" src="{{ url('theme://images/logo-bobs-red-mill.png')}}" alt="Adidas, Inc." />
                             </div>
                             <div class='carousel-item'>
                                 <h4 class="title-three title-main mywhite">Penske Auto Group</h4>
