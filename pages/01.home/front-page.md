@@ -1,15 +1,5 @@
 ---
 title: Home
-seo_title: 'Jeff Wilkerson - Portland Web Developer - Javascript, HTML, CSS'
-seo_description: 'Portland Web Developer with many years HTML, CSS, Javascvript and Wordpress experience. AngularJS and NodeJS too!'
-sharing_title: 'Front End Web Developer from Portland, OR'
-sharing_description: 'Specializing in content management and javascript, I''ve been making websites since 1999!'
-sharing_image:
-    user/pages/01.home/portland-webdeveloper-wilkerson-jeff.jpg:
-        name: portland-webdeveloper-wilkerson-jeff.jpg
-        type: image/jpeg
-        size: 23124
-        path: user/pages/01.home/portland-webdeveloper-wilkerson-jeff.jpg
 ---
 
 # Grav is Running!
