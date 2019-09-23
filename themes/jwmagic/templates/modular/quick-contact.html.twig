@@ -5,5 +5,13 @@
 
 <div class="form-container">
 {{ page.content|raw }}
-	{% include "forms/form.html.twig" %}
+	{#{% include "forms/form.html.twig" %}#}
+	<p id="email-me-now"></p>
+	<script>
+	(function($) {
+		$(function() {
+			$('#email-me-now').html('For quick replies, email me at <a href="mailto:pdxwebdev@jeffwilkerson.net">pdxwebdev@jeffwilkerson.net</a>.');
+		});
+	})(jQuery);
+	</script>
 </div>
