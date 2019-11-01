@@ -4,6 +4,7 @@ content:
     items: '@self.modular'
     order:
         dir: asc
+published: false
 body_classes: modular
 menu: 'Things I''ll Do'
 seo_title: 'Web Development Services. HTML, Wordpress, SEO. Serving Portland, OR'
