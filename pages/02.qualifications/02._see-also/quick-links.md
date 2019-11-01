@@ -1,6 +1,5 @@
 ---
 title: 'See Also...'
-body_classes: blue-bg
 btn_class: 'btn '
 links:
     -
@@ -11,9 +10,6 @@ links:
         pages: github
         text: 'Code Snippets'
         isNewWindow: true
-    -
-        pages: /services
-        text: Services
-        isNewWindow: false
+body_classes: blue-bg
 ---
 
